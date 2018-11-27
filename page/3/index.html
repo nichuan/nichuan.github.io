@@ -1,0 +1,699 @@
+<!DOCTYPE html>
+<html>
+<head><meta name="generator" content="Hexo 3.8.0">
+  <meta charset="utf-8">
+  
+
+  
+  <title>Hexo</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+  <meta property="og:type" content="website">
+<meta property="og:title" content="Hexo">
+<meta property="og:url" content="http://www.nichuan.top/page/3/index.html">
+<meta property="og:site_name" content="Hexo">
+<meta property="og:locale" content="default">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="Hexo">
+  
+    <link rel="alternate" href="/atom.xml" title="Hexo" type="application/atom+xml">
+  
+  
+    <link rel="icon" href="/favicon.png">
+  
+  
+    <link href="//fonts.googleapis.com/css?family=Source+Code+Pro" rel="stylesheet" type="text/css">
+  
+  <link rel="stylesheet" href="/css/style.css">
+</head>
+</html>
+<body>
+  <div id="container">
+    <div id="wrap">
+      <header id="header">
+  <div id="banner"></div>
+  <div id="header-outer" class="outer">
+    <div id="header-title" class="inner">
+      <h1 id="logo-wrap">
+        <a href="/" id="logo">Hexo</a>
+      </h1>
+      
+    </div>
+    <div id="header-inner" class="inner">
+      <nav id="main-nav">
+        <a id="main-nav-toggle" class="nav-icon"></a>
+        
+          <a class="main-nav-link" href="/">Home</a>
+        
+          <a class="main-nav-link" href="/archives">Archives</a>
+        
+      </nav>
+      <nav id="sub-nav">
+        
+          <a id="nav-rss-link" class="nav-icon" href="/atom.xml" title="RSS Feed"></a>
+        
+        <a id="nav-search-btn" class="nav-icon" title="Search"></a>
+      </nav>
+      <div id="search-form-wrap">
+        <form action="//google.com/search" method="get" accept-charset="UTF-8" class="search-form"><input type="search" name="q" class="search-form-input" placeholder="Search"><button type="submit" class="search-form-submit">&#xF002;</button><input type="hidden" name="sitesearch" value="http://www.nichuan.top"></form>
+      </div>
+    </div>
+  </div>
+</header>
+      <div class="outer">
+        <section id="main">
+  
+    <article id="post-java-effective-paging-formula" class="article article-type-post" itemscope="" itemprop="blogPost">
+  <div class="article-meta">
+    <a href="/java-effective-paging-formula/" class="article-date">
+  <time datetime="2018-08-03T14:23:37.000Z" itemprop="datePublished">2018-08-03</time>
+</a>
+    
+  <div class="article-category">
+    <a class="article-category-link" href="/categories/Java/">Java</a>
+  </div>
+
+  </div>
+  <div class="article-inner">
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/java-effective-paging-formula/">Java - 逢一进一高效分页公式</a>
+    </h1>
+  
+
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <p><img src="http://www-zebe-me.oss-cn-beijing.aliyuncs.com/cover/cover-java.jpg" alt=""><br>本文介绍使用Java语言实现的逢一进一高效分页公式：</p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">int</span> totalPage = (totalCount - <span class="number">1</span>) / pageSize + <span class="number">1</span>;</span><br></pre></td></tr></table></figure>
+<h2 id="逢一进一"><a href="#逢一进一" class="headerlink" title="逢一进一"></a>逢一进一</h2><p>在十进制中，每一位有0～9共十个数码，所以计数的基数为10。超过9就必须用多位数来表示。十制数的运算遵循：加法时，“逢十进一 —— 该数位上的数满十就向前一位进一”；减法时，“借一当十 —— 该数位上的数不够减时，就向前一位借一当做十，再相减”。</p>
+<p>请参考以下代码片段：</p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">void</span> <span class="title">main</span><span class="params">(String[] args)</span> </span>&#123;</span><br><span class="line">    <span class="comment">// 逢一进一高效分页公式：总页数 = （总条数 - 1） / 每页查询条数 + 1</span></span><br><span class="line">    <span class="keyword">int</span> totalCount = <span class="number">101</span>;</span><br><span class="line">    <span class="keyword">int</span> pageSize = <span class="number">10</span>;</span><br><span class="line">    <span class="keyword">int</span> totalPage = (totalCount - <span class="number">1</span>) / pageSize + <span class="number">1</span>;</span><br><span class="line">    System.out.println(totalPage); <span class="comment">// 11</span></span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="http://www.nichuan.top/java-effective-paging-formula/" data-id="cjozqlges001khm009y4l2147" class="article-share-link">Share</a>
+      
+      
+  <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/java/">java</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/分页公式/">分页公式</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/逢一进一/">逢一进一</a></li></ul>
+
+    </footer>
+  </div>
+  
+</article>
+
+
+  
+    <article id="post-java-get-http-request-absolute-context-path" class="article article-type-post" itemscope="" itemprop="blogPost">
+  <div class="article-meta">
+    <a href="/java-get-http-request-absolute-context-path/" class="article-date">
+  <time datetime="2018-08-03T14:19:11.000Z" itemprop="datePublished">2018-08-03</time>
+</a>
+    
+  <div class="article-category">
+    <a class="article-category-link" href="/categories/Java/">Java</a>
+  </div>
+
+  </div>
+  <div class="article-inner">
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/java-get-http-request-absolute-context-path/">Java - 获取HTTP请求的上下文绝对路径</a>
+    </h1>
+  
+
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <p><img src="http://www-zebe-me.oss-cn-beijing.aliyuncs.com/cover/cover-java.jpg" alt=""><br>本文介绍使用Java获取一个请求的完整的 协议名+主机+端口号，如：<a href="http://127.0.0.1:14530。获取该地址后，可以设为全局变量（contextPath），在系统页面中作为路径前缀使用。" target="_blank" rel="noopener">http://127.0.0.1:14530。获取该地址后，可以设为全局变量（contextPath），在系统页面中作为路径前缀使用。</a></p>
+<p>请参考以下代码片段：</p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">// 获取HTTP请求的上下文绝对路径（完整的协议名+主机+端口号）</span></span><br><span class="line">StringBuffer url = request.getRequestURL(); <span class="comment">// http://127.0.0.1:14530/siteNews/add</span></span><br><span class="line">String contextUrl = url.delete(url.length() - request.getRequestURI().length(), url.length()).toString();</span><br><span class="line"><span class="keyword">if</span> (contextUrl.endsWith(<span class="string">"/"</span>)) &#123;</span><br><span class="line">    contextUrl = contextUrl.substring(<span class="number">0</span>, contextUrl.length() - <span class="number">1</span>);</span><br><span class="line">&#125;</span><br><span class="line">System.out.println(contextUrl); <span class="comment">// http://127.0.0.1:14530</span></span><br></pre></td></tr></table></figure>
+
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="http://www.nichuan.top/java-get-http-request-absolute-context-path/" data-id="cjozqlgem001hhm00ebuc9z5u" class="article-share-link">Share</a>
+      
+      
+  <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/java/">java</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/上下文/">上下文</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/绝对路径/">绝对路径</a></li></ul>
+
+    </footer>
+  </div>
+  
+</article>
+
+
+  
+    <article id="post-java-get-real-ip" class="article article-type-post" itemscope="" itemprop="blogPost">
+  <div class="article-meta">
+    <a href="/java-get-real-ip/" class="article-date">
+  <time datetime="2018-08-03T14:08:39.000Z" itemprop="datePublished">2018-08-03</time>
+</a>
+    
+  <div class="article-category">
+    <a class="article-category-link" href="/categories/Java/">Java</a>
+  </div>
+
+  </div>
+  <div class="article-inner">
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/java-get-real-ip/">Java - 获取HTTP请求的真实IP</a>
+    </h1>
+  
+
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <p><img src="http://www-zebe-me.oss-cn-beijing.aliyuncs.com/cover/cover-java.jpg" alt=""><br>本文介绍使用Java获取HTTP请求的真实IP，包括了对反向代理、代理客户端、多个IP情况的处理。</p>
+<p>请参考以下代码片段：</p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">/**</span></span><br><span class="line"><span class="comment"> * 获取真实IP</span></span><br><span class="line"><span class="comment"> * <span class="doctag">@param</span> request 请求体</span></span><br><span class="line"><span class="comment"> * <span class="doctag">@return</span> 真实IP</span></span><br><span class="line"><span class="comment"> */</span></span><br><span class="line"><span class="function"><span class="keyword">public</span> <span class="keyword">static</span> String <span class="title">getRealIp</span><span class="params">(HttpServletRequest request)</span> </span>&#123;</span><br><span class="line">	<span class="comment">// 这个一般是Nginx反向代理设置的参数</span></span><br><span class="line">    String ip = request.getHeader(<span class="string">"X-Real-IP"</span>);</span><br><span class="line">    <span class="keyword">if</span> (ip == <span class="keyword">null</span> || ip.length() == <span class="number">0</span> || <span class="string">"unknown"</span>.equalsIgnoreCase(ip)) &#123;</span><br><span class="line">        ip = request.getHeader(<span class="string">"X-Forwarded-For"</span>);</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="keyword">if</span> (ip == <span class="keyword">null</span> || ip.length() == <span class="number">0</span> || <span class="string">"unknown"</span>.equalsIgnoreCase(ip)) &#123;</span><br><span class="line">        ip = request.getHeader(<span class="string">"Proxy-Client-IP"</span>);</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="keyword">if</span> (ip == <span class="keyword">null</span> || ip.length() == <span class="number">0</span> || <span class="string">"unknown"</span>.equalsIgnoreCase(ip)) &#123;</span><br><span class="line">        ip = request.getHeader(<span class="string">"WL-Proxy-Client-IP"</span>);</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="keyword">if</span> (ip == <span class="keyword">null</span> || ip.length() == <span class="number">0</span> || <span class="string">"unknown"</span>.equalsIgnoreCase(ip)) &#123;</span><br><span class="line">        ip = request.getRemoteAddr();</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="comment">// 处理多IP的情况（只取第一个IP）</span></span><br><span class="line">    <span class="keyword">if</span> (ip != <span class="keyword">null</span> &amp;&amp; ip.contains(<span class="string">","</span>)) &#123;</span><br><span class="line">        String[] ipArray = ip.split(<span class="string">","</span>);</span><br><span class="line">        ip = ipArray[<span class="number">0</span>];</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="keyword">return</span> ip;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<p>以上方法，绝大多数情况下可用获取到HTTP请求的真实IP。当然，如果该请求是经过了多层反向代理发送的，则可能获取的是代理服务器的IP，而不是真实IP。</p>
+
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="http://www.nichuan.top/java-get-real-ip/" data-id="cjozqlget001ohm00a8duy4d4" class="article-share-link">Share</a>
+      
+      
+  <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/X-Real-IP/">X-Real-IP</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/反向代理/">反向代理</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/真实IP/">真实IP</a></li></ul>
+
+    </footer>
+  </div>
+  
+</article>
+
+
+  
+    <article id="post-java-send-mail-by-many-accounts-in-one-thread" class="article article-type-post" itemscope="" itemprop="blogPost">
+  <div class="article-meta">
+    <a href="/java-send-mail-by-many-accounts-in-one-thread/" class="article-date">
+  <time datetime="2018-08-03T01:08:07.000Z" itemprop="datePublished">2018-08-03</time>
+</a>
+    
+  <div class="article-category">
+    <a class="article-category-link" href="/categories/Java/">Java</a>
+  </div>
+
+  </div>
+  <div class="article-inner">
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/java-send-mail-by-many-accounts-in-one-thread/">Java - 解决在一个线程（或进程）中切换多个账号发送邮件的问题</a>
+    </h1>
+  
+
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <p><img src="http://www-zebe-me.oss-cn-beijing.aliyuncs.com/cover/cover-java.jpg" alt=""><br>近期做一个项目中遇到需要使用多个邮箱以负载均衡的方式发邮件（单线程多账号发邮件），遇到一些问题在此做一个记录，主要解决 “501 mail from address must be same as authorization user” 这个错误。</p>
+<h2 id="场景"><a href="#场景" class="headerlink" title="场景"></a>场景</h2><p>有A、B、C三个邮件账户，由于发信量限制原因，程序需要做到在每次向用户发邮件时，交替使用这三个邮箱，实际就是一种简单的负载均衡轮询。我将A、B、C三个账户设计为互为主备的策略，每次发信失败后，会自动切换为另外两个邮箱发信，都失败时，才会放弃发信，同时保存失败记录。</p>
+<h2 id="遇到的问题"><a href="#遇到的问题" class="headerlink" title="遇到的问题"></a>遇到的问题</h2><p>切换到单个邮箱发信时，可以正常发送。但是，我将另外两个邮件账户的密码故意设置错误，然后再发信，却提示以下错误：</p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">com.sun.mail.smtp.SMTPSendFailedException: <span class="number">501</span> mail from address must be same as authorization user</span><br></pre></td></tr></table></figure>
+<h2 id="解决办法"><a href="#解决办法" class="headerlink" title="解决办法"></a>解决办法</h2><p>通过搜索资料，发现这是邮件会话设置的问题，是由于获取 <code>Session</code> 时的账号和 <code>Message</code> 中设置的邮箱地址 <code>setFrom</code> 不一致引起的，因此我们需要在获取邮件会话时，不能使用默认的 <code>Session.getDefaultInstance</code>，而是要使用 <code>Session.getInstance</code>，具体请参考以下代码片段：</p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br><span class="line">58</span><br><span class="line">59</span><br><span class="line">60</span><br><span class="line">61</span><br><span class="line">62</span><br><span class="line">63</span><br><span class="line">64</span><br><span class="line">65</span><br><span class="line">66</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">/**</span></span><br><span class="line"><span class="comment"> * 发送邮件</span></span><br><span class="line"><span class="comment"> */</span></span><br><span class="line"><span class="function"><span class="keyword">public</span> <span class="keyword">void</span> <span class="title">send</span><span class="params">()</span> </span>&#123;</span><br><span class="line">    <span class="comment">// 设置邮件属性</span></span><br><span class="line">    Properties prop = <span class="keyword">new</span> Properties();</span><br><span class="line">    prop.setProperty(<span class="string">"mail.transport.protocol"</span>, PROTOCOL);</span><br><span class="line">    prop.setProperty(<span class="string">"mail.smtp.host"</span>, HOST);</span><br><span class="line">    prop.setProperty(<span class="string">"mail.smtp.port"</span>, PORT);</span><br><span class="line">    prop.setProperty(<span class="string">"mail.smtp.auth"</span>, <span class="string">"true"</span>);</span><br><span class="line">    MailSSLSocketFactory sslSocketFactory = <span class="keyword">null</span>;</span><br><span class="line">    <span class="keyword">try</span> &#123;</span><br><span class="line">        sslSocketFactory = <span class="keyword">new</span> MailSSLSocketFactory();</span><br><span class="line">        sslSocketFactory.setTrustAllHosts(<span class="keyword">true</span>);</span><br><span class="line">    &#125; <span class="keyword">catch</span> (GeneralSecurityException e1) &#123;</span><br><span class="line">        e1.printStackTrace();</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="keyword">if</span> (sslSocketFactory == <span class="keyword">null</span>) &#123;</span><br><span class="line">        System.err.println(<span class="string">"开启 MailSSLSocketFactory 失败"</span>);</span><br><span class="line">    &#125; <span class="keyword">else</span> &#123;</span><br><span class="line">        prop.put(<span class="string">"mail.smtp.ssl.enable"</span>, <span class="string">"true"</span>);</span><br><span class="line">        prop.put(<span class="string">"mail.smtp.ssl.socketFactory"</span>, sslSocketFactory);</span><br><span class="line">        <span class="comment">// 创建邮件会话（注意：如果要在一个进程中切换多个邮箱发送，请不要使用 Session.getDefaultInstance）</span></span><br><span class="line">        Session session = Session.getDefaultInstance(prop, <span class="keyword">new</span> MyAuthenticator(ACCOUNT, PASSWORD));</span><br><span class="line">        <span class="comment">// 开启调试模式（生产环境中请不要开启此项）</span></span><br><span class="line">        session.setDebug(<span class="keyword">true</span>);</span><br><span class="line">        <span class="keyword">try</span> &#123;</span><br><span class="line">            MimeMessage mimeMessage = <span class="keyword">new</span> MimeMessage(session);</span><br><span class="line">            <span class="comment">// 设置发件人别名（如果未设置别名就默认为发件人邮箱）</span></span><br><span class="line">            <span class="keyword">if</span> (fromAliasName != <span class="keyword">null</span> &amp;&amp; !fromAliasName.trim().isEmpty()) &#123;</span><br><span class="line">                mimeMessage.setFrom(<span class="keyword">new</span> InternetAddress(ACCOUNT, fromAliasName));</span><br><span class="line">            &#125;</span><br><span class="line">            <span class="comment">// 设置主题和收件人、发信时间等信息</span></span><br><span class="line">            mimeMessage.addRecipient(Message.RecipientType.TO, <span class="keyword">new</span> InternetAddress(to));</span><br><span class="line">            mimeMessage.setSubject(subject);</span><br><span class="line">            mimeMessage.setSentDate(<span class="keyword">new</span> Date());</span><br><span class="line">            <span class="comment">// 如果有附件信息，则添加附件</span></span><br><span class="line">            <span class="keyword">if</span> (!attachFileList.isEmpty()) &#123;</span><br><span class="line">                Multipart multipart = <span class="keyword">new</span> MimeMultipart();</span><br><span class="line">                MimeBodyPart body = <span class="keyword">new</span> MimeBodyPart();</span><br><span class="line">                body.setContent(content, <span class="string">"text/html; charset=UTF-8"</span>);</span><br><span class="line">                multipart.addBodyPart(body);</span><br><span class="line">                <span class="comment">// 添加所有附件（添加时判断文件是否存在）</span></span><br><span class="line">                <span class="keyword">for</span> (String filePath : attachFileList) &#123;</span><br><span class="line">                    <span class="keyword">if</span> (Files.exists(Paths.get(filePath))) &#123;</span><br><span class="line">                        MimeBodyPart tempBodyPart = <span class="keyword">new</span> MimeBodyPart();</span><br><span class="line">                        tempBodyPart.attachFile(filePath);</span><br><span class="line">                        multipart.addBodyPart(tempBodyPart);</span><br><span class="line">                    &#125;</span><br><span class="line">                &#125;</span><br><span class="line">                mimeMessage.setContent(multipart);</span><br><span class="line">            &#125; <span class="keyword">else</span> &#123;</span><br><span class="line">                mimeMessage.setText(content);</span><br><span class="line">            &#125;</span><br><span class="line">            <span class="comment">// 开始发信</span></span><br><span class="line">            mimeMessage.saveChanges();</span><br><span class="line">            Transport.send(mimeMessage);</span><br><span class="line">        &#125; <span class="keyword">catch</span> (MessagingException e) &#123;</span><br><span class="line">            e.printStackTrace();</span><br><span class="line">        &#125; <span class="keyword">catch</span> (UnsupportedEncodingException e) &#123;</span><br><span class="line">            e.printStackTrace();</span><br><span class="line">        &#125; <span class="keyword">catch</span> (IOException e) &#123;</span><br><span class="line">            e.printStackTrace();</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<h2 id="其他备注"><a href="#其他备注" class="headerlink" title="其他备注"></a>其他备注</h2><p>使用多个邮箱发信时，不要在发信代码中 <code>try catch</code> 任何异常，而是将所有的异常抛出，让上一层调用者处理，这样才能够实现多账户交替发信，出错时切换其他账号发信的功能。</p>
+
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="http://www.nichuan.top/java-send-mail-by-many-accounts-in-one-thread/" data-id="cjozqlgey001zhm00ts1g0q2b" class="article-share-link">Share</a>
+      
+      
+  <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/501-mail/">501 mail</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/MailSSLSocketFactory/">MailSSLSocketFactory</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/getDefaultInstance/">getDefaultInstance</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/多账号/">多账号</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/邮件/">邮件</a></li></ul>
+
+    </footer>
+  </div>
+  
+</article>
+
+
+  
+    <article id="post-java-send-tencent-exmail" class="article article-type-post" itemscope="" itemprop="blogPost">
+  <div class="article-meta">
+    <a href="/java-send-tencent-exmail/" class="article-date">
+  <time datetime="2018-08-01T11:12:42.000Z" itemprop="datePublished">2018-08-01</time>
+</a>
+    
+  <div class="article-category">
+    <a class="article-category-link" href="/categories/Java/">Java</a>
+  </div>
+
+  </div>
+  <div class="article-inner">
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/java-send-tencent-exmail/">Java - 使用腾讯企业邮箱发邮件的例子</a>
+    </h1>
+  
+
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <p><img src="http://www-zebe-me.oss-cn-beijing.aliyuncs.com/cover/cover-java.jpg" alt=""><br>这篇教程演示使用腾讯企业邮箱发邮件，文中代码已在java8环境下测试通过，文中的帐户名和密码等信息请修改为自己的企业邮箱账号进行测试。</p>
+<h2 id="邮件发送器"><a href="#邮件发送器" class="headerlink" title="邮件发送器"></a>邮件发送器</h2><figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br><span class="line">58</span><br><span class="line">59</span><br><span class="line">60</span><br><span class="line">61</span><br><span class="line">62</span><br><span class="line">63</span><br><span class="line">64</span><br><span class="line">65</span><br><span class="line">66</span><br><span class="line">67</span><br><span class="line">68</span><br><span class="line">69</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">package</span> me.zebe.cat.java.mail;</span><br><span class="line"></span><br><span class="line"><span class="keyword">import</span> java.util.List;</span><br><span class="line"></span><br><span class="line"><span class="comment">/**</span></span><br><span class="line"><span class="comment"> * 邮件发送器</span></span><br><span class="line"><span class="comment"> *</span></span><br><span class="line"><span class="comment"> * <span class="doctag">@author</span> Zebe</span></span><br><span class="line"><span class="comment"> */</span></span><br><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">MailSender</span> <span class="keyword">implements</span> <span class="title">Runnable</span> </span>&#123;</span><br><span class="line"></span><br><span class="line">    <span class="comment">/**</span></span><br><span class="line"><span class="comment">     * 发件人别名</span></span><br><span class="line"><span class="comment">     */</span></span><br><span class="line">    <span class="keyword">private</span> String fromAliasName;</span><br><span class="line"></span><br><span class="line">    <span class="comment">/**</span></span><br><span class="line"><span class="comment">     * 收件人</span></span><br><span class="line"><span class="comment">     */</span></span><br><span class="line">    <span class="keyword">private</span> String to;</span><br><span class="line"></span><br><span class="line">    <span class="comment">/**</span></span><br><span class="line"><span class="comment">     * 主题</span></span><br><span class="line"><span class="comment">     */</span></span><br><span class="line">    <span class="keyword">private</span> String subject;</span><br><span class="line"></span><br><span class="line">    <span class="comment">/**</span></span><br><span class="line"><span class="comment">     * 内容</span></span><br><span class="line"><span class="comment">     */</span></span><br><span class="line">    <span class="keyword">private</span> String content;</span><br><span class="line"></span><br><span class="line">    <span class="comment">/**</span></span><br><span class="line"><span class="comment">     * 附件列表</span></span><br><span class="line"><span class="comment">     */</span></span><br><span class="line">    <span class="keyword">private</span> List&lt;String&gt; attachFileList;</span><br><span class="line"></span><br><span class="line">    <span class="comment">/**</span></span><br><span class="line"><span class="comment">     * 构造器</span></span><br><span class="line"><span class="comment">     * <span class="doctag">@param</span> fromAliasName 发件人别名</span></span><br><span class="line"><span class="comment">     * <span class="doctag">@param</span> to 收件人</span></span><br><span class="line"><span class="comment">     * <span class="doctag">@param</span> subject 主题</span></span><br><span class="line"><span class="comment">     * <span class="doctag">@param</span> content 内容</span></span><br><span class="line"><span class="comment">     */</span></span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="title">MailSender</span><span class="params">(String fromAliasName, String to, String subject, String content)</span> </span>&#123;</span><br><span class="line">        <span class="keyword">this</span>.fromAliasName = fromAliasName;</span><br><span class="line">        <span class="keyword">this</span>.to = to;</span><br><span class="line">        <span class="keyword">this</span>.subject = subject;</span><br><span class="line">        <span class="keyword">this</span>.content = content;</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="comment">/**</span></span><br><span class="line"><span class="comment">     * 构造器</span></span><br><span class="line"><span class="comment">     * <span class="doctag">@param</span> fromAliasName 发件人别名</span></span><br><span class="line"><span class="comment">     * <span class="doctag">@param</span> to 收件人</span></span><br><span class="line"><span class="comment">     * <span class="doctag">@param</span> subject 主题</span></span><br><span class="line"><span class="comment">     * <span class="doctag">@param</span> content 内容</span></span><br><span class="line"><span class="comment">     * <span class="doctag">@param</span> attachFileList 附件列表</span></span><br><span class="line"><span class="comment">     */</span></span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="title">MailSender</span><span class="params">(String fromAliasName, String to, String subject, String content, List&lt;String&gt; attachFileList)</span> </span>&#123;</span><br><span class="line">        <span class="keyword">this</span>(fromAliasName, to, subject, content);</span><br><span class="line">        <span class="keyword">this</span>.attachFileList = attachFileList;</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="meta">@Override</span></span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">void</span> <span class="title">run</span><span class="params">()</span> </span>&#123;</span><br><span class="line">        <span class="keyword">new</span> SendEmailUtil(fromAliasName, to, subject, content, attachFileList).send();</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<h2 id="邮件发送线程池"><a href="#邮件发送线程池" class="headerlink" title="邮件发送线程池"></a>邮件发送线程池</h2><figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br><span class="line">58</span><br><span class="line">59</span><br><span class="line">60</span><br><span class="line">61</span><br><span class="line">62</span><br><span class="line">63</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">package</span> me.zebe.cat.java.mail;</span><br><span class="line"></span><br><span class="line"><span class="keyword">import</span> java.util.concurrent.*;</span><br><span class="line"></span><br><span class="line"><span class="comment">/**</span></span><br><span class="line"><span class="comment"> * 邮件发送线程池</span></span><br><span class="line"><span class="comment"> *</span></span><br><span class="line"><span class="comment"> * <span class="doctag">@author</span> Zebe</span></span><br><span class="line"><span class="comment"> */</span></span><br><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">MailSenderPool</span> </span>&#123;</span><br><span class="line"></span><br><span class="line">    <span class="comment">/**</span></span><br><span class="line"><span class="comment">     * 邮件发送器线程数量</span></span><br><span class="line"><span class="comment">     */</span></span><br><span class="line">    <span class="keyword">private</span> <span class="keyword">static</span> <span class="keyword">int</span> SENDER_TOTAL = <span class="number">10</span>;</span><br><span class="line"></span><br><span class="line">    <span class="comment">/**</span></span><br><span class="line"><span class="comment">     * 线程工厂（生产环境中建议使用带命名参数的线程工厂）</span></span><br><span class="line"><span class="comment">     */</span></span><br><span class="line">    <span class="keyword">private</span> <span class="keyword">static</span> ThreadFactory threadFactory = Executors.defaultThreadFactory();</span><br><span class="line"></span><br><span class="line">    <span class="comment">/**</span></span><br><span class="line"><span class="comment">     * 线程池执行器（采用了Spring提供的CustomizableThreadFactory，如果不需要请使用默认线程工厂）</span></span><br><span class="line"><span class="comment">     */</span></span><br><span class="line">    <span class="keyword">private</span> <span class="keyword">static</span> ExecutorService executor = <span class="keyword">new</span> ThreadPoolExecutor(SENDER_TOTAL, <span class="number">200</span>,</span><br><span class="line">            <span class="number">0L</span>, TimeUnit.MILLISECONDS, <span class="keyword">new</span> LinkedBlockingQueue&lt;&gt;(<span class="number">1024</span>), threadFactory,</span><br><span class="line">            <span class="keyword">new</span> ThreadPoolExecutor.AbortPolicy());</span><br><span class="line"></span><br><span class="line">    <span class="comment">/**</span></span><br><span class="line"><span class="comment">     * 内部静态实例</span></span><br><span class="line"><span class="comment">     */</span></span><br><span class="line">    <span class="keyword">private</span> <span class="keyword">static</span> <span class="class"><span class="keyword">class</span> <span class="title">Inner</span> </span>&#123;</span><br><span class="line">        <span class="keyword">private</span> <span class="keyword">static</span> MailSenderPool instance = <span class="keyword">new</span> MailSenderPool();</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="comment">/**</span></span><br><span class="line"><span class="comment">     * 获取实例</span></span><br><span class="line"><span class="comment">     *</span></span><br><span class="line"><span class="comment">     * <span class="doctag">@return</span> 返回邮件发送线程池实例</span></span><br><span class="line"><span class="comment">     */</span></span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">static</span> MailSenderPool <span class="title">getInstance</span><span class="params">()</span> </span>&#123;</span><br><span class="line">        <span class="keyword">return</span> Inner.instance;</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="comment">/**</span></span><br><span class="line"><span class="comment">     * 通过线程发送</span></span><br><span class="line"><span class="comment">     *</span></span><br><span class="line"><span class="comment">     * <span class="doctag">@param</span> sender 邮件发送器</span></span><br><span class="line"><span class="comment">     * <span class="doctag">@return</span> 返回自身</span></span><br><span class="line"><span class="comment">     */</span></span><br><span class="line">    <span class="function"><span class="keyword">public</span> MailSenderPool <span class="title">sendByThread</span><span class="params">(MailSender sender)</span> </span>&#123;</span><br><span class="line">        executor.execute(sender);</span><br><span class="line">        <span class="keyword">return</span> getInstance();</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="comment">/**</span></span><br><span class="line"><span class="comment">     * 关闭线程池</span></span><br><span class="line"><span class="comment">     */</span></span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">void</span> <span class="title">shutDown</span><span class="params">()</span> </span>&#123;</span><br><span class="line">        executor.shutdown();</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<h2 id="邮件发送工具类"><a href="#邮件发送工具类" class="headerlink" title="邮件发送工具类"></a>邮件发送工具类</h2><figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br><span class="line">58</span><br><span class="line">59</span><br><span class="line">60</span><br><span class="line">61</span><br><span class="line">62</span><br><span class="line">63</span><br><span class="line">64</span><br><span class="line">65</span><br><span class="line">66</span><br><span class="line">67</span><br><span class="line">68</span><br><span class="line">69</span><br><span class="line">70</span><br><span class="line">71</span><br><span class="line">72</span><br><span class="line">73</span><br><span class="line">74</span><br><span class="line">75</span><br><span class="line">76</span><br><span class="line">77</span><br><span class="line">78</span><br><span class="line">79</span><br><span class="line">80</span><br><span class="line">81</span><br><span class="line">82</span><br><span class="line">83</span><br><span class="line">84</span><br><span class="line">85</span><br><span class="line">86</span><br><span class="line">87</span><br><span class="line">88</span><br><span class="line">89</span><br><span class="line">90</span><br><span class="line">91</span><br><span class="line">92</span><br><span class="line">93</span><br><span class="line">94</span><br><span class="line">95</span><br><span class="line">96</span><br><span class="line">97</span><br><span class="line">98</span><br><span class="line">99</span><br><span class="line">100</span><br><span class="line">101</span><br><span class="line">102</span><br><span class="line">103</span><br><span class="line">104</span><br><span class="line">105</span><br><span class="line">106</span><br><span class="line">107</span><br><span class="line">108</span><br><span class="line">109</span><br><span class="line">110</span><br><span class="line">111</span><br><span class="line">112</span><br><span class="line">113</span><br><span class="line">114</span><br><span class="line">115</span><br><span class="line">116</span><br><span class="line">117</span><br><span class="line">118</span><br><span class="line">119</span><br><span class="line">120</span><br><span class="line">121</span><br><span class="line">122</span><br><span class="line">123</span><br><span class="line">124</span><br><span class="line">125</span><br><span class="line">126</span><br><span class="line">127</span><br><span class="line">128</span><br><span class="line">129</span><br><span class="line">130</span><br><span class="line">131</span><br><span class="line">132</span><br><span class="line">133</span><br><span class="line">134</span><br><span class="line">135</span><br><span class="line">136</span><br><span class="line">137</span><br><span class="line">138</span><br><span class="line">139</span><br><span class="line">140</span><br><span class="line">141</span><br><span class="line">142</span><br><span class="line">143</span><br><span class="line">144</span><br><span class="line">145</span><br><span class="line">146</span><br><span class="line">147</span><br><span class="line">148</span><br><span class="line">149</span><br><span class="line">150</span><br><span class="line">151</span><br><span class="line">152</span><br><span class="line">153</span><br><span class="line">154</span><br><span class="line">155</span><br><span class="line">156</span><br><span class="line">157</span><br><span class="line">158</span><br><span class="line">159</span><br><span class="line">160</span><br><span class="line">161</span><br><span class="line">162</span><br><span class="line">163</span><br><span class="line">164</span><br><span class="line">165</span><br><span class="line">166</span><br><span class="line">167</span><br><span class="line">168</span><br><span class="line">169</span><br><span class="line">170</span><br><span class="line">171</span><br><span class="line">172</span><br><span class="line">173</span><br><span class="line">174</span><br><span class="line">175</span><br><span class="line">176</span><br><span class="line">177</span><br><span class="line">178</span><br><span class="line">179</span><br><span class="line">180</span><br><span class="line">181</span><br><span class="line">182</span><br><span class="line">183</span><br><span class="line">184</span><br><span class="line">185</span><br><span class="line">186</span><br><span class="line">187</span><br><span class="line">188</span><br><span class="line">189</span><br><span class="line">190</span><br><span class="line">191</span><br><span class="line">192</span><br><span class="line">193</span><br><span class="line">194</span><br><span class="line">195</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">package</span> me.zebe.cat.java.mail;</span><br><span class="line"></span><br><span class="line"><span class="keyword">import</span> com.sun.mail.util.MailSSLSocketFactory;</span><br><span class="line"></span><br><span class="line"><span class="keyword">import</span> javax.mail.*;</span><br><span class="line"><span class="keyword">import</span> javax.mail.internet.InternetAddress;</span><br><span class="line"><span class="keyword">import</span> javax.mail.internet.MimeBodyPart;</span><br><span class="line"><span class="keyword">import</span> javax.mail.internet.MimeMessage;</span><br><span class="line"><span class="keyword">import</span> javax.mail.internet.MimeMultipart;</span><br><span class="line"><span class="keyword">import</span> java.io.IOException;</span><br><span class="line"><span class="keyword">import</span> java.io.UnsupportedEncodingException;</span><br><span class="line"><span class="keyword">import</span> java.nio.file.Files;</span><br><span class="line"><span class="keyword">import</span> java.nio.file.Paths;</span><br><span class="line"><span class="keyword">import</span> java.security.GeneralSecurityException;</span><br><span class="line"><span class="keyword">import</span> java.util.Date;</span><br><span class="line"><span class="keyword">import</span> java.util.List;</span><br><span class="line"><span class="keyword">import</span> java.util.Properties;</span><br><span class="line"></span><br><span class="line"><span class="comment">/**</span></span><br><span class="line"><span class="comment"> * 邮件发送工具类。</span></span><br><span class="line"><span class="comment"> * 以下邮件中的配置参数，请在实际环境中，根据需要采取合适的配置方式。</span></span><br><span class="line"><span class="comment"> * 发送邮件依赖 com.sun.mail（1.6.1） 包、javax.mail（1.5.0-b01） 包。</span></span><br><span class="line"><span class="comment"> * 如果使用 Idea 运行，请将这两个包（可以直接到Maven目录下面去找）添加到项目的 Libraries 里面（快捷键：Ctrl + Alt + Shift + S）</span></span><br><span class="line"><span class="comment"> *</span></span><br><span class="line"><span class="comment"> * <span class="doctag">@author</span> Zebe</span></span><br><span class="line"><span class="comment"> */</span></span><br><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">SendEmailUtil</span> </span>&#123;</span><br><span class="line"></span><br><span class="line">    <span class="comment">/**</span></span><br><span class="line"><span class="comment">     * 登录用户名</span></span><br><span class="line"><span class="comment">     */</span></span><br><span class="line">    <span class="keyword">private</span> <span class="keyword">final</span> <span class="keyword">static</span> String ACCOUNT = <span class="string">"xxxxxxx@xxxx.cn"</span>;</span><br><span class="line"></span><br><span class="line">    <span class="comment">/**</span></span><br><span class="line"><span class="comment">     * 登录密码</span></span><br><span class="line"><span class="comment">     */</span></span><br><span class="line">    <span class="keyword">private</span> <span class="keyword">final</span> <span class="keyword">static</span> String PASSWORD = <span class="string">"xxxxxxx"</span>;</span><br><span class="line"></span><br><span class="line">    <span class="comment">/**</span></span><br><span class="line"><span class="comment">     * 邮件服务器地址</span></span><br><span class="line"><span class="comment">     */</span></span><br><span class="line">    <span class="keyword">private</span> <span class="keyword">final</span> <span class="keyword">static</span> String HOST = <span class="string">"smtp.exmail.qq.com"</span>;</span><br><span class="line"></span><br><span class="line">    <span class="comment">/**</span></span><br><span class="line"><span class="comment">     * 发信端口</span></span><br><span class="line"><span class="comment">     */</span></span><br><span class="line">    <span class="keyword">private</span> <span class="keyword">final</span> <span class="keyword">static</span> String PORT = <span class="string">"465"</span>;</span><br><span class="line"></span><br><span class="line">    <span class="comment">/**</span></span><br><span class="line"><span class="comment">     * 发信协议</span></span><br><span class="line"><span class="comment">     */</span></span><br><span class="line">    <span class="keyword">private</span> <span class="keyword">final</span> <span class="keyword">static</span> String PROTOCOL = <span class="string">"ssl"</span>;</span><br><span class="line"></span><br><span class="line">    <span class="comment">/**</span></span><br><span class="line"><span class="comment">     * 发件人别名（可以为空）</span></span><br><span class="line"><span class="comment">     */</span></span><br><span class="line">    <span class="keyword">private</span> String fromAliasName;</span><br><span class="line"></span><br><span class="line">    <span class="comment">/**</span></span><br><span class="line"><span class="comment">     * 收件人</span></span><br><span class="line"><span class="comment">     */</span></span><br><span class="line">    <span class="keyword">private</span> String to;</span><br><span class="line"></span><br><span class="line">    <span class="comment">/**</span></span><br><span class="line"><span class="comment">     * 主题</span></span><br><span class="line"><span class="comment">     */</span></span><br><span class="line">    <span class="keyword">private</span> String subject;</span><br><span class="line"></span><br><span class="line">    <span class="comment">/**</span></span><br><span class="line"><span class="comment">     * 内容</span></span><br><span class="line"><span class="comment">     */</span></span><br><span class="line">    <span class="keyword">private</span> String content;</span><br><span class="line"></span><br><span class="line">    <span class="comment">/**</span></span><br><span class="line"><span class="comment">     * 附件列表（可以为空）</span></span><br><span class="line"><span class="comment">     */</span></span><br><span class="line">    <span class="keyword">private</span> List&lt;String&gt; attachFileList;</span><br><span class="line"></span><br><span class="line">    <span class="comment">/**</span></span><br><span class="line"><span class="comment">     * 构造器</span></span><br><span class="line"><span class="comment">     *</span></span><br><span class="line"><span class="comment">     * <span class="doctag">@param</span> fromAliasName  发件人别名</span></span><br><span class="line"><span class="comment">     * <span class="doctag">@param</span> to             收件人</span></span><br><span class="line"><span class="comment">     * <span class="doctag">@param</span> subject        主题</span></span><br><span class="line"><span class="comment">     * <span class="doctag">@param</span> content        内容</span></span><br><span class="line"><span class="comment">     * <span class="doctag">@param</span> attachFileList 附件列表</span></span><br><span class="line"><span class="comment">     */</span></span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="title">SendEmailUtil</span><span class="params">(String fromAliasName, String to, String subject, String content, List&lt;String&gt; attachFileList)</span> </span>&#123;</span><br><span class="line">        <span class="keyword">this</span>.fromAliasName = fromAliasName;</span><br><span class="line">        <span class="keyword">this</span>.to = to;</span><br><span class="line">        <span class="keyword">this</span>.subject = subject;</span><br><span class="line">        <span class="keyword">this</span>.content = content;</span><br><span class="line">        <span class="keyword">this</span>.attachFileList = attachFileList;</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="comment">/**</span></span><br><span class="line"><span class="comment">     * 认证信息</span></span><br><span class="line"><span class="comment">     */</span></span><br><span class="line">    <span class="keyword">static</span> <span class="class"><span class="keyword">class</span> <span class="title">MyAuthenticator</span> <span class="keyword">extends</span> <span class="title">Authenticator</span> </span>&#123;</span><br><span class="line"></span><br><span class="line">        <span class="comment">/**</span></span><br><span class="line"><span class="comment">         * 用户名</span></span><br><span class="line"><span class="comment">         */</span></span><br><span class="line">        String username = <span class="keyword">null</span>;</span><br><span class="line"></span><br><span class="line">        <span class="comment">/**</span></span><br><span class="line"><span class="comment">         * 密码</span></span><br><span class="line"><span class="comment">         */</span></span><br><span class="line">        String password = <span class="keyword">null</span>;</span><br><span class="line"></span><br><span class="line">        <span class="comment">/**</span></span><br><span class="line"><span class="comment">         * 构造器</span></span><br><span class="line"><span class="comment">         *</span></span><br><span class="line"><span class="comment">         * <span class="doctag">@param</span> username 用户名</span></span><br><span class="line"><span class="comment">         * <span class="doctag">@param</span> password 密码</span></span><br><span class="line"><span class="comment">         */</span></span><br><span class="line">        <span class="function"><span class="keyword">public</span> <span class="title">MyAuthenticator</span><span class="params">(String username, String password)</span> </span>&#123;</span><br><span class="line">            <span class="keyword">this</span>.username = username;</span><br><span class="line">            <span class="keyword">this</span>.password = password;</span><br><span class="line">        &#125;</span><br><span class="line"></span><br><span class="line">        <span class="meta">@Override</span></span><br><span class="line">        <span class="function"><span class="keyword">protected</span> PasswordAuthentication <span class="title">getPasswordAuthentication</span><span class="params">()</span> </span>&#123;</span><br><span class="line">            <span class="keyword">return</span> <span class="keyword">new</span> PasswordAuthentication(username, password);</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="comment">/**</span></span><br><span class="line"><span class="comment">     * 发送邮件</span></span><br><span class="line"><span class="comment">     */</span></span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">void</span> <span class="title">send</span><span class="params">()</span> </span>&#123;</span><br><span class="line">        <span class="comment">// 设置邮件属性</span></span><br><span class="line">        Properties prop = <span class="keyword">new</span> Properties();</span><br><span class="line">        prop.setProperty(<span class="string">"mail.transport.protocol"</span>, PROTOCOL);</span><br><span class="line">        prop.setProperty(<span class="string">"mail.smtp.host"</span>, HOST);</span><br><span class="line">        prop.setProperty(<span class="string">"mail.smtp.port"</span>, PORT);</span><br><span class="line">        prop.setProperty(<span class="string">"mail.smtp.auth"</span>, <span class="string">"true"</span>);</span><br><span class="line">        MailSSLSocketFactory sslSocketFactory = <span class="keyword">null</span>;</span><br><span class="line">        <span class="keyword">try</span> &#123;</span><br><span class="line">            sslSocketFactory = <span class="keyword">new</span> MailSSLSocketFactory();</span><br><span class="line">            sslSocketFactory.setTrustAllHosts(<span class="keyword">true</span>);</span><br><span class="line">        &#125; <span class="keyword">catch</span> (GeneralSecurityException e1) &#123;</span><br><span class="line">            e1.printStackTrace();</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="keyword">if</span> (sslSocketFactory == <span class="keyword">null</span>) &#123;</span><br><span class="line">            System.err.println(<span class="string">"开启 MailSSLSocketFactory 失败"</span>);</span><br><span class="line">        &#125; <span class="keyword">else</span> &#123;</span><br><span class="line">            prop.put(<span class="string">"mail.smtp.ssl.enable"</span>, <span class="string">"true"</span>);</span><br><span class="line">            prop.put(<span class="string">"mail.smtp.ssl.socketFactory"</span>, sslSocketFactory);</span><br><span class="line">            <span class="comment">// 创建邮件会话（注意，如果要在一个进程中切换多个邮箱账号发信，应该用 Session.getInstance）</span></span><br><span class="line">            Session session = Session.getDefaultInstance(prop, <span class="keyword">new</span> MyAuthenticator(ACCOUNT, PASSWORD));</span><br><span class="line">            <span class="comment">// 开启调试模式（生产环境中请不要开启此项）</span></span><br><span class="line">            session.setDebug(<span class="keyword">true</span>);</span><br><span class="line">            <span class="keyword">try</span> &#123;</span><br><span class="line">                MimeMessage mimeMessage = <span class="keyword">new</span> MimeMessage(session);</span><br><span class="line">                <span class="comment">// 设置发件人别名（如果未设置别名就默认为发件人邮箱）</span></span><br><span class="line">                <span class="keyword">if</span> (fromAliasName != <span class="keyword">null</span> &amp;&amp; !fromAliasName.trim().isEmpty()) &#123;</span><br><span class="line">                    mimeMessage.setFrom(<span class="keyword">new</span> InternetAddress(ACCOUNT, fromAliasName));</span><br><span class="line">                &#125;</span><br><span class="line">                <span class="comment">// 设置主题和收件人、发信时间等信息</span></span><br><span class="line">                mimeMessage.addRecipient(Message.RecipientType.TO, <span class="keyword">new</span> InternetAddress(to));</span><br><span class="line">                mimeMessage.setSubject(subject);</span><br><span class="line">                mimeMessage.setSentDate(<span class="keyword">new</span> Date());</span><br><span class="line">                <span class="comment">// 如果有附件信息，则添加附件</span></span><br><span class="line">                <span class="keyword">if</span> (!attachFileList.isEmpty()) &#123;</span><br><span class="line">                    Multipart multipart = <span class="keyword">new</span> MimeMultipart();</span><br><span class="line">                    MimeBodyPart body = <span class="keyword">new</span> MimeBodyPart();</span><br><span class="line">                    body.setContent(content, <span class="string">"text/html; charset=UTF-8"</span>);</span><br><span class="line">                    multipart.addBodyPart(body);</span><br><span class="line">                    <span class="comment">// 添加所有附件（添加时判断文件是否存在）</span></span><br><span class="line">                    <span class="keyword">for</span> (String filePath : attachFileList) &#123;</span><br><span class="line">                        <span class="keyword">if</span> (Files.exists(Paths.get(filePath))) &#123;</span><br><span class="line">                            MimeBodyPart tempBodyPart = <span class="keyword">new</span> MimeBodyPart();</span><br><span class="line">                            tempBodyPart.attachFile(filePath);</span><br><span class="line">                            multipart.addBodyPart(tempBodyPart);</span><br><span class="line">                        &#125;</span><br><span class="line">                    &#125;</span><br><span class="line">                    mimeMessage.setContent(multipart);</span><br><span class="line">                &#125; <span class="keyword">else</span> &#123;</span><br><span class="line">                    mimeMessage.setText(content);</span><br><span class="line">                &#125;</span><br><span class="line">                <span class="comment">// 开始发信</span></span><br><span class="line">                mimeMessage.saveChanges();</span><br><span class="line">                Transport.send(mimeMessage);</span><br><span class="line">            &#125; <span class="keyword">catch</span> (MessagingException e) &#123;</span><br><span class="line">                e.printStackTrace();</span><br><span class="line">            &#125; <span class="keyword">catch</span> (UnsupportedEncodingException e) &#123;</span><br><span class="line">                e.printStackTrace();</span><br><span class="line">            &#125; <span class="keyword">catch</span> (IOException e) &#123;</span><br><span class="line">                e.printStackTrace();</span><br><span class="line">            &#125;</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<h2 id="发送邮件测试"><a href="#发送邮件测试" class="headerlink" title="发送邮件测试"></a>发送邮件测试</h2><figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">package</span> me.zebe.cat.java.mail;</span><br><span class="line"></span><br><span class="line"><span class="keyword">import</span> java.util.Arrays;</span><br><span class="line"><span class="keyword">import</span> java.util.List;</span><br><span class="line"></span><br><span class="line"><span class="comment">/**</span></span><br><span class="line"><span class="comment"> * 发送邮件测试</span></span><br><span class="line"><span class="comment"> *</span></span><br><span class="line"><span class="comment"> * <span class="doctag">@author</span> Zebe</span></span><br><span class="line"><span class="comment"> */</span></span><br><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">SendMailTest</span> </span>&#123;</span><br><span class="line"></span><br><span class="line">    <span class="comment">/**</span></span><br><span class="line"><span class="comment">     * 运行入口</span></span><br><span class="line"><span class="comment">     *</span></span><br><span class="line"><span class="comment">     * <span class="doctag">@param</span> args 运行参数</span></span><br><span class="line"><span class="comment">     */</span></span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">void</span> <span class="title">main</span><span class="params">(String[] args)</span> </span>&#123;</span><br><span class="line">        <span class="comment">// 设置发信参数</span></span><br><span class="line">        <span class="keyword">final</span> String fromAliasName = <span class="string">"自定义别名Test"</span>;</span><br><span class="line">        <span class="keyword">final</span> String to = <span class="string">"zebe@vip.qq.com"</span>;</span><br><span class="line">        <span class="keyword">final</span> String subject = <span class="string">"腾讯企业邮箱发信测试"</span>;</span><br><span class="line">        <span class="keyword">final</span> String content = <span class="string">"&lt;h1&gt;带多个附件的邮件测试&lt;/h1&gt;&lt;p style='color:red'&gt;这是邮件内容正文。&lt;/p&gt;"</span>;</span><br><span class="line">        <span class="comment">// 设置附件路径（注意：res 是项目根目录下的一个文件夹）</span></span><br><span class="line">        <span class="keyword">final</span> List&lt;String&gt; attachFileList = Arrays.asList(<span class="string">"res/1.png"</span>, <span class="string">"res/1.pdf"</span>);</span><br><span class="line">        <span class="comment">// 通过线程池发送邮件</span></span><br><span class="line">        MailSenderPool pool = MailSenderPool.getInstance();</span><br><span class="line">        pool.sendByThread(<span class="keyword">new</span> MailSender(fromAliasName, to, subject, content, attachFileList)).shutDown();</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<h2 id="小结"><a href="#小结" class="headerlink" title="小结"></a>小结</h2><p>本文演示的是纯Java项目进行腾讯企业邮箱发信的例子，文中的帐户名和密码等信息请修改为自己的企业邮箱账号进行测试。</p>
+
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="http://www.nichuan.top/java-send-tencent-exmail/" data-id="cjozqlgh5009rhm001x1tafyv" class="article-share-link">Share</a>
+      
+      
+  <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/腾讯/">腾讯</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/腾讯企业邮箱/">腾讯企业邮箱</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/邮件/">邮件</a></li></ul>
+
+    </footer>
+  </div>
+  
+</article>
+
+
+  
+    <article id="post-java-8-use-jdeps-tool" class="article article-type-post" itemscope="" itemprop="blogPost">
+  <div class="article-meta">
+    <a href="/java-8-use-jdeps-tool/" class="article-date">
+  <time datetime="2018-07-27T14:55:40.000Z" itemprop="datePublished">2018-07-27</time>
+</a>
+    
+  <div class="article-category">
+    <a class="article-category-link" href="/categories/Java/">Java</a>►<a class="article-category-link" href="/categories/Java/Java8/">Java8</a>
+  </div>
+
+  </div>
+  <div class="article-inner">
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/java-8-use-jdeps-tool/">Java8 - 使用jdeps —— Java类依赖性分析器</a>
+    </h1>
+  
+
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <p><img src="http://www-zebe-me.oss-cn-beijing.aliyuncs.com/cover/cover-java-8.jpg" alt=""><br><strong>jdeps</strong>，即“java dependencies” 的缩写，是Java8中提供的一个工具。</p>
+<p>jdeps命令显示Java类文件的包级或类级依赖关系。输入类可以是.class文件、目录、jar文件的路径名，或者可以是完全限定的类名称，以分析所有类文件。jdeps的参数选项决定了输出的内容。默认情况下，JDEPS将依赖关系输出到系统输出（控制台）。它可以用DOT语言生成依赖关系（见 -dotoutput 参数）。</p>
+<p>在这篇文章里，我创建了一个简单的 Maven 项目 <strong>cat-maven-simple</strong>，在这个项目里依赖了 Java 本身的一些库，另外依赖了 <strong>fastjson</strong> 这个库。我将其打包为 <strong>cat-maven-simple.jar</strong>，然后使用 JDK8提供的 jdeps 工具分析它的依赖，看看这个工具会输出什么结果。</p>
+<h2 id="创建一个简单的Maven项目"><a href="#创建一个简单的Maven项目" class="headerlink" title="创建一个简单的Maven项目"></a>创建一个简单的Maven项目</h2><p>使用Idea新建项目 cat-maven-simple，添加依赖如下：</p>
+<figure class="highlight xml"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">&lt;!-- fastjson --&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">dependencies</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">dependency</span>&gt;</span></span><br><span class="line">        <span class="tag">&lt;<span class="name">groupId</span>&gt;</span>com.alibaba<span class="tag">&lt;/<span class="name">groupId</span>&gt;</span></span><br><span class="line">        <span class="tag">&lt;<span class="name">artifactId</span>&gt;</span>fastjson<span class="tag">&lt;/<span class="name">artifactId</span>&gt;</span></span><br><span class="line">        <span class="tag">&lt;<span class="name">version</span>&gt;</span>1.2.47<span class="tag">&lt;/<span class="name">version</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;/<span class="name">dependency</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">dependencies</span>&gt;</span></span><br></pre></td></tr></table></figure>
+<p>完整的 pom.xml 如下：</p>
+<figure class="highlight xml"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">&lt;?xml version="1.0" encoding="UTF-8"?&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">project</span> <span class="attr">xmlns</span>=<span class="string">"http://maven.apache.org/POM/4.0.0"</span></span></span><br><span class="line"><span class="tag">         <span class="attr">xmlns:xsi</span>=<span class="string">"http://www.w3.org/2001/XMLSchema-instance"</span></span></span><br><span class="line"><span class="tag">         <span class="attr">xsi:schemaLocation</span>=<span class="string">"http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd"</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">modelVersion</span>&gt;</span>4.0.0<span class="tag">&lt;/<span class="name">modelVersion</span>&gt;</span></span><br><span class="line"></span><br><span class="line">    <span class="tag">&lt;<span class="name">groupId</span>&gt;</span>me.zebe<span class="tag">&lt;/<span class="name">groupId</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">artifactId</span>&gt;</span>cat-maven-simple<span class="tag">&lt;/<span class="name">artifactId</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">version</span>&gt;</span>1.0-SNAPSHOT<span class="tag">&lt;/<span class="name">version</span>&gt;</span></span><br><span class="line"></span><br><span class="line">    <span class="comment">&lt;!-- fastjson --&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">dependencies</span>&gt;</span></span><br><span class="line">        <span class="tag">&lt;<span class="name">dependency</span>&gt;</span></span><br><span class="line">            <span class="tag">&lt;<span class="name">groupId</span>&gt;</span>com.alibaba<span class="tag">&lt;/<span class="name">groupId</span>&gt;</span></span><br><span class="line">            <span class="tag">&lt;<span class="name">artifactId</span>&gt;</span>fastjson<span class="tag">&lt;/<span class="name">artifactId</span>&gt;</span></span><br><span class="line">            <span class="tag">&lt;<span class="name">version</span>&gt;</span>1.2.47<span class="tag">&lt;/<span class="name">version</span>&gt;</span></span><br><span class="line">        <span class="tag">&lt;/<span class="name">dependency</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;/<span class="name">dependencies</span>&gt;</span></span><br><span class="line"></span><br><span class="line">    <span class="tag">&lt;<span class="name">build</span>&gt;</span></span><br><span class="line">        <span class="tag">&lt;<span class="name">plugins</span>&gt;</span></span><br><span class="line">            <span class="tag">&lt;<span class="name">plugin</span>&gt;</span></span><br><span class="line">                <span class="tag">&lt;<span class="name">groupId</span>&gt;</span>org.apache.maven.plugins<span class="tag">&lt;/<span class="name">groupId</span>&gt;</span></span><br><span class="line">                <span class="tag">&lt;<span class="name">artifactId</span>&gt;</span>maven-compiler-plugin<span class="tag">&lt;/<span class="name">artifactId</span>&gt;</span></span><br><span class="line">                <span class="tag">&lt;<span class="name">configuration</span>&gt;</span></span><br><span class="line">                    <span class="tag">&lt;<span class="name">source</span>&gt;</span>8<span class="tag">&lt;/<span class="name">source</span>&gt;</span></span><br><span class="line">                    <span class="tag">&lt;<span class="name">target</span>&gt;</span>8<span class="tag">&lt;/<span class="name">target</span>&gt;</span></span><br><span class="line">                <span class="tag">&lt;/<span class="name">configuration</span>&gt;</span></span><br><span class="line">            <span class="tag">&lt;/<span class="name">plugin</span>&gt;</span></span><br><span class="line">        <span class="tag">&lt;/<span class="name">plugins</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;/<span class="name">build</span>&gt;</span></span><br><span class="line"></span><br><span class="line"><span class="tag">&lt;/<span class="name">project</span>&gt;</span></span><br></pre></td></tr></table></figure>
+<p>在 me.zebe.cat.maven 包下面创建一个 <strong>CatMavenSimpleDemo</strong> 类，生成 main 方法，完整代码如下：</p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">package</span> me.zebe.cat.maven;</span><br><span class="line"></span><br><span class="line"><span class="keyword">import</span> com.alibaba.fastjson.JSONObject;</span><br><span class="line"></span><br><span class="line"><span class="keyword">import</span> java.time.LocalDate;</span><br><span class="line"><span class="keyword">import</span> java.time.format.DateTimeFormatter;</span><br><span class="line"><span class="keyword">import</span> java.time.format.FormatStyle;</span><br><span class="line"><span class="keyword">import</span> java.util.HashMap;</span><br><span class="line"><span class="keyword">import</span> java.util.Map;</span><br><span class="line"></span><br><span class="line"><span class="comment">/**</span></span><br><span class="line"><span class="comment"> * 简单Maven项目例子</span></span><br><span class="line"><span class="comment"> *</span></span><br><span class="line"><span class="comment"> * <span class="doctag">@author</span> Zebe</span></span><br><span class="line"><span class="comment"> */</span></span><br><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">CatMavenSimpleDemo</span> </span>&#123;</span><br><span class="line"></span><br><span class="line">    <span class="comment">/**</span></span><br><span class="line"><span class="comment">     * 运行入口</span></span><br><span class="line"><span class="comment">     *</span></span><br><span class="line"><span class="comment">     * <span class="doctag">@param</span> args 运行参数</span></span><br><span class="line"><span class="comment">     */</span></span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">void</span> <span class="title">main</span><span class="params">(String[] args)</span> </span>&#123;</span><br><span class="line">        LocalDate today = LocalDate.now();</span><br><span class="line">        Map&lt;String, Object&gt; data = <span class="keyword">new</span> HashMap&lt;&gt;();</span><br><span class="line">        data.put(<span class="string">"name"</span>, <span class="string">"Zebe"</span>);</span><br><span class="line">        data.put(<span class="string">"blog"</span>, <span class="string">"www.zebe.me"</span>);</span><br><span class="line">        data.put(<span class="string">"date"</span>, DateTimeFormatter.ofLocalizedDate(FormatStyle.FULL).format(today));</span><br><span class="line">        String json = JSONObject.toJSONString(data);</span><br><span class="line">        System.out.println(json);</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<p>在IDEA右侧 Maven Projects 面板中，找到项目，运行 Lifecycle 下面的 package 命令，将其打包，得到生成的 jar包：<strong>cat-maven-simple-1.0-SNAPSHOT.jar</strong>。</p>
+<h2 id="使用jdeps分析JAR包的依赖"><a href="#使用jdeps分析JAR包的依赖" class="headerlink" title="使用jdeps分析JAR包的依赖"></a>使用jdeps分析JAR包的依赖</h2><p>使用命令行进入 jar 包所在的目录（我本机的路径是：P:\personal\cat\java\cat-maven-simple\target\cat-maven-simple-1.0-SNAPSHOT.jar），然后执行一下命令：</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">jdeps cat-maven-simple-1.0-SNAPSHOT.jar</span><br></pre></td></tr></table></figure>
+<p>如果提示命令未找到，请检查你的Java版本或者环境变量配置。如果你成功安装了Java8，那么在Java安装目录下的bin目录中，会有一个 <strong>jdeps.exe</strong> 文件，这个文件就是 jdeps 依赖分析工具。</p>
+<p>如果命令成功执行，则会输出以下结果：</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line">cat-maven-simple-1.0-SNAPSHOT.jar -&gt; I:\jdk-8u152\jre\lib\rt.jar</span><br><span class="line">cat-maven-simple-1.0-SNAPSHOT.jar -&gt; 找不到</span><br><span class="line">   me.zebe.cat.maven (cat-maven-simple-1.0-SNAPSHOT.jar)</span><br><span class="line">      -&gt; com.alibaba.fastjson                               找不到</span><br><span class="line">      -&gt; java.io</span><br><span class="line">      -&gt; java.lang</span><br><span class="line">      -&gt; java.time</span><br><span class="line">      -&gt; java.time.format</span><br><span class="line">      -&gt; java.time.temporal</span><br><span class="line">      -&gt; java.util</span><br></pre></td></tr></table></figure>
+<p>在上面输出的结果，提示“找不到”的那一行，说明该库无法在当前目录直接找到。</p>
+<h2 id="jdeps参数"><a href="#jdeps参数" class="headerlink" title="jdeps参数"></a>jdeps参数</h2><p>jdeps可以指定很多参数运行，这里简单列举几个参数的用法，要查看全部详细的参数例子，请查看官方文档，地址：<a href="https://docs.oracle.com/javase/8/docs/technotes/tools/unix/jdeps.html。" target="_blank" rel="noopener">https://docs.oracle.com/javase/8/docs/technotes/tools/unix/jdeps.html。</a></p>
+<p>-s(或-summary)：仅打印依赖性摘要。<br>-v(或-verbose)：打印所有类级别的依赖项。<br>-verbose:package：打印包级依赖项，不包括同一归档中的依赖项。<br>-verbose:class：打印类级依赖项，排除同一归档中的依赖项。<br>-cp(或-classpath) &lt;路径名&gt;：指定在何处查找类文件。<br>-p(或-package) &lt;包名&gt;：指定在何处查找类文件。<br>-R(或-recursive)：递归遍历所有依赖项。</p>
+<h2 id="jdeps小结"><a href="#jdeps小结" class="headerlink" title="jdeps小结"></a>jdeps小结</h2><p>好了，jdeps工具的演示就到这里了，有了这个工具，可以在有些情况下快速的查看一个 JAR 包（或者某个单独的Java类）中依赖了哪些 JAR 包，对于快速分析问题有帮助。</p>
+<p>jdeps官方演示地址：<br><a href="https://docs.oracle.com/javase/8/docs/technotes/tools/unix/jdeps.html。" target="_blank" rel="noopener">https://docs.oracle.com/javase/8/docs/technotes/tools/unix/jdeps.html。</a></p>
+
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="http://www.nichuan.top/java-8-use-jdeps-tool/" data-id="cjozqlgeg0011hm00nw58gn3m" class="article-share-link">Share</a>
+      
+      
+  <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/Java类依赖/">Java类依赖</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/jdeps/">jdeps</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/jdeps-exe/">jdeps.exe</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/jdeps参数/">jdeps参数</a></li></ul>
+
+    </footer>
+  </div>
+  
+</article>
+
+
+  
+    <article id="post-java-nio-files-read-content-in-one-line" class="article article-type-post" itemscope="" itemprop="blogPost">
+  <div class="article-meta">
+    <a href="/java-nio-files-read-content-in-one-line/" class="article-date">
+  <time datetime="2018-07-22T15:25:03.000Z" itemprop="datePublished">2018-07-22</time>
+</a>
+    
+  <div class="article-category">
+    <a class="article-category-link" href="/categories/Java/">Java</a>
+  </div>
+
+  </div>
+  <div class="article-inner">
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/java-nio-files-read-content-in-one-line/">Java - 使用Files类一行代码读取文件内容</a>
+    </h1>
+  
+
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <p><img src="http://www-zebe-me.oss-cn-beijing.aliyuncs.com/cover/cover-java.jpg" alt=""><br><code>Files</code> 类是 java.nio 包中的用于操作文件的类，提供了比 java.io.File 类更便捷的操作。<br>其中，<code>Files</code>类的 <code>readAllBytes</code> 方法提供了一个读取所有字节的方法，可以将读取结果很方便地赋值给一个 <code>String</code>。<br>例如以下代码，可以用一行代码实现读取文件的内容，然后赋值给一个字符串：</p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">package</span> me.zebe.cat;</span><br><span class="line"></span><br><span class="line"><span class="keyword">import</span> java.io.IOException;</span><br><span class="line"><span class="keyword">import</span> java.nio.file.Files;</span><br><span class="line"><span class="keyword">import</span> java.nio.file.Paths;</span><br><span class="line"></span><br><span class="line"><span class="comment">/**</span></span><br><span class="line"><span class="comment"> * Java NIO包Files类型一行代码读取文件内容示例</span></span><br><span class="line"><span class="comment"> *</span></span><br><span class="line"><span class="comment"> * <span class="doctag">@author</span> Zebe</span></span><br><span class="line"><span class="comment"> */</span></span><br><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">ReadFileInOneLineDemo</span> </span>&#123;</span><br><span class="line"></span><br><span class="line">    <span class="comment">/**</span></span><br><span class="line"><span class="comment">     * 运行入口</span></span><br><span class="line"><span class="comment">     * <span class="doctag">@param</span> args 运行参数</span></span><br><span class="line"><span class="comment">     * <span class="doctag">@throws</span> IOException</span></span><br><span class="line"><span class="comment">     */</span></span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">void</span> <span class="title">main</span><span class="params">(String[] args)</span> <span class="keyword">throws</span> IOException </span>&#123;</span><br><span class="line">        <span class="comment">// Files 类的 readAllBytes 方法会将文件的内容全部读入到一个字节数组中</span></span><br><span class="line">        <span class="comment">// 通过 String 类的构造方法，可以实现一行代码将文件的内容读取出来赋值给String</span></span><br><span class="line">        String content = <span class="keyword">new</span> String(Files.readAllBytes(Paths.get(<span class="string">"T:\\JavaScript特效\\01页面特效\\1.1  HTML页面反向显示.htm"</span>)), <span class="string">"GBK"</span>);</span><br><span class="line">        System.out.println(content);</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<p>运行结果如下：</p>
+<figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">html</span> <span class="attr">dir</span>=<span class="string">rtl</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">head</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">title</span>&gt;</span>标题页<span class="tag">&lt;/<span class="name">title</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">body</span>&gt;</span></span><br><span class="line">这是一段伟大的历史<span class="tag">&lt;<span class="name">br</span> /&gt;</span></span><br><span class="line">来自全世界的瞩目和掌声</span><br><span class="line"><span class="tag">&lt;/<span class="name">body</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">html</span>&gt;</span></span><br></pre></td></tr></table></figure>
+
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="http://www.nichuan.top/java-nio-files-read-content-in-one-line/" data-id="cjozqlgew001whm003753ljii" class="article-share-link">Share</a>
+      
+      
+  <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/Files/">Files</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/java/">java</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/nio/">nio</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/readAllBytes/">readAllBytes</a></li></ul>
+
+    </footer>
+  </div>
+  
+</article>
+
+
+  
+    <article id="post-java-call-java-script" class="article article-type-post" itemscope="" itemprop="blogPost">
+  <div class="article-meta">
+    <a href="/java-call-java-script/" class="article-date">
+  <time datetime="2018-07-22T02:07:46.000Z" itemprop="datePublished">2018-07-22</time>
+</a>
+    
+  <div class="article-category">
+    <a class="article-category-link" href="/categories/Java/">Java</a>
+  </div>
+
+  </div>
+  <div class="article-inner">
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/java-call-java-script/">Java - 调用JavaScript脚本的例子</a>
+    </h1>
+  
+
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <p><img src="http://www-zebe-me.oss-cn-beijing.aliyuncs.com/cover/cover-java.jpg" alt=""><br>Java中提供了一个脚本引擎管理器：<code>ScriptEngineManager</code>，它会在虚拟机启动时发现可用的脚本引擎。</p>
+<h2 id="脚本引擎管理器"><a href="#脚本引擎管理器" class="headerlink" title="脚本引擎管理器"></a>脚本引擎管理器</h2><p>构造一个 <code>ScriptEngineManager</code>，调用它的 <code>getEngineFactories</code> 方法，可用获取到当前Java环境所有支持的引擎工厂，可用通过循环去获取每个引擎工厂的属性。请参考以下代码：</p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">void</span> <span class="title">main</span><span class="params">(String[] args)</span> </span>&#123;</span><br><span class="line">        <span class="comment">// 构造一个脚本引擎管理器</span></span><br><span class="line">        ScriptEngineManager manager = <span class="keyword">new</span> ScriptEngineManager();</span><br><span class="line">        <span class="comment">// 遍历所有的引擎工厂，输出引擎工厂的信息</span></span><br><span class="line">        <span class="keyword">for</span> (ScriptEngineFactory factory : manager.getEngineFactories()) &#123;</span><br><span class="line">            String engineName = factory.getEngineName();</span><br><span class="line">            String engineVersion = factory.getEngineVersion();</span><br><span class="line">            String languageName = factory.getLanguageName();</span><br><span class="line">            String languageVersion = factory.getLanguageVersion();</span><br><span class="line">            ScriptEngine engine = factory.getScriptEngine();</span><br><span class="line">            System.out.println(String.format(<span class="string">"引擎名称：%s\t引擎版本：%s\t语言名称：%s\t语言版本：%s\t"</span>,</span><br><span class="line">                    engineName, engineVersion, languageName, languageVersion));</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br></pre></td></tr></table></figure>
+<p>以上程序可能会输出以下结果：</p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">引擎名称：Oracle Nashorn	引擎版本：<span class="number">1.8</span>.0_152	语言名称：ECMAScript	语言版本：ECMA - <span class="number">262</span> Edition <span class="number">5.1</span></span><br></pre></td></tr></table></figure>
+<h2 id="Java调用JavaScript脚本"><a href="#Java调用JavaScript脚本" class="headerlink" title="Java调用JavaScript脚本"></a>Java调用JavaScript脚本</h2><p>首先通过构造脚本引擎管理器 <code>ScriptEngineManager</code>，得到所有支持的引擎工厂，并判断是否支持JS引擎，如果支持，才可以执行JS脚本。<br>请参考以下完整代码：<br><figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br><span class="line">58</span><br><span class="line">59</span><br><span class="line">60</span><br><span class="line">61</span><br><span class="line">62</span><br><span class="line">63</span><br><span class="line">64</span><br><span class="line">65</span><br><span class="line">66</span><br><span class="line">67</span><br><span class="line">68</span><br><span class="line">69</span><br><span class="line">70</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">package</span> me.zebe.cat;</span><br><span class="line"></span><br><span class="line"><span class="keyword">import</span> javax.script.*;</span><br><span class="line"><span class="keyword">import</span> java.io.File;</span><br><span class="line"><span class="keyword">import</span> java.io.FileNotFoundException;</span><br><span class="line"><span class="keyword">import</span> java.io.FileReader;</span><br><span class="line"></span><br><span class="line"><span class="comment">/**</span></span><br><span class="line"><span class="comment"> * 调用JavaScript脚本演示</span></span><br><span class="line"><span class="comment"> * <span class="doctag">@author</span> Zebe</span></span><br><span class="line"><span class="comment"> */</span></span><br><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">CallJavaScriptDemo</span> </span>&#123;</span><br><span class="line"></span><br><span class="line">    <span class="comment">/**</span></span><br><span class="line"><span class="comment">     * 运行入口</span></span><br><span class="line"><span class="comment">     * <span class="doctag">@param</span> args 运行参数</span></span><br><span class="line"><span class="comment">     */</span></span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">void</span> <span class="title">main</span><span class="params">(String[] args)</span> </span>&#123;</span><br><span class="line">        <span class="comment">// 构造一个脚本引擎管理器</span></span><br><span class="line">        ScriptEngineManager manager = <span class="keyword">new</span> ScriptEngineManager();</span><br><span class="line">        <span class="comment">// 遍历所有的引擎工厂，输出引擎工厂的信息</span></span><br><span class="line">        <span class="keyword">for</span> (ScriptEngineFactory factory : manager.getEngineFactories()) &#123;</span><br><span class="line">            String engineName = factory.getEngineName();</span><br><span class="line">            String engineVersion = factory.getEngineVersion();</span><br><span class="line">            String languageName = factory.getLanguageName();</span><br><span class="line">            String languageVersion = factory.getLanguageVersion();</span><br><span class="line">            ScriptEngine engine = factory.getScriptEngine();</span><br><span class="line">            System.out.println(String.format(<span class="string">"引擎名称：%s\t引擎版本：%s\t语言名称：%s\t语言版本：%s\t"</span>,</span><br><span class="line">                    engineName, engineVersion, languageName, languageVersion));</span><br><span class="line">            <span class="comment">// 如果支持JavaScript</span></span><br><span class="line">            <span class="keyword">if</span> (<span class="string">"ECMAScript"</span>.equals(languageName)) &#123;</span><br><span class="line">                callSimpleJavaScript(engine);</span><br><span class="line">                callJavaScriptFromFile(engine);</span><br><span class="line">            &#125;</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="comment">/**</span></span><br><span class="line"><span class="comment">     * 从简单字符串执行JavaScript脚本</span></span><br><span class="line"><span class="comment">     * <span class="doctag">@param</span> engine 脚本引擎</span></span><br><span class="line"><span class="comment">     */</span></span><br><span class="line">    <span class="function"><span class="keyword">private</span> <span class="keyword">static</span> <span class="keyword">void</span> <span class="title">callSimpleJavaScript</span><span class="params">(ScriptEngine engine)</span> </span>&#123;</span><br><span class="line">        <span class="keyword">try</span> &#123;</span><br><span class="line">            <span class="keyword">final</span> String script1 = <span class="string">"var k = 0;"</span>;</span><br><span class="line">            <span class="keyword">final</span> String script2 = <span class="string">"k + 5;"</span>;</span><br><span class="line">            System.out.println(script1 + <span class="string">" 的执行结果是："</span> + engine.eval(script1));</span><br><span class="line">            System.out.println(script2 + <span class="string">" 的执行结果是："</span> + engine.eval(script2));</span><br><span class="line">        &#125; <span class="keyword">catch</span> (ScriptException e) &#123;</span><br><span class="line">            e.printStackTrace();</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="comment">/**</span></span><br><span class="line"><span class="comment">     * 从JavaScript文件执行JavaScript脚本</span></span><br><span class="line"><span class="comment">     * <span class="doctag">@param</span> engine 脚本引擎</span></span><br><span class="line"><span class="comment">     */</span></span><br><span class="line">    <span class="function"><span class="keyword">private</span> <span class="keyword">static</span> <span class="keyword">void</span> <span class="title">callJavaScriptFromFile</span><span class="params">(ScriptEngine engine)</span> </span>&#123;</span><br><span class="line">        <span class="keyword">try</span> &#123;</span><br><span class="line">            <span class="keyword">final</span> String fileName = <span class="string">"test.js"</span>;</span><br><span class="line">            File file = <span class="keyword">new</span> File(fileName);</span><br><span class="line">            <span class="keyword">if</span> (file.exists()) &#123;</span><br><span class="line">                System.out.println(<span class="string">"从 "</span> + fileName + <span class="string">" 的执行结果是："</span> + engine.eval(<span class="keyword">new</span> FileReader(file)));</span><br><span class="line">            &#125; <span class="keyword">else</span> &#123;</span><br><span class="line">                System.err.println(fileName + <span class="string">" 不存在，无法执行脚本"</span>);</span><br><span class="line">            &#125;</span><br><span class="line">        &#125; <span class="keyword">catch</span> (ScriptException | FileNotFoundException e) &#123;</span><br><span class="line">            e.printStackTrace();</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></p>
+<h2 id="小结"><a href="#小结" class="headerlink" title="小结"></a>小结</h2><p>脚本引擎是一个可以执行用某种特定语言编写的脚本的类库。Java不仅可以支持对 <code>JavaScript</code> 的调用，还支持对其他类型的脚本调用，包括 <code>Groovy</code>、<code>Ruby</code>，甚至是更加奇异的诸如 <code>Scheme</code> 和 <code>Haskell</code> 等语言编写的脚本。本文仅作简单演示，内容中没有演示 Java 对 <code>JavaScript</code> 函数的调用，请读者自行研究学习。</p>
+
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="http://www.nichuan.top/java-call-java-script/" data-id="cjozqlgej0017hm009tzesl51" class="article-share-link">Share</a>
+      
+      
+  <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/Java执行JS脚本/">Java执行JS脚本</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/ScriptEngine/">ScriptEngine</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/ScriptEngineManager/">ScriptEngineManager</a></li></ul>
+
+    </footer>
+  </div>
+  
+</article>
+
+
+  
+    <article id="post-mysql-can-not-open-and-lock-privilege-tables" class="article article-type-post" itemscope="" itemprop="blogPost">
+  <div class="article-meta">
+    <a href="/mysql-can-not-open-and-lock-privilege-tables/" class="article-date">
+  <time datetime="2018-06-08T07:47:19.000Z" itemprop="datePublished">2018-06-08</time>
+</a>
+    
+  <div class="article-category">
+    <a class="article-category-link" href="/categories/数据库/">数据库</a>►<a class="article-category-link" href="/categories/数据库/MySQL/">MySQL</a>
+  </div>
+
+  </div>
+  <div class="article-inner">
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/mysql-can-not-open-and-lock-privilege-tables/">MySQL5.6自定义data文件夹路径后无法启动发生系统错误1067 - 解决办法</a>
+    </h1>
+  
+
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <p><img src="http://www-zebe-me.oss-cn-beijing.aliyuncs.com/cover/cover-mysql.jpg" alt=""><br>这篇文章记录一下Windows下MySQL服务无法启动系统错误1067的原因和解决办法。问题很简单，记录很详细，这样有助于提高自己的思维和排查问题的能力。</p>
+<h2 id="安装步骤及错误现象"><a href="#安装步骤及错误现象" class="headerlink" title="安装步骤及错误现象"></a>安装步骤及错误现象</h2><p>我下载了MySQL5.6的ZIP包，拷贝了默认的配置文件 <code>my-default.ini</code>，重命名为 <code>my.ini</code>，并修改配置如下：</p>
+<figure class="highlight ini"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br></pre></td><td class="code"><pre><span class="line"><span class="section">[mysqld]</span></span><br><span class="line"></span><br><span class="line"><span class="attr">log_bin</span> = mysql-bin</span><br><span class="line"><span class="attr">basedir</span> = I:\mysql-<span class="number">5.6</span>.<span class="number">40</span></span><br><span class="line"><span class="attr">datadir</span> = D:\database\mysql</span><br><span class="line"><span class="attr">server_id</span> = <span class="number">111</span></span><br><span class="line"><span class="attr">log-bin-index</span>=mysql-bin.index</span><br><span class="line"><span class="attr">sync_binlog</span>=<span class="number">1</span></span><br><span class="line"><span class="attr">binlog_format</span>=mixed</span><br><span class="line"><span class="attr">binlog-do-db</span> = testdb</span><br><span class="line"><span class="attr">binlog-ignore-db</span> = mysql</span><br><span class="line"><span class="attr">binlog-ignore-db</span> = performance_schema</span><br><span class="line"><span class="attr">binlog-ignore-db</span> = information_schema</span><br><span class="line"><span class="attr">binlog_checksum</span>=NONE</span><br><span class="line"><span class="attr">sql_mode</span>=NO_ENGINE_SUBSTITUTION,STRICT_TRANS_TABLES</span><br></pre></td></tr></table></figure>
+<p>因为我有把软件和数据分开存放的习惯，在这个配置文件里，<strong>我把 datadir 设置到了另外一个盘，而不是 MySQl 安装所在目录</strong>。请注意 MySQL 安装目录下有一个 <strong>data</strong> 文件夹。</p>
+<h3 id="把MySQL安装为Windows服务"><a href="#把MySQL安装为Windows服务" class="headerlink" title="把MySQL安装为Windows服务"></a>把MySQL安装为Windows服务</h3><p>改好配置后，我编写了一个安装成服务的脚本 <strong>MySQL-5.6.40一键安装服务.bat</strong>，内容如下：<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">I:</span><br><span class="line"><span class="built_in">cd</span> I:\mysql-5.6.40\bin</span><br><span class="line">mysqld.exe --install MySQL5.6.40</span><br><span class="line">pause</span><br></pre></td></tr></table></figure></p>
+<p>这样，我就安装了一个名为 MySQL5.6.40 的服务。我之所以指定服务名而不是采用默认的 MySQL，是因为我准备安装一个8.0新版本来尝鲜。<br>右键单击这个脚本文件，以管理员身份运行，提示服务安装成功。</p>
+<h3 id="启动MySQL5-6-40服务出错"><a href="#启动MySQL5-6-40服务出错" class="headerlink" title="启动MySQL5.6.40服务出错"></a>启动MySQL5.6.40服务出错</h3><p>服务成功安装后，我又编写了一个启动脚本 <strong>MySQL-5.6.40一健启动.bat</strong>，方便将来手动一键启动。内容很简单，如下所示：<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">net start MySQL5.6.40</span><br><span class="line">pause</span><br></pre></td></tr></table></figure></p>
+<p>这个脚本无法成功执行，当我在命令提示符中直接粘贴运行 net start MySQL5.6.40 这句命令时，提示 <strong>MySQL5.6.40 服务无法启动</strong>、<strong>发生系统错误 1067。</strong></p>
+<h2 id="原因分析及解决"><a href="#原因分析及解决" class="headerlink" title="原因分析及解决"></a>原因分析及解决</h2><p>打开 <a href="https://baike.baidu.com/item/%E4%BA%8B%E4%BB%B6%E6%9F%A5%E7%9C%8B%E5%99%A8/102786?fr=aladdin" target="_blank" rel="noopener">Windows事件查看器</a>，找到 Windows日志，在应用程序日志列表中，我发现MySQL有一个致命错误：<strong>Fatal error: Can’t open and lock privilege tables: Table ‘mysql.user’ doesn’t exist</strong>。</p>
+<p>既然说是找不到默认的mysql数据库中的user表，那么我去MySQL的安装目录下的data文件中，发现有user这个表。<br>于是，我把整个 <strong>data</strong> 文件夹里面的内容，全部复制粘贴到我在 <strong>my.ini</strong> 配置文件中指定的目录：<strong>D:\database\mysql</strong>（注意是直接整个目录下粘贴原来data文件夹下面的所有内容，不要把data也作为目录粘贴进去，因为我们指定的目录，就是MySQL所需的data文件夹），然后再启动服务，服务即可成功启动。</p>
+
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="http://www.nichuan.top/mysql-can-not-open-and-lock-privilege-tables/" data-id="cjozqlgf4002ehm00slks42es" class="article-share-link">Share</a>
+      
+      
+  <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/MySQL/">MySQL</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/发生系统错误-1067/">发生系统错误 1067</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/服务无法启动/">服务无法启动</a></li></ul>
+
+    </footer>
+  </div>
+  
+</article>
+
+
+  
+    <article id="post-study-note-binary-tree-all-in-one" class="article article-type-post" itemscope="" itemprop="blogPost">
+  <div class="article-meta">
+    <a href="/study-note-binary-tree-all-in-one/" class="article-date">
+  <time datetime="2018-06-07T02:12:12.000Z" itemprop="datePublished">2018-06-07</time>
+</a>
+    
+  <div class="article-category">
+    <a class="article-category-link" href="/categories/底层/">底层</a>►<a class="article-category-link" href="/categories/底层/数据结构/">数据结构</a>
+  </div>
+
+  </div>
+  <div class="article-inner">
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/study-note-binary-tree-all-in-one/">一篇文章掌握二叉树（基础、图例、算法）</a>
+    </h1>
+  
+
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <p><img src="http://www-zebe-me.oss-cn-beijing.aliyuncs.com/binary-tree.jpg" alt="binary-tree"></p>
+<p><script type="text/javascript" src="http://cdn.mathjax.org/mathjax/latest/MathJax.js?config=default"></script><br>这篇笔记详细记录了二叉树的基础知识、运用案例，并配备大量图例便于理解，作为自己复习查阅之用，也适合刚开始学习二叉树的新手作为参考资料。本文内容随时更新直到完结。转载请注明出处，如有不正之处欢迎指出。</p>
+<h2 id="什么是二叉树"><a href="#什么是二叉树" class="headerlink" title="什么是二叉树"></a>什么是二叉树</h2><p>是一种树结构，每个节点最多有 <strong>2</strong> 个子树，通常子树被成为<strong>左子树</strong>和<strong>右子树</strong>，次序不能颠倒。</p>
+<h2 id="二叉树的5种基本形态"><a href="#二叉树的5种基本形态" class="headerlink" title="二叉树的5种基本形态"></a>二叉树的5种基本形态</h2><ul>
+<li>空二叉树（图a）</li>
+<li>只有一个根节点的二叉树（图b）</li>
+<li>只有左子树（图c）</li>
+<li>只有右子树（图d）</li>
+<li>完全二叉树（图e）<br><img src="http://www-zebe-me.oss-cn-beijing.aliyuncs.com/binary-tree-type.png" alt="binary-tree-type"></li>
+</ul>
+<h2 id="二叉树的相关术语"><a href="#二叉树的相关术语" class="headerlink" title="二叉树的相关术语"></a>二叉树的相关术语</h2><ul>
+<li><p><strong>树的深度</strong>：树中最大的结点层，如下图，二叉树的深度为 <strong>3</strong>，简单来说就是层数的意思，根节点第 <strong>1</strong> 层，以此类推。<br><img src="http://www-zebe-me.oss-cn-beijing.aliyuncs.com/binary-tree-depth.png" alt="binary-tree-depth"></p>
+</li>
+<li><p><strong>叶子节点</strong>：就是度为 <strong>0</strong> 的结点，就是没有子结点的结点。<br><img src="http://www-zebe-me.oss-cn-beijing.aliyuncs.com/binary-tree-leaf-node.png" alt="binary-tree-leaf-node"></p>
+</li>
+</ul>
+<h2 id="二叉树的类型"><a href="#二叉树的类型" class="headerlink" title="二叉树的类型"></a>二叉树的类型</h2><ul>
+<li><strong>完全二叉树</strong>：是指除了最后一层外，其他每一层的节点数都是满的。最后一层如果也满了，是一颗满二叉树，也是完全二叉树。最后一层如果不满，缺少的节点也全部集中在右边，那也是一颗完全二叉树。</li>
+<li><strong>满二叉树</strong>：</li>
+<li><strong>平衡二叉树</strong>：</li>
+</ul>
+<p><img src="http://www-zebe-me.oss-cn-beijing.aliyuncs.com/complete-binary-tree.png" alt="complete-binary-tree"><br>以上都是完全二叉树，第一颗既是完全二叉树，也是满二叉树。</p>
+<h2 id="二叉树的性质"><a href="#二叉树的性质" class="headerlink" title="二叉树的性质"></a>二叉树的性质</h2><ul>
+<li><strong>深度为h的二叉树最多有 \(2^h - 1\) 个结点（\(h &gt;= 1\)），最少有 \(h\) 个结点。</strong>例如下面的二叉树深度为 \(3\)，则最多有 \(2^3 - 1 = 7\) 个节点，最少有 \(3\) 个节点。<br><img src="http://www-zebe-me.oss-cn-beijing.aliyuncs.com/binary-tree-max-min-node.png" alt="binary-tree-max-min-node"></li>
+</ul>
+<h2 id="二叉树的遍历顺序"><a href="#二叉树的遍历顺序" class="headerlink" title="二叉树的遍历顺序"></a>二叉树的遍历顺序</h2><p>所谓遍历二叉树，就是按一定的规则和顺序走遍二叉树的所有结点，使每一个结点都被访问一次，而且只被访问一次。由于二叉树是非线性结构，因此，树的遍历实质上是将二叉树的各个结点转换成为一个线性序列来表示。</p>
+<h3 id="先序遍历"><a href="#先序遍历" class="headerlink" title="先序遍历"></a>先序遍历</h3><p>全称先根次序遍历，也叫做先根遍历、前序遍历，首先访问根结点然后遍历左子树，最后遍历右子树。在遍历左、右子树时，仍然先访问根结点，然后遍历左子树，最后遍历右子树，如果二叉树为空则返回。可记做根左右（二叉树父结点向下先左后右）。<br>例子：下图所示二叉树的先序遍历结果是：<strong>ABDECF</strong>。<br><img src="http://www-zebe-me.oss-cn-beijing.aliyuncs.com/binary-tree-pre-order-traversal-1.png" alt="binary-tree-pre-order-traversal-1"></p>
+<p>例子：下图所示二叉树的先序遍历结果是：<strong>ABDGHCEIF</strong>。<br><img src="http://www-zebe-me.oss-cn-beijing.aliyuncs.com/binary-tree-pre-order-traversal-2.png" alt="binary-tree-pre-order-traversal-2"></p>
+<h3 id="中序遍历"><a href="#中序遍历" class="headerlink" title="中序遍历"></a>中序遍历</h3><p>全称中根次序遍历，中序遍历首先遍历左子树，然后访问根结点，最后遍历右子树。<br>例子：下图所示二叉树的中序遍历结果是：<strong>BAC</strong><br><img src="http://www-zebe-me.oss-cn-beijing.aliyuncs.com/binary-tree-middle-order-traversal-1.png" alt="binary-tree-middle-order-traversal-1"></p>
+<p>例子：下图所示二叉树的中序遍历结果是：<strong>GDHBAEICF</strong><br><img src="http://www-zebe-me.oss-cn-beijing.aliyuncs.com/binary-tree-middle-order-traversal-2.png" alt="binary-tree-middle-order-traversal-2"><br><strong>注意</strong>：上图遍历到E节点的时候，其实是先遍历的E节点的左子树，但是E节点没有左子树，所有就按照规则遍历根节点 <strong>E</strong>，然后遍历右子树 <strong>I</strong>。</p>
+<h3 id="后序遍历"><a href="#后序遍历" class="headerlink" title="后序遍历"></a>后序遍历</h3><p>全称后根次序遍历，后序遍历首先遍历左子树，然后遍历右子树，最后访问根结点，在遍历左、右子树时，仍然先遍历左子树，然后遍历右子树，最后遍历根结点。<br>例子：下图所示二叉树的后序遍历结果是：<strong>BCA</strong><br><img src="http://www-zebe-me.oss-cn-beijing.aliyuncs.com/binary-tree-post-order-traversal-1.png" alt="binary-tree-post-order-traversal-1"></p>
+<p>例子：下图所示二叉树的后序遍历结果是：<strong>GHDBIEFCA</strong><br><img src="http://www-zebe-me.oss-cn-beijing.aliyuncs.com/binary-tree-post-order-traversal-2.png" alt="binary-tree-post-order-traversal-2"></p>
+
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="http://www.nichuan.top/study-note-binary-tree-all-in-one/" data-id="cjozqlgf8002mhm00txgj34sl" class="article-share-link">Share</a>
+      
+      
+  <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/BinaryTree/">BinaryTree</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/二叉树/">二叉树</a></li></ul>
+
+    </footer>
+  </div>
+  
+</article>
+
+
+  
+
+
+  <nav id="page-nav">
+    
+    <a class="extend prev" rel="prev" href="/page/2/">&laquo; Prev</a><a class="page-number" href="/">1</a><a class="page-number" href="/page/2/">2</a><span class="page-number current">3</span><a class="page-number" href="/page/4/">4</a><a class="page-number" href="/page/5/">5</a><a class="extend next" rel="next" href="/page/4/">Next &raquo;</a>
+  </nav>
+
+</section>
+        
+          <aside id="sidebar">
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">Categories</h3>
+    <div class="widget">
+      <ul class="category-list"><li class="category-list-item"><a class="category-list-link" href="/categories/Java/">Java</a><ul class="category-list-child"><li class="category-list-item"><a class="category-list-link" href="/categories/Java/Java8/">Java8</a></li><li class="category-list-item"><a class="category-list-link" href="/categories/Java/Java9/">Java9</a></li></ul></li><li class="category-list-item"><a class="category-list-link" href="/categories/协议/">协议</a><ul class="category-list-child"><li class="category-list-item"><a class="category-list-link" href="/categories/协议/HTTP/">HTTP</a></li></ul></li><li class="category-list-item"><a class="category-list-link" href="/categories/工具/">工具</a><ul class="category-list-child"><li class="category-list-item"><a class="category-list-link" href="/categories/工具/Git/">Git</a></li><li class="category-list-item"><a class="category-list-link" href="/categories/工具/Gradle/">Gradle</a></li><li class="category-list-item"><a class="category-list-link" href="/categories/工具/IntelliJ-IDEA/">IntelliJ IDEA</a></li><li class="category-list-item"><a class="category-list-link" href="/categories/工具/Jenkins/">Jenkins</a></li></ul></li><li class="category-list-item"><a class="category-list-link" href="/categories/底层/">底层</a><ul class="category-list-child"><li class="category-list-item"><a class="category-list-link" href="/categories/底层/数据结构/">数据结构</a></li></ul></li><li class="category-list-item"><a class="category-list-link" href="/categories/数据库/">数据库</a><ul class="category-list-child"><li class="category-list-item"><a class="category-list-link" href="/categories/数据库/MySQL/">MySQL</a></li></ul></li><li class="category-list-item"><a class="category-list-link" href="/categories/框架/">框架</a><ul class="category-list-child"><li class="category-list-item"><a class="category-list-link" href="/categories/框架/SQLAlchemy/">SQLAlchemy</a></li><li class="category-list-item"><a class="category-list-link" href="/categories/框架/SpringBoot/">SpringBoot</a></li><li class="category-list-item"><a class="category-list-link" href="/categories/框架/SpringCloud/">SpringCloud</a></li></ul></li><li class="category-list-item"><a class="category-list-link" href="/categories/类库/">类库</a><ul class="category-list-child"><li class="category-list-item"><a class="category-list-link" href="/categories/类库/Guava/">Guava</a></li></ul></li><li class="category-list-item"><a class="category-list-link" href="/categories/系统/">系统</a><ul class="category-list-child"><li class="category-list-item"><a class="category-list-link" href="/categories/系统/Windows/">Windows</a></li></ul></li><li class="category-list-item"><a class="category-list-link" href="/categories/随笔/">随笔</a><ul class="category-list-child"><li class="category-list-item"><a class="category-list-link" href="/categories/随笔/心情感悟/">心情感悟</a></li></ul></li></ul>
+    </div>
+  </div>
+
+
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">Tags</h3>
+    <div class="widget">
+      <ul class="tag-list"><li class="tag-list-item"><a class="tag-list-link" href="/tags/501-mail/">501 mail</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/BiConsumer/">BiConsumer</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/BinaryOperator/">BinaryOperator</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/BinaryTree/">BinaryTree</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Collectors-joining/">Collectors.joining</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/DoubleSummaryStatistics/">DoubleSummaryStatistics</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Eureka/">Eureka</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Files/">Files</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/IntSummaryStatistics/">IntSummaryStatistics</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Java执行JS脚本/">Java执行JS脚本</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Java类依赖/">Java类依赖</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Lambda/">Lambda</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/LongSummaryStatistics/">LongSummaryStatistics</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/MailSSLSocketFactory/">MailSSLSocketFactory</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/MySQL/">MySQL</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/ScriptEngine/">ScriptEngine</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/ScriptEngineManager/">ScriptEngineManager</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/StackOverflowError/">StackOverflowError</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/StringBuilder/">StringBuilder</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Supplier/">Supplier</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/ThreadLocal/">ThreadLocal</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Win10/">Win10</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/X-Real-IP/">X-Real-IP</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/admin/">admin</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/build-gradle/">build.gradle</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/collectors/">collectors</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/computeIfAbsent/">computeIfAbsent</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/forEach/">forEach</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/getDefaultInstance/">getDefaultInstance</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/git/">git</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/gradle/">gradle</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/groupingBy/">groupingBy</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/guava/">guava</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/http/">http</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/idea/">idea</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/ip/">ip</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/java/">java</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/jdeps/">jdeps</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/jdeps-exe/">jdeps.exe</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/jdeps参数/">jdeps参数</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/jenkins/">jenkins</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/join/">join</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/jvm/">jvm</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/lombok/">lombok</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/mapToDouble/">mapToDouble</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/mapToInt/">mapToInt</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/mapToLong/">mapToLong</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/module/">module</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/mysql/">mysql</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/nio/">nio</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/partitioningBy/">partitioningBy</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/readAllBytes/">readAllBytes</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/reducing/">reducing</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/spring-cloud/">spring cloud</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/springboot/">springboot</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/sqlalchemy/">sqlalchemy</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/users/">users</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/withInitial/">withInitial</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/xss/">xss</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/上下文/">上下文</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/二叉树/">二叉树</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/代理/">代理</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/内存中的null/">内存中的null</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/函数式编程/">函数式编程</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/分页公式/">分页公式</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/反向代理/">反向代理</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/反转数组/">反转数组</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/发生系统错误-1067/">发生系统错误 1067</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/合并数组/">合并数组</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/声明数组/">声明数组</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/多账号/">多账号</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/字符串/">字符串</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/字节数组/">字节数组</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/归一/">归一</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/归约/">归约</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/惰性求值/">惰性求值</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/打印数组/">打印数组</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/排他锁/">排他锁</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/数据分块/">数据分块</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/数据分组/">数据分组</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/数组-ArrayList/">数组 ArrayList</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/服务无法启动/">服务无法启动</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/栈/">栈</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/模块化/">模块化</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/注册中心/">注册中心</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/真实IP/">真实IP</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/绝对路径/">绝对路径</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/腾讯/">腾讯</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/腾讯企业邮箱/">腾讯企业邮箱</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/范围请求/">范围请求</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/蔡勒公式/">蔡勒公式</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/计算星期几/">计算星期几</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/许可证即将过期/">许可证即将过期</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/逢一进一/">逢一进一</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/邮件/">邮件</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/队列/">队列</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/高阶函数/">高阶函数</a></li></ul>
+    </div>
+  </div>
+
+
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">Tag Cloud</h3>
+    <div class="widget tagcloud">
+      <a href="/tags/501-mail/" style="font-size: 10px;">501 mail</a> <a href="/tags/BiConsumer/" style="font-size: 10px;">BiConsumer</a> <a href="/tags/BinaryOperator/" style="font-size: 10px;">BinaryOperator</a> <a href="/tags/BinaryTree/" style="font-size: 10px;">BinaryTree</a> <a href="/tags/Collectors-joining/" style="font-size: 10px;">Collectors.joining</a> <a href="/tags/DoubleSummaryStatistics/" style="font-size: 10px;">DoubleSummaryStatistics</a> <a href="/tags/Eureka/" style="font-size: 10px;">Eureka</a> <a href="/tags/Files/" style="font-size: 10px;">Files</a> <a href="/tags/IntSummaryStatistics/" style="font-size: 10px;">IntSummaryStatistics</a> <a href="/tags/Java执行JS脚本/" style="font-size: 10px;">Java执行JS脚本</a> <a href="/tags/Java类依赖/" style="font-size: 10px;">Java类依赖</a> <a href="/tags/Lambda/" style="font-size: 15px;">Lambda</a> <a href="/tags/LongSummaryStatistics/" style="font-size: 10px;">LongSummaryStatistics</a> <a href="/tags/MailSSLSocketFactory/" style="font-size: 10px;">MailSSLSocketFactory</a> <a href="/tags/MySQL/" style="font-size: 10px;">MySQL</a> <a href="/tags/ScriptEngine/" style="font-size: 10px;">ScriptEngine</a> <a href="/tags/ScriptEngineManager/" style="font-size: 10px;">ScriptEngineManager</a> <a href="/tags/StackOverflowError/" style="font-size: 10px;">StackOverflowError</a> <a href="/tags/StringBuilder/" style="font-size: 10px;">StringBuilder</a> <a href="/tags/Supplier/" style="font-size: 10px;">Supplier</a> <a href="/tags/ThreadLocal/" style="font-size: 10px;">ThreadLocal</a> <a href="/tags/Win10/" style="font-size: 10px;">Win10</a> <a href="/tags/X-Real-IP/" style="font-size: 10px;">X-Real-IP</a> <a href="/tags/admin/" style="font-size: 10px;">admin</a> <a href="/tags/build-gradle/" style="font-size: 10px;">build.gradle</a> <a href="/tags/collectors/" style="font-size: 10px;">collectors</a> <a href="/tags/computeIfAbsent/" style="font-size: 10px;">computeIfAbsent</a> <a href="/tags/forEach/" style="font-size: 10px;">forEach</a> <a href="/tags/getDefaultInstance/" style="font-size: 10px;">getDefaultInstance</a> <a href="/tags/git/" style="font-size: 10px;">git</a> <a href="/tags/gradle/" style="font-size: 10px;">gradle</a> <a href="/tags/groupingBy/" style="font-size: 15px;">groupingBy</a> <a href="/tags/guava/" style="font-size: 10px;">guava</a> <a href="/tags/http/" style="font-size: 10px;">http</a> <a href="/tags/idea/" style="font-size: 10px;">idea</a> <a href="/tags/ip/" style="font-size: 10px;">ip</a> <a href="/tags/java/" style="font-size: 20px;">java</a> <a href="/tags/jdeps/" style="font-size: 10px;">jdeps</a> <a href="/tags/jdeps-exe/" style="font-size: 10px;">jdeps.exe</a> <a href="/tags/jdeps参数/" style="font-size: 10px;">jdeps参数</a> <a href="/tags/jenkins/" style="font-size: 10px;">jenkins</a> <a href="/tags/join/" style="font-size: 10px;">join</a> <a href="/tags/jvm/" style="font-size: 10px;">jvm</a> <a href="/tags/lombok/" style="font-size: 10px;">lombok</a> <a href="/tags/mapToDouble/" style="font-size: 10px;">mapToDouble</a> <a href="/tags/mapToInt/" style="font-size: 10px;">mapToInt</a> <a href="/tags/mapToLong/" style="font-size: 10px;">mapToLong</a> <a href="/tags/module/" style="font-size: 10px;">module</a> <a href="/tags/mysql/" style="font-size: 10px;">mysql</a> <a href="/tags/nio/" style="font-size: 10px;">nio</a> <a href="/tags/partitioningBy/" style="font-size: 10px;">partitioningBy</a> <a href="/tags/readAllBytes/" style="font-size: 10px;">readAllBytes</a> <a href="/tags/reducing/" style="font-size: 10px;">reducing</a> <a href="/tags/spring-cloud/" style="font-size: 10px;">spring cloud</a> <a href="/tags/springboot/" style="font-size: 10px;">springboot</a> <a href="/tags/sqlalchemy/" style="font-size: 10px;">sqlalchemy</a> <a href="/tags/users/" style="font-size: 10px;">users</a> <a href="/tags/withInitial/" style="font-size: 10px;">withInitial</a> <a href="/tags/xss/" style="font-size: 10px;">xss</a> <a href="/tags/上下文/" style="font-size: 10px;">上下文</a> <a href="/tags/二叉树/" style="font-size: 10px;">二叉树</a> <a href="/tags/代理/" style="font-size: 10px;">代理</a> <a href="/tags/内存中的null/" style="font-size: 10px;">内存中的null</a> <a href="/tags/函数式编程/" style="font-size: 10px;">函数式编程</a> <a href="/tags/分页公式/" style="font-size: 10px;">分页公式</a> <a href="/tags/反向代理/" style="font-size: 10px;">反向代理</a> <a href="/tags/反转数组/" style="font-size: 10px;">反转数组</a> <a href="/tags/发生系统错误-1067/" style="font-size: 10px;">发生系统错误 1067</a> <a href="/tags/合并数组/" style="font-size: 10px;">合并数组</a> <a href="/tags/声明数组/" style="font-size: 10px;">声明数组</a> <a href="/tags/多账号/" style="font-size: 10px;">多账号</a> <a href="/tags/字符串/" style="font-size: 10px;">字符串</a> <a href="/tags/字节数组/" style="font-size: 10px;">字节数组</a> <a href="/tags/归一/" style="font-size: 10px;">归一</a> <a href="/tags/归约/" style="font-size: 10px;">归约</a> <a href="/tags/惰性求值/" style="font-size: 10px;">惰性求值</a> <a href="/tags/打印数组/" style="font-size: 10px;">打印数组</a> <a href="/tags/排他锁/" style="font-size: 10px;">排他锁</a> <a href="/tags/数据分块/" style="font-size: 10px;">数据分块</a> <a href="/tags/数据分组/" style="font-size: 10px;">数据分组</a> <a href="/tags/数组-ArrayList/" style="font-size: 10px;">数组 ArrayList</a> <a href="/tags/服务无法启动/" style="font-size: 10px;">服务无法启动</a> <a href="/tags/栈/" style="font-size: 10px;">栈</a> <a href="/tags/模块化/" style="font-size: 10px;">模块化</a> <a href="/tags/注册中心/" style="font-size: 10px;">注册中心</a> <a href="/tags/真实IP/" style="font-size: 10px;">真实IP</a> <a href="/tags/绝对路径/" style="font-size: 10px;">绝对路径</a> <a href="/tags/腾讯/" style="font-size: 10px;">腾讯</a> <a href="/tags/腾讯企业邮箱/" style="font-size: 10px;">腾讯企业邮箱</a> <a href="/tags/范围请求/" style="font-size: 10px;">范围请求</a> <a href="/tags/蔡勒公式/" style="font-size: 10px;">蔡勒公式</a> <a href="/tags/计算星期几/" style="font-size: 10px;">计算星期几</a> <a href="/tags/许可证即将过期/" style="font-size: 10px;">许可证即将过期</a> <a href="/tags/逢一进一/" style="font-size: 10px;">逢一进一</a> <a href="/tags/邮件/" style="font-size: 15px;">邮件</a> <a href="/tags/队列/" style="font-size: 10px;">队列</a> <a href="/tags/高阶函数/" style="font-size: 10px;">高阶函数</a>
+    </div>
+  </div>
+
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">Archives</h3>
+    <div class="widget">
+      <ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="/archives/2018/11/">November 2018</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2018/10/">October 2018</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2018/09/">September 2018</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2018/08/">August 2018</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2018/07/">July 2018</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2018/06/">June 2018</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2018/05/">May 2018</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2018/04/">April 2018</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2018/03/">March 2018</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2018/01/">January 2018</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2017/12/">December 2017</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2017/10/">October 2017</a></li></ul>
+    </div>
+  </div>
+
+
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">Recent Posts</h3>
+    <div class="widget">
+      <ul>
+        
+          <li>
+            <a href="/my-new-post/">my new post</a>
+          </li>
+        
+          <li>
+            <a href="/java-jvm-xss/">Java - 局部变量和StackOverflowError</a>
+          </li>
+        
+          <li>
+            <a href="/java-8-string-join-collector/">Java8 - 更优雅的字符串连接(join)收集器 Collectors.joining</a>
+          </li>
+        
+          <li>
+            <a href="/java-8-stream-partitioning-by/">Java8 - 对流(数据)进行自定义分块：partitioningBy收集器</a>
+          </li>
+        
+          <li>
+            <a href="/java-8-stream-grouping-by/">Java8 - 对流(数据)进行自定义分组：groupingBy收集器</a>
+          </li>
+        
+      </ul>
+    </div>
+  </div>
+
+  
+</aside>
+        
+      </div>
+      <footer id="footer">
+  
+  <div class="outer">
+    <div id="footer-info" class="inner">
+      &copy; 2018 John Doe<br>
+      Powered by <a href="http://hexo.io/" target="_blank">Hexo</a>
+    </div>
+  </div>
+</footer>
+    </div>
+    <nav id="mobile-nav">
+  
+    <a href="/" class="mobile-nav-link">Home</a>
+  
+    <a href="/archives" class="mobile-nav-link">Archives</a>
+  
+</nav>
+    
+
+<script src="//ajax.googleapis.com/ajax/libs/jquery/2.0.3/jquery.min.js"></script>
+
+
+  <link rel="stylesheet" href="/fancybox/jquery.fancybox.css">
+  <script src="/fancybox/jquery.fancybox.pack.js"></script>
+
+
+<script src="/js/script.js"></script>
+
+
+
+  </div>
+</body>
+</html>

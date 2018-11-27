@@ -1,0 +1,709 @@
+<!DOCTYPE html>
+<html>
+<head><meta name="generator" content="Hexo 3.8.0">
+  <meta charset="utf-8">
+  
+
+  
+  <title>Hexo</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+  <meta property="og:type" content="website">
+<meta property="og:title" content="Hexo">
+<meta property="og:url" content="http://www.nichuan.top/page/2/index.html">
+<meta property="og:site_name" content="Hexo">
+<meta property="og:locale" content="default">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="Hexo">
+  
+    <link rel="alternate" href="/atom.xml" title="Hexo" type="application/atom+xml">
+  
+  
+    <link rel="icon" href="/favicon.png">
+  
+  
+    <link href="//fonts.googleapis.com/css?family=Source+Code+Pro" rel="stylesheet" type="text/css">
+  
+  <link rel="stylesheet" href="/css/style.css">
+</head>
+</html>
+<body>
+  <div id="container">
+    <div id="wrap">
+      <header id="header">
+  <div id="banner"></div>
+  <div id="header-outer" class="outer">
+    <div id="header-title" class="inner">
+      <h1 id="logo-wrap">
+        <a href="/" id="logo">Hexo</a>
+      </h1>
+      
+    </div>
+    <div id="header-inner" class="inner">
+      <nav id="main-nav">
+        <a id="main-nav-toggle" class="nav-icon"></a>
+        
+          <a class="main-nav-link" href="/">Home</a>
+        
+          <a class="main-nav-link" href="/archives">Archives</a>
+        
+      </nav>
+      <nav id="sub-nav">
+        
+          <a id="nav-rss-link" class="nav-icon" href="/atom.xml" title="RSS Feed"></a>
+        
+        <a id="nav-search-btn" class="nav-icon" title="Search"></a>
+      </nav>
+      <div id="search-form-wrap">
+        <form action="//google.com/search" method="get" accept-charset="UTF-8" class="search-form"><input type="search" name="q" class="search-form-input" placeholder="Search"><button type="submit" class="search-form-submit">&#xF002;</button><input type="hidden" name="sitesearch" value="http://www.nichuan.top"></form>
+      </div>
+    </div>
+  </div>
+</header>
+      <div class="outer">
+        <section id="main">
+  
+    <article id="post-win-10-activate" class="article article-type-post" itemscope="" itemprop="blogPost">
+  <div class="article-meta">
+    <a href="/win-10-activate/" class="article-date">
+  <time datetime="2018-09-18T08:53:34.000Z" itemprop="datePublished">2018-09-18</time>
+</a>
+    
+  <div class="article-category">
+    <a class="article-category-link" href="/categories/系统/">系统</a>►<a class="article-category-link" href="/categories/系统/Windows/">Windows</a>
+  </div>
+
+  </div>
+  <div class="article-inner">
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/win-10-activate/">Windows10“许可证即将过期”解决办法</a>
+    </h1>
+  
+
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <p><img src="http://www-zebe-me.oss-cn-beijing.aliyuncs.com/win-10.jpg" alt=""><br>试了很多激活工具、激活码都不行，本文介绍的这个激活方法截止到今日（2018年9月18日）是可行的，亲测通过。</p>
+<p><strong>第1步</strong>：以管理员模式打开命令提示符号（或者PowerShell）。<br><strong>第2步</strong>：在命令窗口中依次输入以下内容（加粗部分）：</p>
+<ul>
+<li><strong>slmgr.vbs /upk</strong>：稍等几秒钟，窗口会弹出“成功地卸载了产品密钥”。</li>
+<li><strong>slmgr /ipk W269N-WFGWX-YVC9B-4J6C9-T83GX</strong>：稍等几秒钟，窗口会弹出“成功的安装了产品密钥”。</li>
+<li><strong>slmgr /skms zh.us.to</strong>：稍等几秒钟，窗口会弹出“密钥管理服务计算机名成功地设置为 zh.us.to”。</li>
+<li><strong>slmgr /ato</strong>：稍等十秒钟左右，窗口会弹出“成功的激活了产品”。</li>
+</ul>
+
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="http://www.nichuan.top/win-10-activate/" data-id="cjozqlgfa002thm00kbigjk7w" class="article-share-link">Share</a>
+      
+      
+  <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/Win10/">Win10</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/许可证即将过期/">许可证即将过期</a></li></ul>
+
+    </footer>
+  </div>
+  
+</article>
+
+
+  
+    <article id="post-git-conflict-with-others" class="article article-type-post" itemscope="" itemprop="blogPost">
+  <div class="article-meta">
+    <a href="/git-conflict-with-others/" class="article-date">
+  <time datetime="2018-09-18T05:46:37.000Z" itemprop="datePublished">2018-09-18</time>
+</a>
+    
+  <div class="article-category">
+    <a class="article-category-link" href="/categories/工具/">工具</a>►<a class="article-category-link" href="/categories/工具/Git/">Git</a>
+  </div>
+
+  </div>
+  <div class="article-inner">
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/git-conflict-with-others/">Git多分支开发过程中处理冲突的经验教训</a>
+    </h1>
+  
+
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <p><img src="http://www-zebe-me.oss-cn-beijing.aliyuncs.com/lesson-learned.jpg" alt=""><br>最近在项目开发中遇到一个问题，不同分支的代码产生大量冲突，导致合并麻烦。这也算是一个教训。值得记录下来反思。</p>
+<h2 id="不同分支代码的冲突问题"><a href="#不同分支代码的冲突问题" class="headerlink" title="不同分支代码的冲突问题"></a>不同分支代码的冲突问题</h2><p>已上线分支为 <strong>master</strong>，我负责的分支为 <strong>A</strong>，另外有人负责的分支是 <strong>B</strong>，恰恰因为项目需求的原因，A 和 B 分支上的某个类会被我们同时改动。由于master分支上线的缘故，第二天我需要在自己的A分支上去合并已上线分支master的代码。这时候，出现了问题：<strong>我的A分支上有从别人的B分支上合并过来的代码（是必须要的），这个B分支的人居然全选了整个类几千行代码（这个项目有点老，代码质量很差，说成又臭又长也不为过）进行了格式化，因此和已上线的master分支的代码产生大量冲突</strong>，我合并的时候需要挨个比对这个类中自己的代码、B分支的代码和master分支的代码，非常耗时，而且容易出错。</p>
+<h2 id="解决方案与反思"><a href="#解决方案与反思" class="headerlink" title="解决方案与反思"></a>解决方案与反思</h2><p>这个问题让我学到了经验，那就是：<strong>遇到大型项目，有多个分支且已经产生需求冲突的时候，一定要把自己的那部分代码以面向对象的方式，独立出来，在不同分支都会共同修改的那个类中，在关键部分以方法调用的形式来加入自己的逻辑</strong>。这样，可以减少冲突，把自己的代码逻辑独立出来作为新的类，就不会与别人代码冲突。</p>
+
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="http://www.nichuan.top/git-conflict-with-others/" data-id="cjozqlgdp0001hm005r3ibwyk" class="article-share-link">Share</a>
+      
+      
+  <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/git/">git</a></li></ul>
+
+    </footer>
+  </div>
+  
+</article>
+
+
+  
+    <article id="post-java-8-max-min-sum-average-count" class="article article-type-post" itemscope="" itemprop="blogPost">
+  <div class="article-meta">
+    <a href="/java-8-max-min-sum-average-count/" class="article-date">
+  <time datetime="2018-09-12T08:47:17.000Z" itemprop="datePublished">2018-09-12</time>
+</a>
+    
+  <div class="article-category">
+    <a class="article-category-link" href="/categories/Java/">Java</a>►<a class="article-category-link" href="/categories/Java/Java8/">Java8</a>
+  </div>
+
+  </div>
+  <div class="article-inner">
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/java-8-max-min-sum-average-count/">Java8 - 转为流为基本数据类型求最大值、最小值、平均值、求和、计数</a>
+    </h1>
+  
+
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <p><img src="http://www-zebe-me.oss-cn-beijing.aliyuncs.com/cover/cover-java-8.jpg" alt=""></p>
+<h2 id="基本数据类型在高阶函数中的运用"><a href="#基本数据类型在高阶函数中的运用" class="headerlink" title="基本数据类型在高阶函数中的运用"></a>基本数据类型在高阶函数中的运用</h2><p>众所周知，在Java中使用基本数据类型的性能和产效率远高于包装类型。由于<strong>装箱类型是对象，因此在内存中存在额外开销</strong>。比如，整型在内存中占用4 字节，整型对象却要占用 16 字节。这一情况在数组上更加严重，整型数组中的每个元素只占用基本类型的内存，而整型对象数组中，每个元素都是内存中的一个指针，指向 Java堆中的某个对象。在最坏的情况下，同样大小的数组， <code>Integer[]</code> 要比 <code>int[]</code> 多占用 <strong>6</strong> 倍内存。</p>
+<p>将基本类型转换为装箱类型，称为装箱，反之则称为拆箱，两者都需要额外的计算开销。对于需要大量数值运算的算法来说，装箱和拆箱的计算开销，以及装箱类型占用的额外内存，会明显减缓程序的运行速度。</p>
+<p>为了减小这些性能开销， Stream 类的某些方法对基本类型和装箱类型做了区分。Stream中的高阶函数 mapToLong 和其他类似函数即为该方面的一个尝试。在 Java 8 中，仅对整型、长整型和双浮点型做了特殊处理，因为它们在数值计算中用得最多，特殊处理后的系统性能提升效果最明显。</p>
+<h2 id="计算最大值、最小值、平均值、求和、计数统计"><a href="#计算最大值、最小值、平均值、求和、计数统计" class="headerlink" title="计算最大值、最小值、平均值、求和、计数统计"></a>计算最大值、最小值、平均值、求和、计数统计</h2><p>使用 mapToInt、mapToLong、mapToDouble 等高阶函数后，得到一个基于基本数据类型的流。针对这样的流，Java提供了一个摘要统计的功能（对应的类有：IntSummaryStatistics、LongSummaryStatistics 和 DoubleSummaryStatistics），如下代码所示：</p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">/**</span></span><br><span class="line"><span class="comment"> * 运行入口</span></span><br><span class="line"><span class="comment"> *</span></span><br><span class="line"><span class="comment"> * <span class="doctag">@param</span> args 运行参数</span></span><br><span class="line"><span class="comment"> */</span></span><br><span class="line"><span class="function"><span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">void</span> <span class="title">main</span><span class="params">(String[] args)</span> </span>&#123;</span><br><span class="line">    toInt();</span><br><span class="line">    toLong();</span><br><span class="line">    toDouble();</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">private</span> <span class="keyword">static</span> <span class="keyword">void</span> <span class="title">toInt</span><span class="params">()</span> </span>&#123;</span><br><span class="line">    IntSummaryStatistics statistics = Stream.of(<span class="number">1L</span>, <span class="number">2L</span>, <span class="number">3L</span>, <span class="number">4L</span>).mapToInt(Long::intValue).summaryStatistics();</span><br><span class="line">    System.out.println(<span class="string">"最大值："</span> + statistics.getMax());</span><br><span class="line">    System.out.println(<span class="string">"最小值："</span> + statistics.getMin());</span><br><span class="line">    System.out.println(<span class="string">"平均值："</span> + statistics.getAverage());</span><br><span class="line">    System.out.println(<span class="string">"求和："</span> + statistics.getSum());</span><br><span class="line">    System.out.println(<span class="string">"计数："</span> + statistics.getCount());</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">private</span> <span class="keyword">static</span> <span class="keyword">void</span> <span class="title">toLong</span><span class="params">()</span> </span>&#123;</span><br><span class="line">    LongSummaryStatistics statistics = Stream.of(<span class="number">1L</span>, <span class="number">2L</span>, <span class="number">3L</span>, <span class="number">4000000000000000000L</span>).mapToLong(Long::longValue).summaryStatistics();</span><br><span class="line">    System.out.println(<span class="string">"最大值："</span> + statistics.getMax());</span><br><span class="line">    System.out.println(<span class="string">"最小值："</span> + statistics.getMin());</span><br><span class="line">    System.out.println(<span class="string">"平均值："</span> + statistics.getAverage());</span><br><span class="line">    System.out.println(<span class="string">"求和："</span> + statistics.getSum());</span><br><span class="line">    System.out.println(<span class="string">"计数："</span> + statistics.getCount());</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">private</span> <span class="keyword">static</span> <span class="keyword">void</span> <span class="title">toDouble</span><span class="params">()</span> </span>&#123;</span><br><span class="line">    DoubleSummaryStatistics statistics = Stream.of(<span class="number">1</span>, <span class="number">2</span>, <span class="number">3.0</span>, <span class="number">5.2</span>).mapToDouble(Number::doubleValue).summaryStatistics();</span><br><span class="line">    System.out.println(<span class="string">"最大值："</span> + statistics.getMax());</span><br><span class="line">    System.out.println(<span class="string">"最小值："</span> + statistics.getMin());</span><br><span class="line">    System.out.println(<span class="string">"平均值："</span> + statistics.getAverage());</span><br><span class="line">    System.out.println(<span class="string">"求和："</span> + statistics.getSum());</span><br><span class="line">    System.out.println(<span class="string">"计数："</span> + statistics.getCount());</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="http://www.nichuan.top/java-8-max-min-sum-average-count/" data-id="cjozqlgeb000rhm0016ytcs00" class="article-share-link">Share</a>
+      
+      
+  <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/DoubleSummaryStatistics/">DoubleSummaryStatistics</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/IntSummaryStatistics/">IntSummaryStatistics</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/LongSummaryStatistics/">LongSummaryStatistics</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/mapToDouble/">mapToDouble</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/mapToInt/">mapToInt</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/mapToLong/">mapToLong</a></li></ul>
+
+    </footer>
+  </div>
+  
+</article>
+
+
+  
+    <article id="post-java-8-high-level-function" class="article article-type-post" itemscope="" itemprop="blogPost">
+  <div class="article-meta">
+    <a href="/java-8-high-level-function/" class="article-date">
+  <time datetime="2018-09-12T06:39:49.000Z" itemprop="datePublished">2018-09-12</time>
+</a>
+    
+  <div class="article-category">
+    <a class="article-category-link" href="/categories/Java/">Java</a>►<a class="article-category-link" href="/categories/Java/Java8/">Java8</a>
+  </div>
+
+  </div>
+  <div class="article-inner">
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/java-8-high-level-function/">Java8 - 高阶函数及判断高阶函数的方式</a>
+    </h1>
+  
+
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <p><img src="http://www-zebe-me.oss-cn-beijing.aliyuncs.com/cover/cover-java-8.jpg" alt=""></p>
+<h2 id="什么是高阶函数"><a href="#什么是高阶函数" class="headerlink" title="什么是高阶函数"></a>什么是高阶函数</h2><p>高阶函数是指接受另外一个函数作为参数，或返回一个函数的函数。什么样的参数是函数类型的参数？要看该参数是否是一个函数式接口，函数式接口只会有一个方法，会使用 @FunctionalInterface 这个注解来修饰。</p>
+<p>高阶函数在 Java8 中很常见，如以下的例子：</p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">Stream&lt;Integer&gt; numUp = Stream.of(<span class="number">1</span>, <span class="number">2</span>, <span class="number">5</span>).map(num -&gt; num += <span class="number">1</span>);</span><br></pre></td></tr></table></figure>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">Stream&lt;Integer&gt; numbers = Stream.of(<span class="number">1</span>, <span class="number">2</span>, -<span class="number">1</span>, -<span class="number">5</span>).filter(n -&gt; n &gt; <span class="number">0</span>);</span><br></pre></td></tr></table></figure>
+<h2 id="如何判断高阶函数"><a href="#如何判断高阶函数" class="headerlink" title="如何判断高阶函数"></a>如何判断高阶函数</h2><p>Stream 的 anyMatch 是高阶函数吗？是的。因为它的参数接收的是另外一个函数：Predicate。<br><figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">boolean</span> greaterThanZero = Stream.of(-<span class="number">1</span>, -<span class="number">2</span>, <span class="number">0</span>, -<span class="number">5</span>).anyMatch(num -&gt; num &gt; <span class="number">0</span>);</span><br></pre></td></tr></table></figure></p>
+<p>Stream 的 limit 是高阶函数吗？是的。因为它的返回值是一个Stream。<br><figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">Stream&lt;Integer&gt; onlyTwoNumbers = Stream.of(-<span class="number">1</span>, -<span class="number">2</span>, <span class="number">0</span>, -<span class="number">5</span>).limit(<span class="number">2</span>);</span><br></pre></td></tr></table></figure></p>
+
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="http://www.nichuan.top/java-8-high-level-function/" data-id="cjozqlge2000dhm00z9jpt2c7" class="article-share-link">Share</a>
+      
+      
+  <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/高阶函数/">高阶函数</a></li></ul>
+
+    </footer>
+  </div>
+  
+</article>
+
+
+  
+    <article id="post-java-8-thread-local-lambda-with-initial" class="article article-type-post" itemscope="" itemprop="blogPost">
+  <div class="article-meta">
+    <a href="/java-8-thread-local-lambda-with-initial/" class="article-date">
+  <time datetime="2018-09-04T06:11:51.000Z" itemprop="datePublished">2018-09-04</time>
+</a>
+    
+  <div class="article-category">
+    <a class="article-category-link" href="/categories/Java/">Java</a>►<a class="article-category-link" href="/categories/Java/Java8/">Java8</a>
+  </div>
+
+  </div>
+  <div class="article-inner">
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/java-8-thread-local-lambda-with-initial/">Java8 - ThreadLocal的Lambda构造方式：withInitial</a>
+    </h1>
+  
+
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <p><img src="http://www-zebe-me.oss-cn-beijing.aliyuncs.com/cover/cover-java-8.jpg" alt=""></p>
+<h2 id="ThreadLocal的Lambda构造方式"><a href="#ThreadLocal的Lambda构造方式" class="headerlink" title="ThreadLocal的Lambda构造方式"></a>ThreadLocal的Lambda构造方式</h2><p>Java8中ThreadLocal对象提供了一个Lambda构造方式，实现了非常简洁的构造方法：<strong>withInitial</strong>。这个方法采用Lambda方式传入实现了 Supplier<t> 函数接口的参数。写法如下：</t></p>
+<h2 id="代码实例"><a href="#代码实例" class="headerlink" title="代码实例"></a>代码实例</h2><figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">/**</span></span><br><span class="line"><span class="comment"> * 当前余额</span></span><br><span class="line"><span class="comment"> */</span></span><br><span class="line"><span class="keyword">private</span> ThreadLocal&lt;Integer&gt; balance = ThreadLocal.withInitial(() -&gt; <span class="number">1000</span>);</span><br></pre></td></tr></table></figure>
+<p>用ThreadLocal作为容器，当每个线程访问这个 <strong>balance</strong> 变量时，ThreadLocal会为每个线程提供一份变量，各个线程互不影响。</p>
+<h2 id="银行存款实例"><a href="#银行存款实例" class="headerlink" title="银行存款实例"></a>银行存款实例</h2><p>附带一个银行存款的例子。<br><figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br><span class="line">58</span><br><span class="line">59</span><br><span class="line">60</span><br><span class="line">61</span><br><span class="line">62</span><br><span class="line">63</span><br><span class="line">64</span><br><span class="line">65</span><br><span class="line">66</span><br><span class="line">67</span><br><span class="line">68</span><br><span class="line">69</span><br><span class="line">70</span><br><span class="line">71</span><br><span class="line">72</span><br><span class="line">73</span><br><span class="line">74</span><br><span class="line">75</span><br><span class="line">76</span><br><span class="line">77</span><br><span class="line">78</span><br><span class="line">79</span><br><span class="line">80</span><br><span class="line">81</span><br><span class="line">82</span><br><span class="line">83</span><br><span class="line">84</span><br><span class="line">85</span><br><span class="line">86</span><br><span class="line">87</span><br><span class="line">88</span><br><span class="line">89</span><br><span class="line">90</span><br><span class="line">91</span><br><span class="line">92</span><br><span class="line">93</span><br><span class="line">94</span><br><span class="line">95</span><br><span class="line">96</span><br><span class="line">97</span><br><span class="line">98</span><br><span class="line">99</span><br><span class="line">100</span><br><span class="line">101</span><br><span class="line">102</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">package</span> me.zebe.cat.java.lambda;</span><br><span class="line"></span><br><span class="line"><span class="comment">/**</span></span><br><span class="line"><span class="comment"> * ThreadLocal的Lambda构造方式：withInitial</span></span><br><span class="line"><span class="comment"> *</span></span><br><span class="line"><span class="comment"> * <span class="doctag">@author</span> Zebe</span></span><br><span class="line"><span class="comment"> */</span></span><br><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">ThreadLocalLambdaDemo</span> </span>&#123;</span><br><span class="line"></span><br><span class="line">    <span class="comment">/**</span></span><br><span class="line"><span class="comment">     * 运行入口</span></span><br><span class="line"><span class="comment">     *</span></span><br><span class="line"><span class="comment">     * <span class="doctag">@param</span> args 运行参数</span></span><br><span class="line"><span class="comment">     */</span></span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">void</span> <span class="title">main</span><span class="params">(String[] args)</span> </span>&#123;</span><br><span class="line">        safeDeposit();</span><br><span class="line">        <span class="comment">//notSafeDeposit();</span></span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="comment">/**</span></span><br><span class="line"><span class="comment">     * 线程安全的存款</span></span><br><span class="line"><span class="comment">     */</span></span><br><span class="line">    <span class="function"><span class="keyword">private</span> <span class="keyword">static</span> <span class="keyword">void</span> <span class="title">safeDeposit</span><span class="params">()</span> </span>&#123;</span><br><span class="line">        SafeBank bank = <span class="keyword">new</span> SafeBank();</span><br><span class="line">        Thread thread1 = <span class="keyword">new</span> Thread(() -&gt; bank.deposit(<span class="number">200</span>), <span class="string">"张成瑶"</span>);</span><br><span class="line">        Thread thread2 = <span class="keyword">new</span> Thread(() -&gt; bank.deposit(<span class="number">200</span>), <span class="string">"马云"</span>);</span><br><span class="line">        Thread thread3 = <span class="keyword">new</span> Thread(() -&gt; bank.deposit(<span class="number">500</span>), <span class="string">"马化腾"</span>);</span><br><span class="line">        thread1.start();</span><br><span class="line">        thread2.start();</span><br><span class="line">        thread3.start();</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="comment">/**</span></span><br><span class="line"><span class="comment">     * 非线程安全的存款</span></span><br><span class="line"><span class="comment">     */</span></span><br><span class="line">    <span class="function"><span class="keyword">private</span> <span class="keyword">static</span> <span class="keyword">void</span> <span class="title">notSafeDeposit</span><span class="params">()</span> </span>&#123;</span><br><span class="line">        NotSafeBank bank = <span class="keyword">new</span> NotSafeBank();</span><br><span class="line">        Thread thread1 = <span class="keyword">new</span> Thread(() -&gt; bank.deposit(<span class="number">200</span>), <span class="string">"张成瑶"</span>);</span><br><span class="line">        Thread thread2 = <span class="keyword">new</span> Thread(() -&gt; bank.deposit(<span class="number">200</span>), <span class="string">"马云"</span>);</span><br><span class="line">        Thread thread3 = <span class="keyword">new</span> Thread(() -&gt; bank.deposit(<span class="number">500</span>), <span class="string">"马化腾"</span>);</span><br><span class="line">        thread1.start();</span><br><span class="line">        thread2.start();</span><br><span class="line">        thread3.start();</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="comment">/**</span></span><br><span class="line"><span class="comment"> * 非线程安全的银行</span></span><br><span class="line"><span class="comment"> */</span></span><br><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">NotSafeBank</span> </span>&#123;</span><br><span class="line"></span><br><span class="line">    <span class="comment">/**</span></span><br><span class="line"><span class="comment">     * 当前余额</span></span><br><span class="line"><span class="comment">     */</span></span><br><span class="line">    <span class="keyword">private</span> <span class="keyword">int</span> balance = <span class="number">1000</span>;</span><br><span class="line"></span><br><span class="line">    <span class="comment">/**</span></span><br><span class="line"><span class="comment">     * 存款</span></span><br><span class="line"><span class="comment">     *</span></span><br><span class="line"><span class="comment">     * <span class="doctag">@param</span> money 存款金额</span></span><br><span class="line"><span class="comment">     */</span></span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">void</span> <span class="title">deposit</span><span class="params">(<span class="keyword">int</span> money)</span> </span>&#123;</span><br><span class="line">        String threadName = Thread.currentThread().getName();</span><br><span class="line">        System.out.println(threadName + <span class="string">" -&gt; 当前账户余额为："</span> + <span class="keyword">this</span>.balance);</span><br><span class="line">        <span class="keyword">this</span>.balance += money;</span><br><span class="line">        System.out.println(threadName + <span class="string">" -&gt; 存入 "</span> + money + <span class="string">" 后，当前账户余额为："</span> + <span class="keyword">this</span>.balance);</span><br><span class="line">        <span class="keyword">try</span> &#123;</span><br><span class="line">            Thread.sleep(<span class="number">1000</span>);</span><br><span class="line">        &#125; <span class="keyword">catch</span> (InterruptedException e) &#123;</span><br><span class="line">            e.printStackTrace();</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="comment">/**</span></span><br><span class="line"><span class="comment"> * 线程安全的银行</span></span><br><span class="line"><span class="comment"> */</span></span><br><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">SafeBank</span> </span>&#123;</span><br><span class="line"></span><br><span class="line">    <span class="comment">/**</span></span><br><span class="line"><span class="comment">     * 当前余额</span></span><br><span class="line"><span class="comment">     */</span></span><br><span class="line">    <span class="keyword">private</span> ThreadLocal&lt;Integer&gt; balance = ThreadLocal.withInitial(() -&gt; <span class="number">1000</span>);</span><br><span class="line"></span><br><span class="line">    <span class="comment">/**</span></span><br><span class="line"><span class="comment">     * 存款</span></span><br><span class="line"><span class="comment">     *</span></span><br><span class="line"><span class="comment">     * <span class="doctag">@param</span> money 存款金额</span></span><br><span class="line"><span class="comment">     */</span></span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">void</span> <span class="title">deposit</span><span class="params">(<span class="keyword">int</span> money)</span> </span>&#123;</span><br><span class="line">        String threadName = Thread.currentThread().getName();</span><br><span class="line">        System.out.println(threadName + <span class="string">" -&gt; 当前账户余额为："</span> + <span class="keyword">this</span>.balance.get());</span><br><span class="line">        <span class="keyword">this</span>.balance.set(<span class="keyword">this</span>.balance.get() + money);</span><br><span class="line">        System.out.println(threadName + <span class="string">" -&gt; 存入 "</span> + money + <span class="string">" 后，当前账户余额为："</span> + <span class="keyword">this</span>.balance.get());</span><br><span class="line">        <span class="keyword">try</span> &#123;</span><br><span class="line">            Thread.sleep(<span class="number">1000</span>);</span><br><span class="line">        &#125; <span class="keyword">catch</span> (InterruptedException e) &#123;</span><br><span class="line">            e.printStackTrace();</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></p>
+
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="http://www.nichuan.top/java-8-thread-local-lambda-with-initial/" data-id="cjozqlgee000whm00wf5qypp4" class="article-share-link">Share</a>
+      
+      
+  <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/Lambda/">Lambda</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/Supplier/">Supplier</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/ThreadLocal/">ThreadLocal</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/withInitial/">withInitial</a></li></ul>
+
+    </footer>
+  </div>
+  
+</article>
+
+
+  
+    <article id="post-java-8-lazy-evaluation" class="article article-type-post" itemscope="" itemprop="blogPost">
+  <div class="article-meta">
+    <a href="/java-8-lazy-evaluation/" class="article-date">
+  <time datetime="2018-09-04T01:36:56.000Z" itemprop="datePublished">2018-09-04</time>
+</a>
+    
+  <div class="article-category">
+    <a class="article-category-link" href="/categories/Java/">Java</a>►<a class="article-category-link" href="/categories/Java/Java8/">Java8</a>
+  </div>
+
+  </div>
+  <div class="article-inner">
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/java-8-lazy-evaluation/">Java8 - 惰性求值</a>
+    </h1>
+  
+
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <p><img src="http://www-zebe-me.oss-cn-beijing.aliyuncs.com/cover/cover-java-8.jpg" alt=""></p>
+<h2 id="什么是惰性求值（惰性计算）"><a href="#什么是惰性求值（惰性计算）" class="headerlink" title="什么是惰性求值（惰性计算）"></a>什么是惰性求值（惰性计算）</h2><p>惰性求值也叫惰性计算、延迟求职，在函数式编程语言中随处可见。可以这样通俗地理解为：<strong>不对给出的表达式立即计算并返回值，而是在这个值需要被用到的时候才会计算。</strong>这个是个人理解，有关专业的术语定义请参考百度百科：<a href="https://baike.baidu.com/item/惰性计算" target="_blank" rel="noopener">https://baike.baidu.com/item/惰性计算</a></p>
+<h2 id="什么是及早求值（热情求值）"><a href="#什么是及早求值（热情求值）" class="headerlink" title="什么是及早求值（热情求值）"></a>什么是及早求值（热情求值）</h2><p>和惰性求值相反的是及早求值（热情求值），这是在大多数编程语言中随处可见的一种计算方式，例如：</p>
+<ul>
+<li><strong>int x = 1;</strong>。</li>
+<li><strong>String name = getUserName();</strong>。</li>
+</ul>
+<p>上面的表达式在绑定了变量后就立即求值，得到计算的结果.</p>
+<h2 id="Java中的惰性求值"><a href="#Java中的惰性求值" class="headerlink" title="Java中的惰性求值"></a>Java中的惰性求值</h2><p>以下Java代码就是惰性求值的范例。这段代码在定义 <strong>nameStream</strong> 这个流的时候，System.out.println 语句不会被立即执行。</p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">package</span> me.zebe.cat.java.lambda;</span><br><span class="line"></span><br><span class="line"><span class="keyword">import</span> java.util.List;</span><br><span class="line"><span class="keyword">import</span> java.util.stream.Collectors;</span><br><span class="line"><span class="keyword">import</span> java.util.stream.Stream;</span><br><span class="line"></span><br><span class="line"><span class="comment">/**</span></span><br><span class="line"><span class="comment"> * Java8惰性求值例子</span></span><br><span class="line"><span class="comment"> *</span></span><br><span class="line"><span class="comment"> * <span class="doctag">@author</span> Zebe</span></span><br><span class="line"><span class="comment"> */</span></span><br><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">LazyEvaluationDemo</span> </span>&#123;</span><br><span class="line"></span><br><span class="line">    <span class="comment">/**</span></span><br><span class="line"><span class="comment">     * 运行入口</span></span><br><span class="line"><span class="comment">     *</span></span><br><span class="line"><span class="comment">     * <span class="doctag">@param</span> args 运行参数</span></span><br><span class="line"><span class="comment">     */</span></span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">void</span> <span class="title">main</span><span class="params">(String[] args)</span> </span>&#123;</span><br><span class="line">        <span class="comment">// 定义流</span></span><br><span class="line">        Stream&lt;String&gt; nameStream = Stream.of(<span class="string">"Zebe"</span>, <span class="string">"July"</span>, <span class="string">"Yaha"</span>).filter(name -&gt; &#123;</span><br><span class="line">            <span class="keyword">if</span> (!name.isEmpty()) &#123;</span><br><span class="line">                System.out.println(<span class="string">"过滤流，当前名称："</span> + name);</span><br><span class="line">                <span class="keyword">return</span> <span class="keyword">true</span>;</span><br><span class="line">            &#125;</span><br><span class="line">            <span class="keyword">return</span> <span class="keyword">false</span>;</span><br><span class="line">        &#125;);</span><br><span class="line">        <span class="comment">// 取出流的值，这时候才会调用计算</span></span><br><span class="line">        List&lt;String&gt; names1 = nameStream.collect(Collectors.toList());</span><br><span class="line">        <span class="comment">// 流只能被使用一次，下面这行代码会报错，提示流已经被操作或者关闭了</span></span><br><span class="line">        List&lt;String&gt; names2 = nameStream.collect(Collectors.toList());</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="http://www.nichuan.top/java-8-lazy-evaluation/" data-id="cjozqlge6000ihm00munx610w" class="article-share-link">Share</a>
+      
+      
+  <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/惰性求值/">惰性求值</a></li></ul>
+
+    </footer>
+  </div>
+  
+</article>
+
+
+  
+    <article id="post-java-8-lambda-styles" class="article article-type-post" itemscope="" itemprop="blogPost">
+  <div class="article-meta">
+    <a href="/java-8-lambda-styles/" class="article-date">
+  <time datetime="2018-09-03T07:32:00.000Z" itemprop="datePublished">2018-09-03</time>
+</a>
+    
+  <div class="article-category">
+    <a class="article-category-link" href="/categories/Java/">Java</a>►<a class="article-category-link" href="/categories/Java/Java8/">Java8</a>
+  </div>
+
+  </div>
+  <div class="article-inner">
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/java-8-lambda-styles/">Java8 - Lambda表达式的5种形式</a>
+    </h1>
+  
+
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <p><img src="http://www-zebe-me.oss-cn-beijing.aliyuncs.com/cover/cover-java-8.jpg" alt=""><br>本文介绍Jave8中Lambda表达式的多种写法形式，一般有五种写法形式。</p>
+<h2 id="形式一："><a href="#形式一：" class="headerlink" title="形式一："></a>形式一：</h2><p>这种写法没有参数，用一对圆括号表示。<br><figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">Runnable noArguments = () -&gt; System.out.println(<span class="string">"Hello World"</span>);</span><br></pre></td></tr></table></figure></p>
+<h2 id="形式二："><a href="#形式二：" class="headerlink" title="形式二："></a>形式二：</h2><p>这种写法只有1个参数，可以省略括号，下面的 <strong>event</strong> 相当于 <strong>(event)</strong>。<br><figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">ActionListener oneArgument = event -&gt; System.out.println(<span class="string">"点击了按钮"</span>);</span><br><span class="line"><span class="comment">// 等同于 ↓</span></span><br><span class="line"><span class="comment">//ActionListener oneArgument = (event) -&gt; System.out.println("点击了按钮");</span></span><br></pre></td></tr></table></figure></p>
+<h2 id="形式三："><a href="#形式三：" class="headerlink" title="形式三："></a>形式三：</h2><p>这种写法表示有多段代码块，适用于复杂状况。<br><figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">Runnable multiStatement = () -&gt; &#123;</span><br><span class="line">	System.out.print(<span class="string">"Hello"</span>);</span><br><span class="line">	System.out.println(<span class="string">" World"</span>);</span><br><span class="line">&#125;;</span><br></pre></td></tr></table></figure></p>
+<h2 id="形式四："><a href="#形式四：" class="headerlink" title="形式四："></a>形式四：</h2><p>这种写法表示包含两个参数的方法。<br>注意：<strong>下面的 functionAdd 并不是将两个数字相加的结果，而是创建了一个函数，用来计算两个数字相加的结果。</strong>变量 functionAdd 的类型并不是两个数字相加的和，而是将两个数字相加的那行代码。<br><figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">// 创建一个函数</span></span><br><span class="line">BinaryOperator&lt;Long&gt; functionAdd = (x, y) -&gt; x + y;</span><br><span class="line"><span class="comment">// 应用函数，给函数传值，得到计算结果</span></span><br><span class="line">Long result = functionAdd.apply(<span class="number">1L</span>, <span class="number">2L</span>);</span><br></pre></td></tr></table></figure></p>
+<h2 id="形式五："><a href="#形式五：" class="headerlink" title="形式五："></a>形式五：</h2><p>这种写法和形式四的不同之处在于，多了对参数类型的显示声明。<br><figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">// 创建一个函数</span></span><br><span class="line">BinaryOperator&lt;Long&gt; function = (Long x, Long y) -&gt; x + y;</span><br><span class="line"><span class="comment">// 应用函数，给函数传值，得到计算结果</span></span><br><span class="line">Long result = function.apply(<span class="number">1L</span>, <span class="number">2L</span>);</span><br></pre></td></tr></table></figure></p>
+
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="http://www.nichuan.top/java-8-lambda-styles/" data-id="cjozqlge4000fhm000szls140" class="article-share-link">Share</a>
+      
+      
+  <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/Lambda/">Lambda</a></li></ul>
+
+    </footer>
+  </div>
+  
+</article>
+
+
+  
+    <article id="post-feelings-2018-08-27" class="article article-type-post" itemscope="" itemprop="blogPost">
+  <div class="article-meta">
+    <a href="/feelings-2018-08-27/" class="article-date">
+  <time datetime="2018-08-27T14:22:36.000Z" itemprop="datePublished">2018-08-27</time>
+</a>
+    
+  <div class="article-category">
+    <a class="article-category-link" href="/categories/随笔/">随笔</a>►<a class="article-category-link" href="/categories/随笔/心情感悟/">心情感悟</a>
+  </div>
+
+  </div>
+  <div class="article-inner">
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/feelings-2018-08-27/">选择了程序员，选择了什么？</a>
+    </h1>
+  
+
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <p><img src="http://www-zebe-me.oss-cn-beijing.aliyuncs.com/cat-on-my-note-book.jpg" alt="cat-on-my-note-book"></p>
+<h2 id="过去"><a href="#过去" class="headerlink" title="过去"></a>过去</h2><p>从前，我是一个很感性的人 —— 用几年不变的Z字头像，喜欢收集悲伤的句子，习惯在QQ空间自问自答，除了有一份莫名的执着，仿佛我的生活被一把大伞遮住了阳光。</p>
+<p>那时候，能把一首歌听上百遍，能把十个字就能表达清楚的句子用一万个字来表达，能保存好些年的日记。<br>那时候，我在不断追寻自己，以守护者为名，以鼠标为画笔，试着画出自己的梦想。</p>
+<h6 id="守护者之宿命诅咒"><a href="#守护者之宿命诅咒" class="headerlink" title="守护者之宿命诅咒"></a>守护者之宿命诅咒</h6><p><img src="http://www-zebe-me.oss-cn-beijing.aliyuncs.com/shou-hu-zhe-de-su-ming.jpg" alt="守护者之宿命诅咒"></p>
+<h6 id="七彩凤凰"><a href="#七彩凤凰" class="headerlink" title="七彩凤凰"></a>七彩凤凰</h6><p><img src="http://www-zebe-me.oss-cn-beijing.aliyuncs.com/qi-cai-feng-huang.jpg" alt="七彩凤凰"></p>
+<h6 id="WindowsXP主题设计"><a href="#WindowsXP主题设计" class="headerlink" title="WindowsXP主题设计"></a>WindowsXP主题设计</h6><p><img src="http://www-zebe-me.oss-cn-beijing.aliyuncs.com/gray-style-windows-theme.jpg" alt="WindowsXP主题设计"></p>
+<h6 id="我爱罗-AI矢量图"><a href="#我爱罗-AI矢量图" class="headerlink" title="我爱罗 - AI矢量图"></a>我爱罗 - AI矢量图</h6><p><img src="http://www-zebe-me.oss-cn-beijing.aliyuncs.com/cartoon-wo-ai-luo.jpg" alt="我爱罗 - AI矢量图"></p>
+<h6 id="卡卡西-AI矢量图"><a href="#卡卡西-AI矢量图" class="headerlink" title="卡卡西 - AI矢量图"></a>卡卡西 - AI矢量图</h6><p><img src="http://www-zebe-me.oss-cn-beijing.aliyuncs.com/cartoon-ka-ka-xi.jpg" alt="卡卡西 - AI矢量图"></p>
+<h6 id="音画设计-旧景依然"><a href="#音画设计-旧景依然" class="headerlink" title="音画设计 - 旧景依然"></a>音画设计 - 旧景依然</h6><p><img src="http://www-zebe-me.oss-cn-beijing.aliyuncs.com/jiu-jing-yi-ran.jpg" alt="卡卡西 - AI矢量图"></p>
+<h2 id="现在"><a href="#现在" class="headerlink" title="现在"></a>现在</h2><p>八年的时光，沉淀了我的大半个靑春。那时候，我经常像这样花几个小时，只是安静地写写几段文字。<br><strong>生活就像一场繁华里的流浪，多少欲望，像汹涌的浪，吞噬多少善良。曾经的梦想，如今实现了。</strong>大概和南派三叔一样，从感性思维的设计师，跳槽做了一名理性思维的程序员。只不过，我不大可能再像他一样从程序员再跨界成为一名作家，我写不出《盗墓笔记》，也导演不了《沙海》。</p>
+<p>不同的人，对程序员的理解不同，仁者见仁，智者见智。<strong>会写循环的码农千篇一律，懂得思考的Coder万里挑一</strong>。如今我只想问问自己，我该为我的选择付出什么？<br>八小时求生存，八小时求发展，八小时好好睡觉。这对于我来说只是一个美好的愿望。</p>
+<h2 id="未来"><a href="#未来" class="headerlink" title="未来"></a>未来</h2><p>选择了程序员，选择的是一份<strong>热爱</strong> —— 挑灯夜战，不知疲倦，终身学习。<br>选择了程序员，选择的是一份<strong>担当</strong> —— 努力让自己的代码产出价值，让用户满意，让老板赚到钱，让自己可靠。<br>选择了程序员，选择的是一种<strong>修行</strong> —— 不抱怨，不埋怨，少言语，多产出，多虚心，眼里能容下别人的代码。<br>选择了程序员，选择的是一种<strong>孤独</strong> —— 从HTTP协议到DB持久化，越是独立解决问题，越是独当一面。</p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line">Programmer zebe = Programmer.getInstance();</span><br><span class="line"><span class="keyword">for</span>(;;) &#123;</span><br><span class="line">	<span class="keyword">try</span> &#123;</span><br><span class="line">		zebe.writeCode();</span><br><span class="line">	&#125; <span class="keyword">catch</span> (Exception e) &#123;</span><br><span class="line">		zebe.fixBug();</span><br><span class="line">	&#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<p>仅以此文纪念自己成为职业程序员一路走来的一千多个日日夜夜。</p>
+<p>第 <strong>1638</strong> 天，思考自己，思考未来。<strong>静下心来，方能做得更好。</strong></p>
+<embed src="http://www-zebe-me.oss-cn-beijing.aliyuncs.com/yi-nu-ni-feng.mp3" width="1" height="1" type="audio/mpeg" autostart="true" loop="infinite">
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="http://www.nichuan.top/feelings-2018-08-27/" data-id="cjozqlgdd0000hm0094ytpu7d" class="article-share-link">Share</a>
+      
+      
+    </footer>
+  </div>
+  
+</article>
+
+
+  
+    <article id="post-spring-cloud-eureka-server" class="article article-type-post" itemscope="" itemprop="blogPost">
+  <div class="article-meta">
+    <a href="/spring-cloud-eureka-server/" class="article-date">
+  <time datetime="2018-08-07T13:07:52.000Z" itemprop="datePublished">2018-08-07</time>
+</a>
+    
+  <div class="article-category">
+    <a class="article-category-link" href="/categories/框架/">框架</a>►<a class="article-category-link" href="/categories/框架/SpringCloud/">SpringCloud</a>
+  </div>
+
+  </div>
+  <div class="article-inner">
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/spring-cloud-eureka-server/">搭建 Spring Cloud Eureka Server 高可用注册中心集群</a>
+    </h1>
+  
+
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <h2 id="什么是注册中心"><a href="#什么是注册中心" class="headerlink" title="什么是注册中心"></a>什么是注册中心</h2><p>Eureka Server 在微服务中承担的角色是服务注册中心，也是最最基础的核心设施之一。从“Eureka”单词的含义<strong>“我找到了！我发现了！”</strong>可以看出，其实 Eureka 就是<strong>用来实现服务注册、服务发现的工具</strong>，和 dubbo 这类的分布式服务治理框架类似。各种独立的微服务将自己注册到 Eureka Server，Eureka Client 则提供了服务发现的能力。</p>
+<h2 id="本文目的"><a href="#本文目的" class="headerlink" title="本文目的"></a>本文目的</h2><p>Eureka的特点在于可以<strong>相互注册，形成高可用注册中心集群</strong>。这篇文章记录一下本地搭建两个 Eureka Server 注册中心，让他们互相注册自己到对方的服务中心，最后创建一个名为 <code>hello-service</code> 的微服务，将它们注册到注册中心。</p>
+<h2 id="开发环境"><a href="#开发环境" class="headerlink" title="开发环境"></a>开发环境</h2><ul>
+<li>IntelliJ IDEA 2018.1.6</li>
+<li>Maven-3.5.3</li>
+<li>JDK8</li>
+<li>spring cloud版本：Finchley.RELEASE</li>
+<li>spring-boot-starter版本：2.0.3.RELEASE</li>
+</ul>
+<h2 id="准备工作"><a href="#准备工作" class="headerlink" title="准备工作"></a>准备工作</h2><p>由于是本地在同一台机器上模拟搭建两个注册中心，需要修改 HOSTS 文件，这里以 Win10 系统为例，HOSTS 文件的路径在 <code>C:\Windows\System32\drivers\etc</code>。</p>
+<p>在末尾追加内容如下，表示访问 eureka-server1 和 eureka-server2 时，等于访问 127.0.0.1：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">127.0.0.1 eureka-server1</span><br><span class="line">127.0.0.1 eureka-server2</span><br></pre></td></tr></table></figure>
+<h2 id="第1步：搭建注册中心1"><a href="#第1步：搭建注册中心1" class="headerlink" title="第1步：搭建注册中心1"></a>第1步：搭建注册中心1</h2><p>在IDEA创建工程，取名为 <code>cat-spring-cloud-eureka-server-1</code>，通过Spring初始化工具，添加 eureka server 依赖（这里就不贴图演示了）：</p>
+<p><strong>pom.xml</strong>：</p>
+<figure class="highlight xml"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br><span class="line">58</span><br><span class="line">59</span><br><span class="line">60</span><br><span class="line">61</span><br><span class="line">62</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">&lt;?xml version="1.0" encoding="UTF-8"?&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">project</span> <span class="attr">xmlns</span>=<span class="string">"http://maven.apache.org/POM/4.0.0"</span> <span class="attr">xmlns:xsi</span>=<span class="string">"http://www.w3.org/2001/XMLSchema-instance"</span></span></span><br><span class="line"><span class="tag">         <span class="attr">xsi:schemaLocation</span>=<span class="string">"http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd"</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">modelVersion</span>&gt;</span>4.0.0<span class="tag">&lt;/<span class="name">modelVersion</span>&gt;</span></span><br><span class="line"></span><br><span class="line">    <span class="tag">&lt;<span class="name">groupId</span>&gt;</span>me.zebe<span class="tag">&lt;/<span class="name">groupId</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">artifactId</span>&gt;</span>cat-spring-cloud-eureka-server-1<span class="tag">&lt;/<span class="name">artifactId</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">version</span>&gt;</span>0.0.1-SNAPSHOT<span class="tag">&lt;/<span class="name">version</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">packaging</span>&gt;</span>jar<span class="tag">&lt;/<span class="name">packaging</span>&gt;</span></span><br><span class="line"></span><br><span class="line">    <span class="tag">&lt;<span class="name">name</span>&gt;</span>cat-spring-cloud-eureka-server-1<span class="tag">&lt;/<span class="name">name</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">description</span>&gt;</span>pring Cloud Eureka 注册中心1<span class="tag">&lt;/<span class="name">description</span>&gt;</span></span><br><span class="line"></span><br><span class="line">    <span class="tag">&lt;<span class="name">parent</span>&gt;</span></span><br><span class="line">        <span class="tag">&lt;<span class="name">groupId</span>&gt;</span>org.springframework.boot<span class="tag">&lt;/<span class="name">groupId</span>&gt;</span></span><br><span class="line">        <span class="tag">&lt;<span class="name">artifactId</span>&gt;</span>spring-boot-starter-parent<span class="tag">&lt;/<span class="name">artifactId</span>&gt;</span></span><br><span class="line">        <span class="tag">&lt;<span class="name">version</span>&gt;</span>2.0.3.RELEASE<span class="tag">&lt;/<span class="name">version</span>&gt;</span></span><br><span class="line">        <span class="tag">&lt;<span class="name">relativePath</span>/&gt;</span> <span class="comment">&lt;!-- lookup parent from repository --&gt;</span></span><br><span class="line">    <span class="tag">&lt;/<span class="name">parent</span>&gt;</span></span><br><span class="line"></span><br><span class="line">    <span class="tag">&lt;<span class="name">properties</span>&gt;</span></span><br><span class="line">        <span class="tag">&lt;<span class="name">project.build.sourceEncoding</span>&gt;</span>UTF-8<span class="tag">&lt;/<span class="name">project.build.sourceEncoding</span>&gt;</span></span><br><span class="line">        <span class="tag">&lt;<span class="name">project.reporting.outputEncoding</span>&gt;</span>UTF-8<span class="tag">&lt;/<span class="name">project.reporting.outputEncoding</span>&gt;</span></span><br><span class="line">        <span class="tag">&lt;<span class="name">java.version</span>&gt;</span>1.8<span class="tag">&lt;/<span class="name">java.version</span>&gt;</span></span><br><span class="line">        <span class="tag">&lt;<span class="name">spring-cloud.version</span>&gt;</span>Finchley.RELEASE<span class="tag">&lt;/<span class="name">spring-cloud.version</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;/<span class="name">properties</span>&gt;</span></span><br><span class="line"></span><br><span class="line">    <span class="tag">&lt;<span class="name">dependencies</span>&gt;</span></span><br><span class="line">        <span class="tag">&lt;<span class="name">dependency</span>&gt;</span></span><br><span class="line">            <span class="tag">&lt;<span class="name">groupId</span>&gt;</span>org.springframework.cloud<span class="tag">&lt;/<span class="name">groupId</span>&gt;</span></span><br><span class="line">            <span class="tag">&lt;<span class="name">artifactId</span>&gt;</span>spring-cloud-starter-netflix-eureka-server<span class="tag">&lt;/<span class="name">artifactId</span>&gt;</span></span><br><span class="line">        <span class="tag">&lt;/<span class="name">dependency</span>&gt;</span></span><br><span class="line"></span><br><span class="line">        <span class="tag">&lt;<span class="name">dependency</span>&gt;</span></span><br><span class="line">            <span class="tag">&lt;<span class="name">groupId</span>&gt;</span>org.springframework.boot<span class="tag">&lt;/<span class="name">groupId</span>&gt;</span></span><br><span class="line">            <span class="tag">&lt;<span class="name">artifactId</span>&gt;</span>spring-boot-starter-test<span class="tag">&lt;/<span class="name">artifactId</span>&gt;</span></span><br><span class="line">            <span class="tag">&lt;<span class="name">scope</span>&gt;</span>test<span class="tag">&lt;/<span class="name">scope</span>&gt;</span></span><br><span class="line">        <span class="tag">&lt;/<span class="name">dependency</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;/<span class="name">dependencies</span>&gt;</span></span><br><span class="line"></span><br><span class="line">    <span class="tag">&lt;<span class="name">dependencyManagement</span>&gt;</span></span><br><span class="line">        <span class="tag">&lt;<span class="name">dependencies</span>&gt;</span></span><br><span class="line">            <span class="tag">&lt;<span class="name">dependency</span>&gt;</span></span><br><span class="line">                <span class="tag">&lt;<span class="name">groupId</span>&gt;</span>org.springframework.cloud<span class="tag">&lt;/<span class="name">groupId</span>&gt;</span></span><br><span class="line">                <span class="tag">&lt;<span class="name">artifactId</span>&gt;</span>spring-cloud-dependencies<span class="tag">&lt;/<span class="name">artifactId</span>&gt;</span></span><br><span class="line">                <span class="tag">&lt;<span class="name">version</span>&gt;</span>$&#123;spring-cloud.version&#125;<span class="tag">&lt;/<span class="name">version</span>&gt;</span></span><br><span class="line">                <span class="tag">&lt;<span class="name">type</span>&gt;</span>pom<span class="tag">&lt;/<span class="name">type</span>&gt;</span></span><br><span class="line">                <span class="tag">&lt;<span class="name">scope</span>&gt;</span>import<span class="tag">&lt;/<span class="name">scope</span>&gt;</span></span><br><span class="line">            <span class="tag">&lt;/<span class="name">dependency</span>&gt;</span></span><br><span class="line">        <span class="tag">&lt;/<span class="name">dependencies</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;/<span class="name">dependencyManagement</span>&gt;</span></span><br><span class="line"></span><br><span class="line">    <span class="tag">&lt;<span class="name">build</span>&gt;</span></span><br><span class="line">        <span class="tag">&lt;<span class="name">plugins</span>&gt;</span></span><br><span class="line">            <span class="tag">&lt;<span class="name">plugin</span>&gt;</span></span><br><span class="line">                <span class="tag">&lt;<span class="name">groupId</span>&gt;</span>org.springframework.boot<span class="tag">&lt;/<span class="name">groupId</span>&gt;</span></span><br><span class="line">                <span class="tag">&lt;<span class="name">artifactId</span>&gt;</span>spring-boot-maven-plugin<span class="tag">&lt;/<span class="name">artifactId</span>&gt;</span></span><br><span class="line">            <span class="tag">&lt;/<span class="name">plugin</span>&gt;</span></span><br><span class="line">        <span class="tag">&lt;/<span class="name">plugins</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;/<span class="name">build</span>&gt;</span></span><br><span class="line"></span><br><span class="line"><span class="tag">&lt;/<span class="name">project</span>&gt;</span></span><br></pre></td></tr></table></figure>
+<p><strong>application.yml</strong>：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br></pre></td><td class="code"><pre><span class="line">server:</span><br><span class="line">  port: 20001</span><br><span class="line">eureka:</span><br><span class="line">  instance:</span><br><span class="line">    # eureka-server1 是一个别名，需要在 hosts 文件里面将其映射为 127.0.0.1</span><br><span class="line">    hostname: eureka-server1</span><br><span class="line">  client:</span><br><span class="line">    serviceUrl:</span><br><span class="line">      # 将自身反注册到eureka-server2，利用相互注册，形成高可用注册中心集群</span><br><span class="line">      defaultZone: http://eureka-server2:20002/eureka/</span><br><span class="line">    # 将当前服务注册中心本身也作为服务注册到别的服务注册中心（eureka-server2）</span><br><span class="line">    register-with-eureka: true</span><br><span class="line">    # 不将当前服务注册中心本身也作为服务注册到别的服务注册中心（如设为false，则 eureka-server2 中，unavailable-replicas 会包含此注册中心）</span><br><span class="line">    # register-with-eureka: false</span><br></pre></td></tr></table></figure>
+<p><strong>应用启动器类</strong>：</p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">package</span> me.zebe.cat.spring.cloud.eureka.server;</span><br><span class="line"></span><br><span class="line"><span class="keyword">import</span> org.springframework.boot.SpringApplication;</span><br><span class="line"><span class="keyword">import</span> org.springframework.boot.autoconfigure.SpringBootApplication;</span><br><span class="line"><span class="keyword">import</span> org.springframework.cloud.netflix.eureka.server.EnableEurekaServer;</span><br><span class="line"></span><br><span class="line"><span class="comment">/**</span></span><br><span class="line"><span class="comment"> * Spring Cloud Eureka 注册中心1</span></span><br><span class="line"><span class="comment"> *</span></span><br><span class="line"><span class="comment"> * <span class="doctag">@author</span> Zebe</span></span><br><span class="line"><span class="comment"> */</span></span><br><span class="line"><span class="meta">@EnableEurekaServer</span></span><br><span class="line"><span class="meta">@SpringBootApplication</span></span><br><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">CatSpringCloudEurekaServer1Application</span> </span>&#123;</span><br><span class="line"></span><br><span class="line">    <span class="comment">/**</span></span><br><span class="line"><span class="comment">     * 运行入口</span></span><br><span class="line"><span class="comment">     * <span class="doctag">@param</span> args 运行参数</span></span><br><span class="line"><span class="comment">     */</span></span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">void</span> <span class="title">main</span><span class="params">(String[] args)</span> </span>&#123;</span><br><span class="line">        SpringApplication.run(CatSpringCloudEurekaServer1Application.class, args);</span><br><span class="line">        System.out.println(<span class="string">"Spring Cloud Eureka 注册中心1 -&gt; 已启动。"</span>);</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<p>运行该类，<strong>启动时会抛出异常，提示找不到 eureka-server2</strong>，这是因为 eureka-server2 我们没有启动，不用管它。</p>
+<h2 id="第2步：搭建注册中心2"><a href="#第2步：搭建注册中心2" class="headerlink" title="第2步：搭建注册中心2"></a>第2步：搭建注册中心2</h2><p>第二个注册中心和第一个注册中心没有本质上的区别，只不过是换了运行端口和注册地址。将第二个工程取名为 <code>cat-spring-cloud-eureka-server-2</code>。</p>
+<p><strong>pom.xml</strong>：</p>
+<figure class="highlight xml"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br><span class="line">58</span><br><span class="line">59</span><br><span class="line">60</span><br><span class="line">61</span><br><span class="line">62</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">&lt;?xml version="1.0" encoding="UTF-8"?&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">project</span> <span class="attr">xmlns</span>=<span class="string">"http://maven.apache.org/POM/4.0.0"</span> <span class="attr">xmlns:xsi</span>=<span class="string">"http://www.w3.org/2001/XMLSchema-instance"</span></span></span><br><span class="line"><span class="tag">         <span class="attr">xsi:schemaLocation</span>=<span class="string">"http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd"</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">modelVersion</span>&gt;</span>4.0.0<span class="tag">&lt;/<span class="name">modelVersion</span>&gt;</span></span><br><span class="line"></span><br><span class="line">    <span class="tag">&lt;<span class="name">groupId</span>&gt;</span>me.zebe<span class="tag">&lt;/<span class="name">groupId</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">artifactId</span>&gt;</span>cat-spring-cloud-eureka-server-2<span class="tag">&lt;/<span class="name">artifactId</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">version</span>&gt;</span>0.0.1-SNAPSHOT<span class="tag">&lt;/<span class="name">version</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">packaging</span>&gt;</span>jar<span class="tag">&lt;/<span class="name">packaging</span>&gt;</span></span><br><span class="line"></span><br><span class="line">    <span class="tag">&lt;<span class="name">name</span>&gt;</span>cat-spring-cloud-eureka-server-2<span class="tag">&lt;/<span class="name">name</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">description</span>&gt;</span>pring Cloud Eureka 注册中心2<span class="tag">&lt;/<span class="name">description</span>&gt;</span></span><br><span class="line"></span><br><span class="line">    <span class="tag">&lt;<span class="name">parent</span>&gt;</span></span><br><span class="line">        <span class="tag">&lt;<span class="name">groupId</span>&gt;</span>org.springframework.boot<span class="tag">&lt;/<span class="name">groupId</span>&gt;</span></span><br><span class="line">        <span class="tag">&lt;<span class="name">artifactId</span>&gt;</span>spring-boot-starter-parent<span class="tag">&lt;/<span class="name">artifactId</span>&gt;</span></span><br><span class="line">        <span class="tag">&lt;<span class="name">version</span>&gt;</span>2.0.3.RELEASE<span class="tag">&lt;/<span class="name">version</span>&gt;</span></span><br><span class="line">        <span class="tag">&lt;<span class="name">relativePath</span>/&gt;</span> <span class="comment">&lt;!-- lookup parent from repository --&gt;</span></span><br><span class="line">    <span class="tag">&lt;/<span class="name">parent</span>&gt;</span></span><br><span class="line"></span><br><span class="line">    <span class="tag">&lt;<span class="name">properties</span>&gt;</span></span><br><span class="line">        <span class="tag">&lt;<span class="name">project.build.sourceEncoding</span>&gt;</span>UTF-8<span class="tag">&lt;/<span class="name">project.build.sourceEncoding</span>&gt;</span></span><br><span class="line">        <span class="tag">&lt;<span class="name">project.reporting.outputEncoding</span>&gt;</span>UTF-8<span class="tag">&lt;/<span class="name">project.reporting.outputEncoding</span>&gt;</span></span><br><span class="line">        <span class="tag">&lt;<span class="name">java.version</span>&gt;</span>1.8<span class="tag">&lt;/<span class="name">java.version</span>&gt;</span></span><br><span class="line">        <span class="tag">&lt;<span class="name">spring-cloud.version</span>&gt;</span>Finchley.RELEASE<span class="tag">&lt;/<span class="name">spring-cloud.version</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;/<span class="name">properties</span>&gt;</span></span><br><span class="line"></span><br><span class="line">    <span class="tag">&lt;<span class="name">dependencies</span>&gt;</span></span><br><span class="line">        <span class="tag">&lt;<span class="name">dependency</span>&gt;</span></span><br><span class="line">            <span class="tag">&lt;<span class="name">groupId</span>&gt;</span>org.springframework.cloud<span class="tag">&lt;/<span class="name">groupId</span>&gt;</span></span><br><span class="line">            <span class="tag">&lt;<span class="name">artifactId</span>&gt;</span>spring-cloud-starter-netflix-eureka-server<span class="tag">&lt;/<span class="name">artifactId</span>&gt;</span></span><br><span class="line">        <span class="tag">&lt;/<span class="name">dependency</span>&gt;</span></span><br><span class="line"></span><br><span class="line">        <span class="tag">&lt;<span class="name">dependency</span>&gt;</span></span><br><span class="line">            <span class="tag">&lt;<span class="name">groupId</span>&gt;</span>org.springframework.boot<span class="tag">&lt;/<span class="name">groupId</span>&gt;</span></span><br><span class="line">            <span class="tag">&lt;<span class="name">artifactId</span>&gt;</span>spring-boot-starter-test<span class="tag">&lt;/<span class="name">artifactId</span>&gt;</span></span><br><span class="line">            <span class="tag">&lt;<span class="name">scope</span>&gt;</span>test<span class="tag">&lt;/<span class="name">scope</span>&gt;</span></span><br><span class="line">        <span class="tag">&lt;/<span class="name">dependency</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;/<span class="name">dependencies</span>&gt;</span></span><br><span class="line"></span><br><span class="line">    <span class="tag">&lt;<span class="name">dependencyManagement</span>&gt;</span></span><br><span class="line">        <span class="tag">&lt;<span class="name">dependencies</span>&gt;</span></span><br><span class="line">            <span class="tag">&lt;<span class="name">dependency</span>&gt;</span></span><br><span class="line">                <span class="tag">&lt;<span class="name">groupId</span>&gt;</span>org.springframework.cloud<span class="tag">&lt;/<span class="name">groupId</span>&gt;</span></span><br><span class="line">                <span class="tag">&lt;<span class="name">artifactId</span>&gt;</span>spring-cloud-dependencies<span class="tag">&lt;/<span class="name">artifactId</span>&gt;</span></span><br><span class="line">                <span class="tag">&lt;<span class="name">version</span>&gt;</span>$&#123;spring-cloud.version&#125;<span class="tag">&lt;/<span class="name">version</span>&gt;</span></span><br><span class="line">                <span class="tag">&lt;<span class="name">type</span>&gt;</span>pom<span class="tag">&lt;/<span class="name">type</span>&gt;</span></span><br><span class="line">                <span class="tag">&lt;<span class="name">scope</span>&gt;</span>import<span class="tag">&lt;/<span class="name">scope</span>&gt;</span></span><br><span class="line">            <span class="tag">&lt;/<span class="name">dependency</span>&gt;</span></span><br><span class="line">        <span class="tag">&lt;/<span class="name">dependencies</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;/<span class="name">dependencyManagement</span>&gt;</span></span><br><span class="line"></span><br><span class="line">    <span class="tag">&lt;<span class="name">build</span>&gt;</span></span><br><span class="line">        <span class="tag">&lt;<span class="name">plugins</span>&gt;</span></span><br><span class="line">            <span class="tag">&lt;<span class="name">plugin</span>&gt;</span></span><br><span class="line">                <span class="tag">&lt;<span class="name">groupId</span>&gt;</span>org.springframework.boot<span class="tag">&lt;/<span class="name">groupId</span>&gt;</span></span><br><span class="line">                <span class="tag">&lt;<span class="name">artifactId</span>&gt;</span>spring-boot-maven-plugin<span class="tag">&lt;/<span class="name">artifactId</span>&gt;</span></span><br><span class="line">            <span class="tag">&lt;/<span class="name">plugin</span>&gt;</span></span><br><span class="line">        <span class="tag">&lt;/<span class="name">plugins</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;/<span class="name">build</span>&gt;</span></span><br><span class="line"></span><br><span class="line"><span class="tag">&lt;/<span class="name">project</span>&gt;</span></span><br></pre></td></tr></table></figure>
+<p><strong>application.yml</strong>：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br></pre></td><td class="code"><pre><span class="line">server:</span><br><span class="line">  port: 20002</span><br><span class="line">eureka:</span><br><span class="line">  instance:</span><br><span class="line">    # eureka-server2 是一个别名，需要在 hosts 文件里面将其映射为 127.0.0.1</span><br><span class="line">    hostname: eureka-server2</span><br><span class="line">  client:</span><br><span class="line">    serviceUrl:</span><br><span class="line">      # 将自身反注册到eureka-server1，利用相互注册，形成高可用注册中心集群</span><br><span class="line">      defaultZone: http://eureka-server1:20001/eureka/</span><br><span class="line">    # 将当前服务注册中心本身也作为服务注册到别的服务注册中心（eureka-server1）</span><br><span class="line">    register-with-eureka: true</span><br><span class="line">    # 不将当前服务注册中心本身也作为服务注册到别的服务注册中心（如设为false，则 eureka-server1 中，unavailable-replicas 会包含此注册中心）</span><br><span class="line">    # register-with-eureka: false</span><br></pre></td></tr></table></figure>
+<p><strong>应用启动器类</strong>：</p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">package</span> me.zebe.cat.spring.cloud.eureka.server;</span><br><span class="line"></span><br><span class="line"><span class="keyword">import</span> org.springframework.boot.SpringApplication;</span><br><span class="line"><span class="keyword">import</span> org.springframework.boot.autoconfigure.SpringBootApplication;</span><br><span class="line"><span class="keyword">import</span> org.springframework.cloud.netflix.eureka.server.EnableEurekaServer;</span><br><span class="line"></span><br><span class="line"><span class="comment">/**</span></span><br><span class="line"><span class="comment"> * Spring Cloud Eureka 注册中心2</span></span><br><span class="line"><span class="comment"> *</span></span><br><span class="line"><span class="comment"> * <span class="doctag">@author</span> Zebe</span></span><br><span class="line"><span class="comment"> */</span></span><br><span class="line"><span class="meta">@EnableEurekaServer</span></span><br><span class="line"><span class="meta">@SpringBootApplication</span></span><br><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">CatSpringCloudEurekaServer2Application</span> </span>&#123;</span><br><span class="line"></span><br><span class="line">    <span class="comment">/**</span></span><br><span class="line"><span class="comment">     * 运行入口</span></span><br><span class="line"><span class="comment">     * <span class="doctag">@param</span> args 运行参数</span></span><br><span class="line"><span class="comment">     */</span></span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">void</span> <span class="title">main</span><span class="params">(String[] args)</span> </span>&#123;</span><br><span class="line">        SpringApplication.run(CatSpringCloudEurekaServer2Application.class, args);</span><br><span class="line">        System.out.println(<span class="string">"Spring Cloud Eureka 注册中心2 -&gt; 已启动。"</span>);</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<p>运行该类，只要 <strong>hosts</strong> 文件里面按照配置里面修改好了，启动时就不会报异常了。</p>
+<h2 id="第3步：启动注册中心"><a href="#第3步：启动注册中心" class="headerlink" title="第3步：启动注册中心"></a>第3步：启动注册中心</h2><p>先启动注册中心1，忽略报错信息，然后再启动注册中心2。分别访问 <a href="http://127.0.0.1:20001" target="_blank" rel="noopener">http://127.0.0.1:20001</a> 和 <a href="http://127.0.0.1:20002" target="_blank" rel="noopener">http://127.0.0.1:20002</a> 。<br>可以看到两个注册中心已经互相注册，配置文件的注释里面已经写清楚了如何观察。</p>
+<p><strong>注册中心1</strong>：<br><img src="http://www-zebe-me.oss-cn-beijing.aliyuncs.com/spring-cloud-eureka-server-1.jpg" alt="spring-cloud-eureka-server-1"></p>
+<p><strong>注册中心2</strong>：<br><img src="http://www-zebe-me.oss-cn-beijing.aliyuncs.com/spring-cloud-eureka-server-2.jpg" alt="spring-cloud-eureka-server-2"></p>
+<h2 id="第4步：制作快速启动脚本（非必需）"><a href="#第4步：制作快速启动脚本（非必需）" class="headerlink" title="第4步：制作快速启动脚本（非必需）"></a>第4步：制作快速启动脚本（非必需）</h2><p>将这两个注册中心工程，分别用Maven打包成JAR文件，然后写好批处理文件，后面就可以一健启动了，比如我为这两个应用写了批处理文件，如下所示：</p>
+<ul>
+<li>01 一健启动 Eureka 注册中心-1 运行在 20001.cmd</li>
+<li>02 一健启动 Eureka 注册中心-2 运行在 20002.cmd</li>
+</ul>
+<p>内容参考：</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">title EurekaServer1-20001</span><br><span class="line">java -jar cat-spring-cloud-eureka-server-1-0.0.1-SNAPSHOT.jar</span><br></pre></td></tr></table></figure>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">title EurekaServer2-20002</span><br><span class="line">java -jar cat-spring-cloud-eureka-server-2-0.0.1-SNAPSHOT.jar</span><br></pre></td></tr></table></figure>
+<p><strong>强烈建议写为批处理文件</strong>，因为如果要本地搭建为服务学习环境，注册中心是首先要启动的基础设施。</p>
+<h2 id="第5步：编写-HELLO-SERVICE-微服务"><a href="#第5步：编写-HELLO-SERVICE-微服务" class="headerlink" title="第5步：编写 HELLO-SERVICE 微服务"></a>第5步：编写 HELLO-SERVICE 微服务</h2><p>创建工程，取名为 <code>cat-spring-cloud-hello-service</code>。该工程很简单，需要依赖于 eureka client 来实现服务发现，注意需要引用 starter-web 提供WEB访问功能。</p>
+<p><strong>pom.xml</strong>：<br><figure class="highlight xml"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br><span class="line">58</span><br><span class="line">59</span><br><span class="line">60</span><br><span class="line">61</span><br><span class="line">62</span><br><span class="line">63</span><br><span class="line">64</span><br><span class="line">65</span><br><span class="line">66</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">&lt;?xml version="1.0" encoding="UTF-8"?&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">project</span> <span class="attr">xmlns</span>=<span class="string">"http://maven.apache.org/POM/4.0.0"</span> <span class="attr">xmlns:xsi</span>=<span class="string">"http://www.w3.org/2001/XMLSchema-instance"</span></span></span><br><span class="line"><span class="tag">         <span class="attr">xsi:schemaLocation</span>=<span class="string">"http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd"</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">modelVersion</span>&gt;</span>4.0.0<span class="tag">&lt;/<span class="name">modelVersion</span>&gt;</span></span><br><span class="line"></span><br><span class="line">    <span class="tag">&lt;<span class="name">groupId</span>&gt;</span>me.zebe<span class="tag">&lt;/<span class="name">groupId</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">artifactId</span>&gt;</span>cat-spring-cloud-hello-service<span class="tag">&lt;/<span class="name">artifactId</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">version</span>&gt;</span>0.0.1-SNAPSHOT<span class="tag">&lt;/<span class="name">version</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">packaging</span>&gt;</span>jar<span class="tag">&lt;/<span class="name">packaging</span>&gt;</span></span><br><span class="line"></span><br><span class="line">    <span class="tag">&lt;<span class="name">name</span>&gt;</span>cat-spring-cloud-hello-service<span class="tag">&lt;/<span class="name">name</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">description</span>&gt;</span>Spring Cloud Hello-Service 服务实现<span class="tag">&lt;/<span class="name">description</span>&gt;</span></span><br><span class="line"></span><br><span class="line">    <span class="tag">&lt;<span class="name">parent</span>&gt;</span></span><br><span class="line">        <span class="tag">&lt;<span class="name">groupId</span>&gt;</span>org.springframework.boot<span class="tag">&lt;/<span class="name">groupId</span>&gt;</span></span><br><span class="line">        <span class="tag">&lt;<span class="name">artifactId</span>&gt;</span>spring-boot-starter-parent<span class="tag">&lt;/<span class="name">artifactId</span>&gt;</span></span><br><span class="line">        <span class="tag">&lt;<span class="name">version</span>&gt;</span>2.0.3.RELEASE<span class="tag">&lt;/<span class="name">version</span>&gt;</span></span><br><span class="line">        <span class="tag">&lt;<span class="name">relativePath</span>/&gt;</span> <span class="comment">&lt;!-- lookup parent from repository --&gt;</span></span><br><span class="line">    <span class="tag">&lt;/<span class="name">parent</span>&gt;</span></span><br><span class="line"></span><br><span class="line">    <span class="tag">&lt;<span class="name">properties</span>&gt;</span></span><br><span class="line">        <span class="tag">&lt;<span class="name">project.build.sourceEncoding</span>&gt;</span>UTF-8<span class="tag">&lt;/<span class="name">project.build.sourceEncoding</span>&gt;</span></span><br><span class="line">        <span class="tag">&lt;<span class="name">project.reporting.outputEncoding</span>&gt;</span>UTF-8<span class="tag">&lt;/<span class="name">project.reporting.outputEncoding</span>&gt;</span></span><br><span class="line">        <span class="tag">&lt;<span class="name">java.version</span>&gt;</span>1.8<span class="tag">&lt;/<span class="name">java.version</span>&gt;</span></span><br><span class="line">        <span class="tag">&lt;<span class="name">spring-cloud.version</span>&gt;</span>Finchley.RELEASE<span class="tag">&lt;/<span class="name">spring-cloud.version</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;/<span class="name">properties</span>&gt;</span></span><br><span class="line"></span><br><span class="line">    <span class="tag">&lt;<span class="name">dependencies</span>&gt;</span></span><br><span class="line">        <span class="tag">&lt;<span class="name">dependency</span>&gt;</span></span><br><span class="line">            <span class="tag">&lt;<span class="name">groupId</span>&gt;</span>org.springframework.cloud<span class="tag">&lt;/<span class="name">groupId</span>&gt;</span></span><br><span class="line">            <span class="tag">&lt;<span class="name">artifactId</span>&gt;</span>spring-cloud-starter-netflix-eureka-client<span class="tag">&lt;/<span class="name">artifactId</span>&gt;</span></span><br><span class="line">        <span class="tag">&lt;/<span class="name">dependency</span>&gt;</span></span><br><span class="line">        <span class="comment">&lt;!-- spring-boot-starter-web --&gt;</span></span><br><span class="line">        <span class="tag">&lt;<span class="name">dependency</span>&gt;</span></span><br><span class="line">            <span class="tag">&lt;<span class="name">groupId</span>&gt;</span>org.springframework.boot<span class="tag">&lt;/<span class="name">groupId</span>&gt;</span></span><br><span class="line">            <span class="tag">&lt;<span class="name">artifactId</span>&gt;</span>spring-boot-starter-web<span class="tag">&lt;/<span class="name">artifactId</span>&gt;</span></span><br><span class="line">        <span class="tag">&lt;/<span class="name">dependency</span>&gt;</span></span><br><span class="line">        <span class="tag">&lt;<span class="name">dependency</span>&gt;</span></span><br><span class="line">            <span class="tag">&lt;<span class="name">groupId</span>&gt;</span>org.springframework.boot<span class="tag">&lt;/<span class="name">groupId</span>&gt;</span></span><br><span class="line">            <span class="tag">&lt;<span class="name">artifactId</span>&gt;</span>spring-boot-starter-test<span class="tag">&lt;/<span class="name">artifactId</span>&gt;</span></span><br><span class="line">            <span class="tag">&lt;<span class="name">scope</span>&gt;</span>test<span class="tag">&lt;/<span class="name">scope</span>&gt;</span></span><br><span class="line">        <span class="tag">&lt;/<span class="name">dependency</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;/<span class="name">dependencies</span>&gt;</span></span><br><span class="line"></span><br><span class="line">    <span class="tag">&lt;<span class="name">dependencyManagement</span>&gt;</span></span><br><span class="line">        <span class="tag">&lt;<span class="name">dependencies</span>&gt;</span></span><br><span class="line">            <span class="tag">&lt;<span class="name">dependency</span>&gt;</span></span><br><span class="line">                <span class="tag">&lt;<span class="name">groupId</span>&gt;</span>org.springframework.cloud<span class="tag">&lt;/<span class="name">groupId</span>&gt;</span></span><br><span class="line">                <span class="tag">&lt;<span class="name">artifactId</span>&gt;</span>spring-cloud-dependencies<span class="tag">&lt;/<span class="name">artifactId</span>&gt;</span></span><br><span class="line">                <span class="tag">&lt;<span class="name">version</span>&gt;</span>$&#123;spring-cloud.version&#125;<span class="tag">&lt;/<span class="name">version</span>&gt;</span></span><br><span class="line">                <span class="tag">&lt;<span class="name">type</span>&gt;</span>pom<span class="tag">&lt;/<span class="name">type</span>&gt;</span></span><br><span class="line">                <span class="tag">&lt;<span class="name">scope</span>&gt;</span>import<span class="tag">&lt;/<span class="name">scope</span>&gt;</span></span><br><span class="line">            <span class="tag">&lt;/<span class="name">dependency</span>&gt;</span></span><br><span class="line">        <span class="tag">&lt;/<span class="name">dependencies</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;/<span class="name">dependencyManagement</span>&gt;</span></span><br><span class="line"></span><br><span class="line">    <span class="tag">&lt;<span class="name">build</span>&gt;</span></span><br><span class="line">        <span class="tag">&lt;<span class="name">plugins</span>&gt;</span></span><br><span class="line">            <span class="tag">&lt;<span class="name">plugin</span>&gt;</span></span><br><span class="line">                <span class="tag">&lt;<span class="name">groupId</span>&gt;</span>org.springframework.boot<span class="tag">&lt;/<span class="name">groupId</span>&gt;</span></span><br><span class="line">                <span class="tag">&lt;<span class="name">artifactId</span>&gt;</span>spring-boot-maven-plugin<span class="tag">&lt;/<span class="name">artifactId</span>&gt;</span></span><br><span class="line">            <span class="tag">&lt;/<span class="name">plugin</span>&gt;</span></span><br><span class="line">        <span class="tag">&lt;/<span class="name">plugins</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;/<span class="name">build</span>&gt;</span></span><br><span class="line"></span><br><span class="line"><span class="tag">&lt;/<span class="name">project</span>&gt;</span></span><br></pre></td></tr></table></figure></p>
+<p><strong>application.yml</strong>：<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br></pre></td><td class="code"><pre><span class="line">server:</span><br><span class="line">  port: 8001</span><br><span class="line">spring:</span><br><span class="line">  application:</span><br><span class="line">    name: hello-service</span><br><span class="line">eureka:</span><br><span class="line">  client:</span><br><span class="line">    serviceUrl:</span><br><span class="line">      # 如果这里只配置一个服务注册中心 eureka-server1，那么当 eureka-server1 挂掉，服务便无法注册上去</span><br><span class="line">      # defaultZone: http://eureka-server1:20001/eureka/</span><br><span class="line">      # 因此，通常的做法是，将注册中心的地址写成多个（用逗号隔开时，不要有空格，不然可能会报解析错误）</span><br><span class="line">      defaultZone: http://eureka-server1:20001/eureka/,http://eureka-server1:20002/eureka/</span><br><span class="line">    # 将当前服务注册到eureka服务注册中心，这样消费者就可以发现服务</span><br><span class="line">    register-with-eureka: true</span><br><span class="line">    # 如果设置为false，则不会注册到服务中心</span><br><span class="line">    #register-with-eureka: false</span><br></pre></td></tr></table></figure></p>
+<p><strong>应用启动器类</strong>：<br><figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">package</span> me.zebe.cat.spring.cloud.service.hello;</span><br><span class="line"></span><br><span class="line"><span class="keyword">import</span> org.springframework.boot.SpringApplication;</span><br><span class="line"><span class="keyword">import</span> org.springframework.boot.autoconfigure.SpringBootApplication;</span><br><span class="line"><span class="keyword">import</span> org.springframework.cloud.netflix.eureka.EnableEurekaClient;</span><br><span class="line"></span><br><span class="line"><span class="comment">/**</span></span><br><span class="line"><span class="comment"> * Spring Cloud &#123;Hello-Service&#125; 服务提供者</span></span><br><span class="line"><span class="comment"> *</span></span><br><span class="line"><span class="comment"> * <span class="doctag">@author</span> Zebe</span></span><br><span class="line"><span class="comment"> */</span></span><br><span class="line"><span class="meta">@EnableEurekaClient</span></span><br><span class="line"><span class="meta">@SpringBootApplication</span></span><br><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">CatSpringCloudEurekaHelloServiceApplication</span> </span>&#123;</span><br><span class="line"></span><br><span class="line">    <span class="comment">/**</span></span><br><span class="line"><span class="comment">     * 运行入口</span></span><br><span class="line"><span class="comment">     * <span class="doctag">@param</span> args 运行参数</span></span><br><span class="line"><span class="comment">     */</span></span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">void</span> <span class="title">main</span><span class="params">(String[] args)</span> </span>&#123;</span><br><span class="line">        SpringApplication.run(CatSpringCloudEurekaHelloServiceApplication.class, args);</span><br><span class="line">        System.out.println(<span class="string">"Spring Cloud Eureka &#123;Hello-Service&#125; 服务提供者 -&gt; 已启动。"</span>);</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></p>
+<p><strong>服务提供控制器类</strong>：<br><figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">package</span> me.zebe.cat.spring.cloud.service.hello;</span><br><span class="line"></span><br><span class="line"><span class="keyword">import</span> org.springframework.beans.factory.annotation.Value;</span><br><span class="line"><span class="keyword">import</span> org.springframework.web.bind.annotation.GetMapping;</span><br><span class="line"><span class="keyword">import</span> org.springframework.web.bind.annotation.RestController;</span><br><span class="line"></span><br><span class="line"><span class="comment">/**</span></span><br><span class="line"><span class="comment"> * &#123;Hello-Service&#125; 服务提供者控制器</span></span><br><span class="line"><span class="comment"> *</span></span><br><span class="line"><span class="comment"> * <span class="doctag">@author</span> Zebe</span></span><br><span class="line"><span class="comment"> */</span></span><br><span class="line"><span class="meta">@RestController</span></span><br><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">HelloServiceController</span> </span>&#123;</span><br><span class="line"></span><br><span class="line">    <span class="meta">@Value</span>(<span class="string">"$&#123;server.port&#125;"</span>)</span><br><span class="line">    <span class="keyword">private</span> <span class="keyword">int</span> port;</span><br><span class="line"></span><br><span class="line">    <span class="comment">/**</span></span><br><span class="line"><span class="comment">     * Hello</span></span><br><span class="line"><span class="comment">     * <span class="doctag">@return</span> 返回字符串</span></span><br><span class="line"><span class="comment">     */</span></span><br><span class="line">    <span class="meta">@GetMapping</span>(<span class="string">"/hello"</span>)</span><br><span class="line">    <span class="function"><span class="keyword">public</span> String <span class="title">hello</span><span class="params">()</span> </span>&#123;</span><br><span class="line">        <span class="comment">// 返回值里面显示当前的端口号，这样可以用来测试单个服务节点挂掉之后的运行情况</span></span><br><span class="line">        <span class="keyword">return</span> <span class="string">"&#123;Hello&#125; From "</span> + port;</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></p>
+<p>启动该服务，观察注册中心，可以看到服务注册成功。到此为止，一个简单的微服务注册例子就完成了。</p>
+<p><strong>服务运行截图</strong>：</p>
+<p><img src="http://www-zebe-me.oss-cn-beijing.aliyuncs.com/spring-cloud-hello-service-1.jpg" alt="spring-cloud-hello-service-1"></p>
+<p><img src="http://www-zebe-me.oss-cn-beijing.aliyuncs.com/spring-cloud-hello-service-2.jpg" alt="spring-cloud-hello-service-2"></p>
+
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="http://www.nichuan.top/spring-cloud-eureka-server/" data-id="cjozqlgh6009shm00jckgfw9d" class="article-share-link">Share</a>
+      
+      
+  <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/Eureka/">Eureka</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/spring-cloud/">spring cloud</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/注册中心/">注册中心</a></li></ul>
+
+    </footer>
+  </div>
+  
+</article>
+
+
+  
+    <article id="post-java-zeller-formula" class="article article-type-post" itemscope="" itemprop="blogPost">
+  <div class="article-meta">
+    <a href="/java-zeller-formula/" class="article-date">
+  <time datetime="2018-08-03T14:30:00.000Z" itemprop="datePublished">2018-08-03</time>
+</a>
+    
+  <div class="article-category">
+    <a class="article-category-link" href="/categories/Java/">Java</a>
+  </div>
+
+  </div>
+  <div class="article-inner">
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/java-zeller-formula/">Java - 使用蔡勒公式快速计算某一天是星期几</a>
+    </h1>
+  
+
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <p><img src="http://www-zebe-me.oss-cn-beijing.aliyuncs.com/cover/cover-java.jpg" alt=""><br>使用蔡勒公式，只需给出年月日，就可以用该公式来计算任意一个日期是星期几。</p>
+<p>请参考以下计算星期几的代码例子：</p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br><span class="line">58</span><br><span class="line">59</span><br><span class="line">60</span><br><span class="line">61</span><br><span class="line">62</span><br><span class="line">63</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">/**</span></span><br><span class="line"><span class="comment"> * 蔡勒公式Java实现例子</span></span><br><span class="line"><span class="comment"> * <span class="doctag">@author</span> Zebe</span></span><br><span class="line"><span class="comment"> * <span class="doctag">@version</span> 1.0.0</span></span><br><span class="line"><span class="comment"> */</span></span><br><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">ZellerDemo</span> </span>&#123;</span><br><span class="line"></span><br><span class="line">    <span class="comment">/**</span></span><br><span class="line"><span class="comment">     * 根据蔡勒公式计算任意一个日期是星期几</span></span><br><span class="line"><span class="comment">     * <span class="doctag">@param</span> year  年</span></span><br><span class="line"><span class="comment">     * <span class="doctag">@param</span> month 月</span></span><br><span class="line"><span class="comment">     * <span class="doctag">@param</span> day   日</span></span><br><span class="line"><span class="comment">     */</span></span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">void</span> <span class="title">calcWeekByZeller</span><span class="params">(<span class="keyword">int</span> year, <span class="keyword">int</span> month, <span class="keyword">int</span> day)</span> </span>&#123;</span><br><span class="line">        <span class="keyword">int</span> x = year;</span><br><span class="line">        <span class="keyword">int</span> y = month;</span><br><span class="line">        <span class="keyword">int</span> z = day;</span><br><span class="line">        <span class="keyword">if</span> (month == <span class="number">1</span>) &#123;</span><br><span class="line">            month = <span class="number">13</span>;</span><br><span class="line">            year = year - <span class="number">1</span>;</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="keyword">if</span> (month == <span class="number">12</span>) &#123;</span><br><span class="line">            month = <span class="number">14</span>;</span><br><span class="line">            year = year - <span class="number">1</span>;</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="comment">// 蔡勒公式</span></span><br><span class="line">        <span class="keyword">int</span> h = ((day + (<span class="number">26</span> * (month + <span class="number">1</span>) / <span class="number">10</span>) + (year % <span class="number">100</span>) + ((year % <span class="number">100</span>) / <span class="number">4</span>) + ((year / <span class="number">100</span>) / <span class="number">4</span>) + <span class="number">5</span> * (year / <span class="number">100</span>)) % <span class="number">7</span>);</span><br><span class="line">        <span class="keyword">switch</span> (h) &#123;</span><br><span class="line">            <span class="keyword">case</span> <span class="number">0</span>:</span><br><span class="line">                System.out.println(x + <span class="string">"年"</span> + y + <span class="string">"月"</span> + z + <span class="string">"日: 星期六"</span>);</span><br><span class="line">                <span class="keyword">break</span>;</span><br><span class="line">            <span class="keyword">case</span> <span class="number">1</span>:</span><br><span class="line">                System.out.println(x + <span class="string">"年"</span> + y + <span class="string">"月"</span> + z + <span class="string">"日: 星期天"</span>);</span><br><span class="line">                <span class="keyword">break</span>;</span><br><span class="line">            <span class="keyword">case</span> <span class="number">2</span>:</span><br><span class="line">                System.out.println(x + <span class="string">"年"</span> + y + <span class="string">"月"</span> + z + <span class="string">"日: 星期一"</span>);</span><br><span class="line">                <span class="keyword">break</span>;</span><br><span class="line">            <span class="keyword">case</span> <span class="number">3</span>:</span><br><span class="line">                System.out.println(x + <span class="string">"年"</span> + y + <span class="string">"月"</span> + z + <span class="string">"日: 星期二"</span>);</span><br><span class="line">                <span class="keyword">break</span>;</span><br><span class="line">            <span class="keyword">case</span> <span class="number">4</span>:</span><br><span class="line">                System.out.println(x + <span class="string">"年"</span> + y + <span class="string">"月"</span> + z + <span class="string">"日: 星期三"</span>);</span><br><span class="line">                <span class="keyword">break</span>;</span><br><span class="line">            <span class="keyword">case</span> <span class="number">5</span>:</span><br><span class="line">                System.out.println(x + <span class="string">"年"</span> + y + <span class="string">"月"</span> + z + <span class="string">"日: 星期四"</span>);</span><br><span class="line">                <span class="keyword">break</span>;</span><br><span class="line">            <span class="keyword">case</span> <span class="number">6</span>:</span><br><span class="line">                System.out.println(x + <span class="string">"年"</span> + y + <span class="string">"月"</span> + z + <span class="string">"日: 星期五"</span>);</span><br><span class="line">                <span class="keyword">break</span>;</span><br><span class="line">            <span class="keyword">default</span>:</span><br><span class="line">                System.err.println(<span class="string">"公式可能写错了,或者日期不合法"</span>);</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="comment">/**</span></span><br><span class="line"><span class="comment">     * 程序入口</span></span><br><span class="line"><span class="comment">     * <span class="doctag">@param</span> args 运行参数</span></span><br><span class="line"><span class="comment">     */</span></span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">void</span> <span class="title">main</span><span class="params">(String[] args)</span> </span>&#123;</span><br><span class="line">        calcWeekByZeller(<span class="number">2017</span>, <span class="number">5</span>, <span class="number">7</span>); <span class="comment">// 周日</span></span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="http://www.nichuan.top/java-zeller-formula/" data-id="cjozqlgf10028hm001qawtm7v" class="article-share-link">Share</a>
+      
+      
+  <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/java/">java</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/蔡勒公式/">蔡勒公式</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/计算星期几/">计算星期几</a></li></ul>
+
+    </footer>
+  </div>
+  
+</article>
+
+
+  
+
+
+  <nav id="page-nav">
+    
+    <a class="extend prev" rel="prev" href="/">&laquo; Prev</a><a class="page-number" href="/">1</a><span class="page-number current">2</span><a class="page-number" href="/page/3/">3</a><a class="page-number" href="/page/4/">4</a><a class="page-number" href="/page/5/">5</a><a class="extend next" rel="next" href="/page/3/">Next &raquo;</a>
+  </nav>
+
+</section>
+        
+          <aside id="sidebar">
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">Categories</h3>
+    <div class="widget">
+      <ul class="category-list"><li class="category-list-item"><a class="category-list-link" href="/categories/Java/">Java</a><ul class="category-list-child"><li class="category-list-item"><a class="category-list-link" href="/categories/Java/Java8/">Java8</a></li><li class="category-list-item"><a class="category-list-link" href="/categories/Java/Java9/">Java9</a></li></ul></li><li class="category-list-item"><a class="category-list-link" href="/categories/协议/">协议</a><ul class="category-list-child"><li class="category-list-item"><a class="category-list-link" href="/categories/协议/HTTP/">HTTP</a></li></ul></li><li class="category-list-item"><a class="category-list-link" href="/categories/工具/">工具</a><ul class="category-list-child"><li class="category-list-item"><a class="category-list-link" href="/categories/工具/Git/">Git</a></li><li class="category-list-item"><a class="category-list-link" href="/categories/工具/Gradle/">Gradle</a></li><li class="category-list-item"><a class="category-list-link" href="/categories/工具/IntelliJ-IDEA/">IntelliJ IDEA</a></li><li class="category-list-item"><a class="category-list-link" href="/categories/工具/Jenkins/">Jenkins</a></li></ul></li><li class="category-list-item"><a class="category-list-link" href="/categories/底层/">底层</a><ul class="category-list-child"><li class="category-list-item"><a class="category-list-link" href="/categories/底层/数据结构/">数据结构</a></li></ul></li><li class="category-list-item"><a class="category-list-link" href="/categories/数据库/">数据库</a><ul class="category-list-child"><li class="category-list-item"><a class="category-list-link" href="/categories/数据库/MySQL/">MySQL</a></li></ul></li><li class="category-list-item"><a class="category-list-link" href="/categories/框架/">框架</a><ul class="category-list-child"><li class="category-list-item"><a class="category-list-link" href="/categories/框架/SQLAlchemy/">SQLAlchemy</a></li><li class="category-list-item"><a class="category-list-link" href="/categories/框架/SpringBoot/">SpringBoot</a></li><li class="category-list-item"><a class="category-list-link" href="/categories/框架/SpringCloud/">SpringCloud</a></li></ul></li><li class="category-list-item"><a class="category-list-link" href="/categories/类库/">类库</a><ul class="category-list-child"><li class="category-list-item"><a class="category-list-link" href="/categories/类库/Guava/">Guava</a></li></ul></li><li class="category-list-item"><a class="category-list-link" href="/categories/系统/">系统</a><ul class="category-list-child"><li class="category-list-item"><a class="category-list-link" href="/categories/系统/Windows/">Windows</a></li></ul></li><li class="category-list-item"><a class="category-list-link" href="/categories/随笔/">随笔</a><ul class="category-list-child"><li class="category-list-item"><a class="category-list-link" href="/categories/随笔/心情感悟/">心情感悟</a></li></ul></li></ul>
+    </div>
+  </div>
+
+
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">Tags</h3>
+    <div class="widget">
+      <ul class="tag-list"><li class="tag-list-item"><a class="tag-list-link" href="/tags/501-mail/">501 mail</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/BiConsumer/">BiConsumer</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/BinaryOperator/">BinaryOperator</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/BinaryTree/">BinaryTree</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Collectors-joining/">Collectors.joining</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/DoubleSummaryStatistics/">DoubleSummaryStatistics</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Eureka/">Eureka</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Files/">Files</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/IntSummaryStatistics/">IntSummaryStatistics</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Java执行JS脚本/">Java执行JS脚本</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Java类依赖/">Java类依赖</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Lambda/">Lambda</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/LongSummaryStatistics/">LongSummaryStatistics</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/MailSSLSocketFactory/">MailSSLSocketFactory</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/MySQL/">MySQL</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/ScriptEngine/">ScriptEngine</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/ScriptEngineManager/">ScriptEngineManager</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/StackOverflowError/">StackOverflowError</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/StringBuilder/">StringBuilder</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Supplier/">Supplier</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/ThreadLocal/">ThreadLocal</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Win10/">Win10</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/X-Real-IP/">X-Real-IP</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/admin/">admin</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/build-gradle/">build.gradle</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/collectors/">collectors</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/computeIfAbsent/">computeIfAbsent</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/forEach/">forEach</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/getDefaultInstance/">getDefaultInstance</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/git/">git</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/gradle/">gradle</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/groupingBy/">groupingBy</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/guava/">guava</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/http/">http</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/idea/">idea</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/ip/">ip</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/java/">java</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/jdeps/">jdeps</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/jdeps-exe/">jdeps.exe</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/jdeps参数/">jdeps参数</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/jenkins/">jenkins</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/join/">join</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/jvm/">jvm</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/lombok/">lombok</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/mapToDouble/">mapToDouble</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/mapToInt/">mapToInt</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/mapToLong/">mapToLong</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/module/">module</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/mysql/">mysql</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/nio/">nio</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/partitioningBy/">partitioningBy</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/readAllBytes/">readAllBytes</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/reducing/">reducing</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/spring-cloud/">spring cloud</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/springboot/">springboot</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/sqlalchemy/">sqlalchemy</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/users/">users</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/withInitial/">withInitial</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/xss/">xss</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/上下文/">上下文</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/二叉树/">二叉树</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/代理/">代理</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/内存中的null/">内存中的null</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/函数式编程/">函数式编程</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/分页公式/">分页公式</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/反向代理/">反向代理</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/反转数组/">反转数组</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/发生系统错误-1067/">发生系统错误 1067</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/合并数组/">合并数组</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/声明数组/">声明数组</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/多账号/">多账号</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/字符串/">字符串</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/字节数组/">字节数组</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/归一/">归一</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/归约/">归约</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/惰性求值/">惰性求值</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/打印数组/">打印数组</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/排他锁/">排他锁</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/数据分块/">数据分块</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/数据分组/">数据分组</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/数组-ArrayList/">数组 ArrayList</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/服务无法启动/">服务无法启动</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/栈/">栈</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/模块化/">模块化</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/注册中心/">注册中心</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/真实IP/">真实IP</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/绝对路径/">绝对路径</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/腾讯/">腾讯</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/腾讯企业邮箱/">腾讯企业邮箱</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/范围请求/">范围请求</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/蔡勒公式/">蔡勒公式</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/计算星期几/">计算星期几</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/许可证即将过期/">许可证即将过期</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/逢一进一/">逢一进一</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/邮件/">邮件</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/队列/">队列</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/高阶函数/">高阶函数</a></li></ul>
+    </div>
+  </div>
+
+
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">Tag Cloud</h3>
+    <div class="widget tagcloud">
+      <a href="/tags/501-mail/" style="font-size: 10px;">501 mail</a> <a href="/tags/BiConsumer/" style="font-size: 10px;">BiConsumer</a> <a href="/tags/BinaryOperator/" style="font-size: 10px;">BinaryOperator</a> <a href="/tags/BinaryTree/" style="font-size: 10px;">BinaryTree</a> <a href="/tags/Collectors-joining/" style="font-size: 10px;">Collectors.joining</a> <a href="/tags/DoubleSummaryStatistics/" style="font-size: 10px;">DoubleSummaryStatistics</a> <a href="/tags/Eureka/" style="font-size: 10px;">Eureka</a> <a href="/tags/Files/" style="font-size: 10px;">Files</a> <a href="/tags/IntSummaryStatistics/" style="font-size: 10px;">IntSummaryStatistics</a> <a href="/tags/Java执行JS脚本/" style="font-size: 10px;">Java执行JS脚本</a> <a href="/tags/Java类依赖/" style="font-size: 10px;">Java类依赖</a> <a href="/tags/Lambda/" style="font-size: 15px;">Lambda</a> <a href="/tags/LongSummaryStatistics/" style="font-size: 10px;">LongSummaryStatistics</a> <a href="/tags/MailSSLSocketFactory/" style="font-size: 10px;">MailSSLSocketFactory</a> <a href="/tags/MySQL/" style="font-size: 10px;">MySQL</a> <a href="/tags/ScriptEngine/" style="font-size: 10px;">ScriptEngine</a> <a href="/tags/ScriptEngineManager/" style="font-size: 10px;">ScriptEngineManager</a> <a href="/tags/StackOverflowError/" style="font-size: 10px;">StackOverflowError</a> <a href="/tags/StringBuilder/" style="font-size: 10px;">StringBuilder</a> <a href="/tags/Supplier/" style="font-size: 10px;">Supplier</a> <a href="/tags/ThreadLocal/" style="font-size: 10px;">ThreadLocal</a> <a href="/tags/Win10/" style="font-size: 10px;">Win10</a> <a href="/tags/X-Real-IP/" style="font-size: 10px;">X-Real-IP</a> <a href="/tags/admin/" style="font-size: 10px;">admin</a> <a href="/tags/build-gradle/" style="font-size: 10px;">build.gradle</a> <a href="/tags/collectors/" style="font-size: 10px;">collectors</a> <a href="/tags/computeIfAbsent/" style="font-size: 10px;">computeIfAbsent</a> <a href="/tags/forEach/" style="font-size: 10px;">forEach</a> <a href="/tags/getDefaultInstance/" style="font-size: 10px;">getDefaultInstance</a> <a href="/tags/git/" style="font-size: 10px;">git</a> <a href="/tags/gradle/" style="font-size: 10px;">gradle</a> <a href="/tags/groupingBy/" style="font-size: 15px;">groupingBy</a> <a href="/tags/guava/" style="font-size: 10px;">guava</a> <a href="/tags/http/" style="font-size: 10px;">http</a> <a href="/tags/idea/" style="font-size: 10px;">idea</a> <a href="/tags/ip/" style="font-size: 10px;">ip</a> <a href="/tags/java/" style="font-size: 20px;">java</a> <a href="/tags/jdeps/" style="font-size: 10px;">jdeps</a> <a href="/tags/jdeps-exe/" style="font-size: 10px;">jdeps.exe</a> <a href="/tags/jdeps参数/" style="font-size: 10px;">jdeps参数</a> <a href="/tags/jenkins/" style="font-size: 10px;">jenkins</a> <a href="/tags/join/" style="font-size: 10px;">join</a> <a href="/tags/jvm/" style="font-size: 10px;">jvm</a> <a href="/tags/lombok/" style="font-size: 10px;">lombok</a> <a href="/tags/mapToDouble/" style="font-size: 10px;">mapToDouble</a> <a href="/tags/mapToInt/" style="font-size: 10px;">mapToInt</a> <a href="/tags/mapToLong/" style="font-size: 10px;">mapToLong</a> <a href="/tags/module/" style="font-size: 10px;">module</a> <a href="/tags/mysql/" style="font-size: 10px;">mysql</a> <a href="/tags/nio/" style="font-size: 10px;">nio</a> <a href="/tags/partitioningBy/" style="font-size: 10px;">partitioningBy</a> <a href="/tags/readAllBytes/" style="font-size: 10px;">readAllBytes</a> <a href="/tags/reducing/" style="font-size: 10px;">reducing</a> <a href="/tags/spring-cloud/" style="font-size: 10px;">spring cloud</a> <a href="/tags/springboot/" style="font-size: 10px;">springboot</a> <a href="/tags/sqlalchemy/" style="font-size: 10px;">sqlalchemy</a> <a href="/tags/users/" style="font-size: 10px;">users</a> <a href="/tags/withInitial/" style="font-size: 10px;">withInitial</a> <a href="/tags/xss/" style="font-size: 10px;">xss</a> <a href="/tags/上下文/" style="font-size: 10px;">上下文</a> <a href="/tags/二叉树/" style="font-size: 10px;">二叉树</a> <a href="/tags/代理/" style="font-size: 10px;">代理</a> <a href="/tags/内存中的null/" style="font-size: 10px;">内存中的null</a> <a href="/tags/函数式编程/" style="font-size: 10px;">函数式编程</a> <a href="/tags/分页公式/" style="font-size: 10px;">分页公式</a> <a href="/tags/反向代理/" style="font-size: 10px;">反向代理</a> <a href="/tags/反转数组/" style="font-size: 10px;">反转数组</a> <a href="/tags/发生系统错误-1067/" style="font-size: 10px;">发生系统错误 1067</a> <a href="/tags/合并数组/" style="font-size: 10px;">合并数组</a> <a href="/tags/声明数组/" style="font-size: 10px;">声明数组</a> <a href="/tags/多账号/" style="font-size: 10px;">多账号</a> <a href="/tags/字符串/" style="font-size: 10px;">字符串</a> <a href="/tags/字节数组/" style="font-size: 10px;">字节数组</a> <a href="/tags/归一/" style="font-size: 10px;">归一</a> <a href="/tags/归约/" style="font-size: 10px;">归约</a> <a href="/tags/惰性求值/" style="font-size: 10px;">惰性求值</a> <a href="/tags/打印数组/" style="font-size: 10px;">打印数组</a> <a href="/tags/排他锁/" style="font-size: 10px;">排他锁</a> <a href="/tags/数据分块/" style="font-size: 10px;">数据分块</a> <a href="/tags/数据分组/" style="font-size: 10px;">数据分组</a> <a href="/tags/数组-ArrayList/" style="font-size: 10px;">数组 ArrayList</a> <a href="/tags/服务无法启动/" style="font-size: 10px;">服务无法启动</a> <a href="/tags/栈/" style="font-size: 10px;">栈</a> <a href="/tags/模块化/" style="font-size: 10px;">模块化</a> <a href="/tags/注册中心/" style="font-size: 10px;">注册中心</a> <a href="/tags/真实IP/" style="font-size: 10px;">真实IP</a> <a href="/tags/绝对路径/" style="font-size: 10px;">绝对路径</a> <a href="/tags/腾讯/" style="font-size: 10px;">腾讯</a> <a href="/tags/腾讯企业邮箱/" style="font-size: 10px;">腾讯企业邮箱</a> <a href="/tags/范围请求/" style="font-size: 10px;">范围请求</a> <a href="/tags/蔡勒公式/" style="font-size: 10px;">蔡勒公式</a> <a href="/tags/计算星期几/" style="font-size: 10px;">计算星期几</a> <a href="/tags/许可证即将过期/" style="font-size: 10px;">许可证即将过期</a> <a href="/tags/逢一进一/" style="font-size: 10px;">逢一进一</a> <a href="/tags/邮件/" style="font-size: 15px;">邮件</a> <a href="/tags/队列/" style="font-size: 10px;">队列</a> <a href="/tags/高阶函数/" style="font-size: 10px;">高阶函数</a>
+    </div>
+  </div>
+
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">Archives</h3>
+    <div class="widget">
+      <ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="/archives/2018/11/">November 2018</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2018/10/">October 2018</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2018/09/">September 2018</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2018/08/">August 2018</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2018/07/">July 2018</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2018/06/">June 2018</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2018/05/">May 2018</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2018/04/">April 2018</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2018/03/">March 2018</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2018/01/">January 2018</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2017/12/">December 2017</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2017/10/">October 2017</a></li></ul>
+    </div>
+  </div>
+
+
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">Recent Posts</h3>
+    <div class="widget">
+      <ul>
+        
+          <li>
+            <a href="/my-new-post/">my new post</a>
+          </li>
+        
+          <li>
+            <a href="/java-jvm-xss/">Java - 局部变量和StackOverflowError</a>
+          </li>
+        
+          <li>
+            <a href="/java-8-string-join-collector/">Java8 - 更优雅的字符串连接(join)收集器 Collectors.joining</a>
+          </li>
+        
+          <li>
+            <a href="/java-8-stream-partitioning-by/">Java8 - 对流(数据)进行自定义分块：partitioningBy收集器</a>
+          </li>
+        
+          <li>
+            <a href="/java-8-stream-grouping-by/">Java8 - 对流(数据)进行自定义分组：groupingBy收集器</a>
+          </li>
+        
+      </ul>
+    </div>
+  </div>
+
+  
+</aside>
+        
+      </div>
+      <footer id="footer">
+  
+  <div class="outer">
+    <div id="footer-info" class="inner">
+      &copy; 2018 John Doe<br>
+      Powered by <a href="http://hexo.io/" target="_blank">Hexo</a>
+    </div>
+  </div>
+</footer>
+    </div>
+    <nav id="mobile-nav">
+  
+    <a href="/" class="mobile-nav-link">Home</a>
+  
+    <a href="/archives" class="mobile-nav-link">Archives</a>
+  
+</nav>
+    
+
+<script src="//ajax.googleapis.com/ajax/libs/jquery/2.0.3/jquery.min.js"></script>
+
+
+  <link rel="stylesheet" href="/fancybox/jquery.fancybox.css">
+  <script src="/fancybox/jquery.fancybox.pack.js"></script>
+
+
+<script src="/js/script.js"></script>
+
+
+
+  </div>
+</body>
+</html>
