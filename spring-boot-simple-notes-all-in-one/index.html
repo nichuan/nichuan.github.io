@@ -5,16 +5,16 @@
   
 
   
-  <title>SpringBoot关键知识点简要笔记 | Hexo</title>
+  <title>SpringBoot关键知识点简要笔记 | nichuan&#39;s blog</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
   <meta name="description" content="内容简介本文是个人对 SpringBoot 关键知识点的梳理和简单总结，方便遗忘时回顾。文章内容边学边整理。 关于参数、配置文件(profile)命令行参数是最高加载级别的参数，通过两个连字符指定，如：java -jar demo.jar –server.port=8888。 要添加多个配置文件（profile），添加多个 application-xxx.properties 配置即可，如：">
 <meta name="keywords" content="springboot">
 <meta property="og:type" content="article">
 <meta property="og:title" content="SpringBoot关键知识点简要笔记">
 <meta property="og:url" content="http://www.nichuan.top/spring-boot-simple-notes-all-in-one/index.html">
-<meta property="og:site_name" content="Hexo">
+<meta property="og:site_name" content="nichuan&#39;s blog">
 <meta property="og:description" content="内容简介本文是个人对 SpringBoot 关键知识点的梳理和简单总结，方便遗忘时回顾。文章内容边学边整理。 关于参数、配置文件(profile)命令行参数是最高加载级别的参数，通过两个连字符指定，如：java -jar demo.jar –server.port=8888。 要添加多个配置文件（profile），添加多个 application-xxx.properties 配置即可，如：">
-<meta property="og:locale" content="default">
+<meta property="og:locale" content="zh-CN">
 <meta property="og:image" content="http://www-zebe-me.oss-cn-beijing.aliyuncs.com/spring-boot.jpg">
 <meta property="og:updated_time" content="2018-11-27T12:47:08.501Z">
 <meta name="twitter:card" content="summary">
@@ -22,7 +22,7 @@
 <meta name="twitter:description" content="内容简介本文是个人对 SpringBoot 关键知识点的梳理和简单总结，方便遗忘时回顾。文章内容边学边整理。 关于参数、配置文件(profile)命令行参数是最高加载级别的参数，通过两个连字符指定，如：java -jar demo.jar –server.port=8888。 要添加多个配置文件（profile），添加多个 application-xxx.properties 配置即可，如：">
 <meta name="twitter:image" content="http://www-zebe-me.oss-cn-beijing.aliyuncs.com/spring-boot.jpg">
   
-    <link rel="alternate" href="/atom.xml" title="Hexo" type="application/atom+xml">
+    <link rel="alternate" href="/atom.xml" title="nichuan&#39;s blog" type="application/atom+xml">
   
   
     <link rel="icon" href="/favicon.png">
@@ -41,7 +41,7 @@
   <div id="header-outer" class="outer">
     <div id="header-title" class="inner">
       <h1 id="logo-wrap">
-        <a href="/" id="logo">Hexo</a>
+        <a href="/" id="logo">nichuan&#39;s blog</a>
       </h1>
       
     </div>
@@ -53,12 +53,14 @@
         
           <a class="main-nav-link" href="/archives">Archives</a>
         
+          <a class="main-nav-link" href="/about">About</a>
+        
       </nav>
       <nav id="sub-nav">
         
           <a id="nav-rss-link" class="nav-icon" href="/atom.xml" title="RSS Feed"></a>
         
-        <a id="nav-search-btn" class="nav-icon" title="Search"></a>
+        <a id="nav-search-btn" class="nav-icon" title="搜索"></a>
       </nav>
       <div id="search-form-wrap">
         <form action="//google.com/search" method="get" accept-charset="UTF-8" class="search-form"><input type="search" name="q" class="search-form-input" placeholder="Search"><button type="submit" class="search-form-submit">&#xF002;</button><input type="hidden" name="sitesearch" value="http://www.nichuan.top"></form>
@@ -125,7 +127,7 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://www.nichuan.top/spring-boot-simple-notes-all-in-one/" data-id="cjozqlgf5002ghm00b9zlknew" class="article-share-link">Share</a>
+      <a data-url="http://www.nichuan.top/spring-boot-simple-notes-all-in-one/" data-id="cjozuitl1002hbp0ekfykvsgj" class="article-share-link">Share</a>
       
       
   <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/springboot/">springboot</a></li></ul>
@@ -162,7 +164,7 @@
   
     
   <div class="widget-wrap">
-    <h3 class="widget-title">Categories</h3>
+    <h3 class="widget-title">分类</h3>
     <div class="widget">
       <ul class="category-list"><li class="category-list-item"><a class="category-list-link" href="/categories/Java/">Java</a><ul class="category-list-child"><li class="category-list-item"><a class="category-list-link" href="/categories/Java/Java8/">Java8</a></li><li class="category-list-item"><a class="category-list-link" href="/categories/Java/Java9/">Java9</a></li></ul></li><li class="category-list-item"><a class="category-list-link" href="/categories/协议/">协议</a><ul class="category-list-child"><li class="category-list-item"><a class="category-list-link" href="/categories/协议/HTTP/">HTTP</a></li></ul></li><li class="category-list-item"><a class="category-list-link" href="/categories/工具/">工具</a><ul class="category-list-child"><li class="category-list-item"><a class="category-list-link" href="/categories/工具/Git/">Git</a></li><li class="category-list-item"><a class="category-list-link" href="/categories/工具/Gradle/">Gradle</a></li><li class="category-list-item"><a class="category-list-link" href="/categories/工具/IntelliJ-IDEA/">IntelliJ IDEA</a></li><li class="category-list-item"><a class="category-list-link" href="/categories/工具/Jenkins/">Jenkins</a></li></ul></li><li class="category-list-item"><a class="category-list-link" href="/categories/底层/">底层</a><ul class="category-list-child"><li class="category-list-item"><a class="category-list-link" href="/categories/底层/数据结构/">数据结构</a></li></ul></li><li class="category-list-item"><a class="category-list-link" href="/categories/数据库/">数据库</a><ul class="category-list-child"><li class="category-list-item"><a class="category-list-link" href="/categories/数据库/MySQL/">MySQL</a></li></ul></li><li class="category-list-item"><a class="category-list-link" href="/categories/框架/">框架</a><ul class="category-list-child"><li class="category-list-item"><a class="category-list-link" href="/categories/框架/SQLAlchemy/">SQLAlchemy</a></li><li class="category-list-item"><a class="category-list-link" href="/categories/框架/SpringBoot/">SpringBoot</a></li><li class="category-list-item"><a class="category-list-link" href="/categories/框架/SpringCloud/">SpringCloud</a></li></ul></li><li class="category-list-item"><a class="category-list-link" href="/categories/类库/">类库</a><ul class="category-list-child"><li class="category-list-item"><a class="category-list-link" href="/categories/类库/Guava/">Guava</a></li></ul></li><li class="category-list-item"><a class="category-list-link" href="/categories/系统/">系统</a><ul class="category-list-child"><li class="category-list-item"><a class="category-list-link" href="/categories/系统/Windows/">Windows</a></li></ul></li><li class="category-list-item"><a class="category-list-link" href="/categories/随笔/">随笔</a><ul class="category-list-child"><li class="category-list-item"><a class="category-list-link" href="/categories/随笔/心情感悟/">心情感悟</a></li></ul></li></ul>
     </div>
@@ -172,7 +174,7 @@
   
     
   <div class="widget-wrap">
-    <h3 class="widget-title">Tags</h3>
+    <h3 class="widget-title">标签</h3>
     <div class="widget">
       <ul class="tag-list"><li class="tag-list-item"><a class="tag-list-link" href="/tags/501-mail/">501 mail</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/BiConsumer/">BiConsumer</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/BinaryOperator/">BinaryOperator</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/BinaryTree/">BinaryTree</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Collectors-joining/">Collectors.joining</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/DoubleSummaryStatistics/">DoubleSummaryStatistics</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Eureka/">Eureka</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Files/">Files</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/IntSummaryStatistics/">IntSummaryStatistics</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Java执行JS脚本/">Java执行JS脚本</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Java类依赖/">Java类依赖</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Lambda/">Lambda</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/LongSummaryStatistics/">LongSummaryStatistics</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/MailSSLSocketFactory/">MailSSLSocketFactory</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/MySQL/">MySQL</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/ScriptEngine/">ScriptEngine</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/ScriptEngineManager/">ScriptEngineManager</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/StackOverflowError/">StackOverflowError</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/StringBuilder/">StringBuilder</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Supplier/">Supplier</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/ThreadLocal/">ThreadLocal</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Win10/">Win10</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/X-Real-IP/">X-Real-IP</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/admin/">admin</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/build-gradle/">build.gradle</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/collectors/">collectors</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/computeIfAbsent/">computeIfAbsent</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/forEach/">forEach</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/getDefaultInstance/">getDefaultInstance</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/git/">git</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/gradle/">gradle</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/groupingBy/">groupingBy</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/guava/">guava</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/http/">http</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/idea/">idea</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/ip/">ip</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/java/">java</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/jdeps/">jdeps</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/jdeps-exe/">jdeps.exe</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/jdeps参数/">jdeps参数</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/jenkins/">jenkins</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/join/">join</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/jvm/">jvm</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/lombok/">lombok</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/mapToDouble/">mapToDouble</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/mapToInt/">mapToInt</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/mapToLong/">mapToLong</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/module/">module</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/mysql/">mysql</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/nio/">nio</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/partitioningBy/">partitioningBy</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/readAllBytes/">readAllBytes</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/reducing/">reducing</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/spring-cloud/">spring cloud</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/springboot/">springboot</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/sqlalchemy/">sqlalchemy</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/users/">users</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/withInitial/">withInitial</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/xss/">xss</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/上下文/">上下文</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/二叉树/">二叉树</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/代理/">代理</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/内存中的null/">内存中的null</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/函数式编程/">函数式编程</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/分页公式/">分页公式</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/反向代理/">反向代理</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/反转数组/">反转数组</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/发生系统错误-1067/">发生系统错误 1067</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/合并数组/">合并数组</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/声明数组/">声明数组</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/多账号/">多账号</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/字符串/">字符串</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/字节数组/">字节数组</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/归一/">归一</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/归约/">归约</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/惰性求值/">惰性求值</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/打印数组/">打印数组</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/排他锁/">排他锁</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/数据分块/">数据分块</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/数据分组/">数据分组</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/数组-ArrayList/">数组 ArrayList</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/服务无法启动/">服务无法启动</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/栈/">栈</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/模块化/">模块化</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/注册中心/">注册中心</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/真实IP/">真实IP</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/绝对路径/">绝对路径</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/腾讯/">腾讯</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/腾讯企业邮箱/">腾讯企业邮箱</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/范围请求/">范围请求</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/蔡勒公式/">蔡勒公式</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/计算星期几/">计算星期几</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/许可证即将过期/">许可证即将过期</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/逢一进一/">逢一进一</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/邮件/">邮件</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/队列/">队列</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/高阶函数/">高阶函数</a></li></ul>
     </div>
@@ -182,7 +184,7 @@
   
     
   <div class="widget-wrap">
-    <h3 class="widget-title">Tag Cloud</h3>
+    <h3 class="widget-title">标签云</h3>
     <div class="widget tagcloud">
       <a href="/tags/501-mail/" style="font-size: 10px;">501 mail</a> <a href="/tags/BiConsumer/" style="font-size: 10px;">BiConsumer</a> <a href="/tags/BinaryOperator/" style="font-size: 10px;">BinaryOperator</a> <a href="/tags/BinaryTree/" style="font-size: 10px;">BinaryTree</a> <a href="/tags/Collectors-joining/" style="font-size: 10px;">Collectors.joining</a> <a href="/tags/DoubleSummaryStatistics/" style="font-size: 10px;">DoubleSummaryStatistics</a> <a href="/tags/Eureka/" style="font-size: 10px;">Eureka</a> <a href="/tags/Files/" style="font-size: 10px;">Files</a> <a href="/tags/IntSummaryStatistics/" style="font-size: 10px;">IntSummaryStatistics</a> <a href="/tags/Java执行JS脚本/" style="font-size: 10px;">Java执行JS脚本</a> <a href="/tags/Java类依赖/" style="font-size: 10px;">Java类依赖</a> <a href="/tags/Lambda/" style="font-size: 15px;">Lambda</a> <a href="/tags/LongSummaryStatistics/" style="font-size: 10px;">LongSummaryStatistics</a> <a href="/tags/MailSSLSocketFactory/" style="font-size: 10px;">MailSSLSocketFactory</a> <a href="/tags/MySQL/" style="font-size: 10px;">MySQL</a> <a href="/tags/ScriptEngine/" style="font-size: 10px;">ScriptEngine</a> <a href="/tags/ScriptEngineManager/" style="font-size: 10px;">ScriptEngineManager</a> <a href="/tags/StackOverflowError/" style="font-size: 10px;">StackOverflowError</a> <a href="/tags/StringBuilder/" style="font-size: 10px;">StringBuilder</a> <a href="/tags/Supplier/" style="font-size: 10px;">Supplier</a> <a href="/tags/ThreadLocal/" style="font-size: 10px;">ThreadLocal</a> <a href="/tags/Win10/" style="font-size: 10px;">Win10</a> <a href="/tags/X-Real-IP/" style="font-size: 10px;">X-Real-IP</a> <a href="/tags/admin/" style="font-size: 10px;">admin</a> <a href="/tags/build-gradle/" style="font-size: 10px;">build.gradle</a> <a href="/tags/collectors/" style="font-size: 10px;">collectors</a> <a href="/tags/computeIfAbsent/" style="font-size: 10px;">computeIfAbsent</a> <a href="/tags/forEach/" style="font-size: 10px;">forEach</a> <a href="/tags/getDefaultInstance/" style="font-size: 10px;">getDefaultInstance</a> <a href="/tags/git/" style="font-size: 10px;">git</a> <a href="/tags/gradle/" style="font-size: 10px;">gradle</a> <a href="/tags/groupingBy/" style="font-size: 15px;">groupingBy</a> <a href="/tags/guava/" style="font-size: 10px;">guava</a> <a href="/tags/http/" style="font-size: 10px;">http</a> <a href="/tags/idea/" style="font-size: 10px;">idea</a> <a href="/tags/ip/" style="font-size: 10px;">ip</a> <a href="/tags/java/" style="font-size: 20px;">java</a> <a href="/tags/jdeps/" style="font-size: 10px;">jdeps</a> <a href="/tags/jdeps-exe/" style="font-size: 10px;">jdeps.exe</a> <a href="/tags/jdeps参数/" style="font-size: 10px;">jdeps参数</a> <a href="/tags/jenkins/" style="font-size: 10px;">jenkins</a> <a href="/tags/join/" style="font-size: 10px;">join</a> <a href="/tags/jvm/" style="font-size: 10px;">jvm</a> <a href="/tags/lombok/" style="font-size: 10px;">lombok</a> <a href="/tags/mapToDouble/" style="font-size: 10px;">mapToDouble</a> <a href="/tags/mapToInt/" style="font-size: 10px;">mapToInt</a> <a href="/tags/mapToLong/" style="font-size: 10px;">mapToLong</a> <a href="/tags/module/" style="font-size: 10px;">module</a> <a href="/tags/mysql/" style="font-size: 10px;">mysql</a> <a href="/tags/nio/" style="font-size: 10px;">nio</a> <a href="/tags/partitioningBy/" style="font-size: 10px;">partitioningBy</a> <a href="/tags/readAllBytes/" style="font-size: 10px;">readAllBytes</a> <a href="/tags/reducing/" style="font-size: 10px;">reducing</a> <a href="/tags/spring-cloud/" style="font-size: 10px;">spring cloud</a> <a href="/tags/springboot/" style="font-size: 10px;">springboot</a> <a href="/tags/sqlalchemy/" style="font-size: 10px;">sqlalchemy</a> <a href="/tags/users/" style="font-size: 10px;">users</a> <a href="/tags/withInitial/" style="font-size: 10px;">withInitial</a> <a href="/tags/xss/" style="font-size: 10px;">xss</a> <a href="/tags/上下文/" style="font-size: 10px;">上下文</a> <a href="/tags/二叉树/" style="font-size: 10px;">二叉树</a> <a href="/tags/代理/" style="font-size: 10px;">代理</a> <a href="/tags/内存中的null/" style="font-size: 10px;">内存中的null</a> <a href="/tags/函数式编程/" style="font-size: 10px;">函数式编程</a> <a href="/tags/分页公式/" style="font-size: 10px;">分页公式</a> <a href="/tags/反向代理/" style="font-size: 10px;">反向代理</a> <a href="/tags/反转数组/" style="font-size: 10px;">反转数组</a> <a href="/tags/发生系统错误-1067/" style="font-size: 10px;">发生系统错误 1067</a> <a href="/tags/合并数组/" style="font-size: 10px;">合并数组</a> <a href="/tags/声明数组/" style="font-size: 10px;">声明数组</a> <a href="/tags/多账号/" style="font-size: 10px;">多账号</a> <a href="/tags/字符串/" style="font-size: 10px;">字符串</a> <a href="/tags/字节数组/" style="font-size: 10px;">字节数组</a> <a href="/tags/归一/" style="font-size: 10px;">归一</a> <a href="/tags/归约/" style="font-size: 10px;">归约</a> <a href="/tags/惰性求值/" style="font-size: 10px;">惰性求值</a> <a href="/tags/打印数组/" style="font-size: 10px;">打印数组</a> <a href="/tags/排他锁/" style="font-size: 10px;">排他锁</a> <a href="/tags/数据分块/" style="font-size: 10px;">数据分块</a> <a href="/tags/数据分组/" style="font-size: 10px;">数据分组</a> <a href="/tags/数组-ArrayList/" style="font-size: 10px;">数组 ArrayList</a> <a href="/tags/服务无法启动/" style="font-size: 10px;">服务无法启动</a> <a href="/tags/栈/" style="font-size: 10px;">栈</a> <a href="/tags/模块化/" style="font-size: 10px;">模块化</a> <a href="/tags/注册中心/" style="font-size: 10px;">注册中心</a> <a href="/tags/真实IP/" style="font-size: 10px;">真实IP</a> <a href="/tags/绝对路径/" style="font-size: 10px;">绝对路径</a> <a href="/tags/腾讯/" style="font-size: 10px;">腾讯</a> <a href="/tags/腾讯企业邮箱/" style="font-size: 10px;">腾讯企业邮箱</a> <a href="/tags/范围请求/" style="font-size: 10px;">范围请求</a> <a href="/tags/蔡勒公式/" style="font-size: 10px;">蔡勒公式</a> <a href="/tags/计算星期几/" style="font-size: 10px;">计算星期几</a> <a href="/tags/许可证即将过期/" style="font-size: 10px;">许可证即将过期</a> <a href="/tags/逢一进一/" style="font-size: 10px;">逢一进一</a> <a href="/tags/邮件/" style="font-size: 15px;">邮件</a> <a href="/tags/队列/" style="font-size: 10px;">队列</a> <a href="/tags/高阶函数/" style="font-size: 10px;">高阶函数</a>
     </div>
@@ -191,9 +193,9 @@
   
     
   <div class="widget-wrap">
-    <h3 class="widget-title">Archives</h3>
+    <h3 class="widget-title">归档</h3>
     <div class="widget">
-      <ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="/archives/2018/11/">November 2018</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2018/10/">October 2018</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2018/09/">September 2018</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2018/08/">August 2018</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2018/07/">July 2018</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2018/06/">June 2018</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2018/05/">May 2018</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2018/04/">April 2018</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2018/03/">March 2018</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2018/01/">January 2018</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2017/12/">December 2017</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2017/10/">October 2017</a></li></ul>
+      <ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="/archives/2018/11/">十一月 2018</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2018/10/">十月 2018</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2018/09/">九月 2018</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2018/08/">八月 2018</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2018/07/">七月 2018</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2018/06/">六月 2018</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2018/05/">五月 2018</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2018/04/">四月 2018</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2018/03/">三月 2018</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2018/01/">一月 2018</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2017/12/">十二月 2017</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2017/10/">十月 2017</a></li></ul>
     </div>
   </div>
 
@@ -201,7 +203,7 @@
   
     
   <div class="widget-wrap">
-    <h3 class="widget-title">Recent Posts</h3>
+    <h3 class="widget-title">最新文章</h3>
     <div class="widget">
       <ul>
         
@@ -237,7 +239,7 @@
   
   <div class="outer">
     <div id="footer-info" class="inner">
-      &copy; 2018 John Doe<br>
+      &copy; 2018 倪川<br>
       Powered by <a href="http://hexo.io/" target="_blank">Hexo</a>
     </div>
   </div>
@@ -248,6 +250,8 @@
     <a href="/" class="mobile-nav-link">Home</a>
   
     <a href="/archives" class="mobile-nav-link">Archives</a>
+  
+    <a href="/about" class="mobile-nav-link">About</a>
   
 </nav>
     
