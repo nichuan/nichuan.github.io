@@ -229,161 +229,6 @@
   
   
   <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="http://www.nichuan.top/git-conflict-with-others/">
-
-    <span hidden itemprop="author" itemscope="" itemtype="http://schema.org/Person">
-      <meta itemprop="name" content="倪川">
-      <meta itemprop="description" content="">
-      <meta itemprop="image" content="/images/avatar.gif">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope="" itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="nichuan's blog">
-    </span>
-
-    
-      <header class="post-header">
-
-        
-        
-          <h1 class="post-title" itemprop="name headline">
-                
-                <a class="post-title-link" href="/git-conflict-with-others/" itemprop="url">Git多分支开发过程中处理冲突的经验教训</a></h1>
-        
-
-        <div class="post-meta">
-          <span class="post-time">
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-calendar-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">发表于</span>
-              
-              <time title="创建于" itemprop="dateCreated datePublished" datetime="2018-09-18T13:46:37+08:00">
-                2018-09-18
-              </time>
-            
-
-            
-
-            
-          </span>
-
-          
-            <span class="post-category">
-            
-              <span class="post-meta-divider">|</span>
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-folder-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">分类于</span>
-              
-              
-                <span itemprop="about" itemscope="" itemtype="http://schema.org/Thing">
-                  <a href="/categories/工具/" itemprop="url" rel="index">
-                    <span itemprop="name">工具</span>
-                  </a>
-                </span>
-
-                
-                
-                  ， 
-                
-              
-                <span itemprop="about" itemscope="" itemtype="http://schema.org/Thing">
-                  <a href="/categories/工具/Git/" itemprop="url" rel="index">
-                    <span itemprop="name">Git</span>
-                  </a>
-                </span>
-
-                
-                
-              
-            </span>
-          
-
-          
-            
-          
-
-          
-          
-
-          
-
-          
-
-          
-
-        </div>
-      </header>
-    
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-
-      
-      
-
-      
-        
-          
-            <p><img src="http://www-zebe-me.oss-cn-beijing.aliyuncs.com/lesson-learned.jpg" alt=""><br>最近在项目开发中遇到一个问题，不同分支的代码产生大量冲突，导致合并麻烦。这也算是一个教训。值得记录下来反思。</p>
-<h2 id="不同分支代码的冲突问题"><a href="#不同分支代码的冲突问题" class="headerlink" title="不同分支代码的冲突问题"></a>不同分支代码的冲突问题</h2><p>已上线分支为 <strong>master</strong>，我负责的分支为 <strong>A</strong>，另外有人负责的分支是 <strong>B</strong>，恰恰因为项目需求的原因，A 和 B 分支上的某个类会被我们同时改动。由于master分支上线的缘故，第二天我需要在自己的A分支上去合并已上线分支master的代码。这时候，出现了问题：<strong>我的A分支上有从别人的B分支上合并过来的代码（是必须要的），这个B分支的人居然全选了整个类几千行代码（这个项目有点老，代码质量很差，说成又臭又长也不为过）进行了格式化，因此和已上线的master分支的代码产生大量冲突</strong>，我合并的时候需要挨个比对这个类中自己的代码、B分支的代码和master分支的代码，非常耗时，而且容易出错。</p>
-<h2 id="解决方案与反思"><a href="#解决方案与反思" class="headerlink" title="解决方案与反思"></a>解决方案与反思</h2><p>这个问题让我学到了经验，那就是：<strong>遇到大型项目，有多个分支且已经产生需求冲突的时候，一定要把自己的那部分代码以面向对象的方式，独立出来，在不同分支都会共同修改的那个类中，在关键部分以方法调用的形式来加入自己的逻辑</strong>。这样，可以减少冲突，把自己的代码逻辑独立出来作为新的类，就不会与别人代码冲突。</p>
-
-          
-        
-      
-    </div>
-    
-    
-    
-
-    
-
-    
-
-    
-
-    <footer class="post-footer">
-      
-
-      
-
-      
-
-      
-      
-        <div class="post-eof"></div>
-      
-    </footer>
-  </div>
-  
-  
-  
-  </article>
-
-
-    
-      
-
-  
-
-  
-  
-  
-
-  <article class="post post-type-normal" itemscope="" itemtype="http://schema.org/Article">
-  
-  
-  
-  <div class="post-block">
     <link itemprop="mainEntityOfPage" href="http://www.nichuan.top/java-8-max-min-sum-average-count/">
 
     <span hidden itemprop="author" itemscope="" itemtype="http://schema.org/Person">
@@ -1176,173 +1021,6 @@
   
   
   <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="http://www.nichuan.top/feelings-2018-08-27/">
-
-    <span hidden itemprop="author" itemscope="" itemtype="http://schema.org/Person">
-      <meta itemprop="name" content="倪川">
-      <meta itemprop="description" content="">
-      <meta itemprop="image" content="/images/avatar.gif">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope="" itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="nichuan's blog">
-    </span>
-
-    
-      <header class="post-header">
-
-        
-        
-          <h1 class="post-title" itemprop="name headline">
-                
-                <a class="post-title-link" href="/feelings-2018-08-27/" itemprop="url">选择了程序员，选择了什么？</a></h1>
-        
-
-        <div class="post-meta">
-          <span class="post-time">
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-calendar-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">发表于</span>
-              
-              <time title="创建于" itemprop="dateCreated datePublished" datetime="2018-08-27T22:22:36+08:00">
-                2018-08-27
-              </time>
-            
-
-            
-
-            
-          </span>
-
-          
-            <span class="post-category">
-            
-              <span class="post-meta-divider">|</span>
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-folder-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">分类于</span>
-              
-              
-                <span itemprop="about" itemscope="" itemtype="http://schema.org/Thing">
-                  <a href="/categories/随笔/" itemprop="url" rel="index">
-                    <span itemprop="name">随笔</span>
-                  </a>
-                </span>
-
-                
-                
-                  ， 
-                
-              
-                <span itemprop="about" itemscope="" itemtype="http://schema.org/Thing">
-                  <a href="/categories/随笔/心情感悟/" itemprop="url" rel="index">
-                    <span itemprop="name">心情感悟</span>
-                  </a>
-                </span>
-
-                
-                
-              
-            </span>
-          
-
-          
-            
-          
-
-          
-          
-
-          
-
-          
-
-          
-
-        </div>
-      </header>
-    
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-
-      
-      
-
-      
-        
-          
-            <p><img src="http://www-zebe-me.oss-cn-beijing.aliyuncs.com/cat-on-my-note-book.jpg" alt="cat-on-my-note-book"></p>
-<h2 id="过去"><a href="#过去" class="headerlink" title="过去"></a>过去</h2><p>从前，我是一个很感性的人 —— 用几年不变的Z字头像，喜欢收集悲伤的句子，习惯在QQ空间自问自答，除了有一份莫名的执着，仿佛我的生活被一把大伞遮住了阳光。</p>
-<p>那时候，能把一首歌听上百遍，能把十个字就能表达清楚的句子用一万个字来表达，能保存好些年的日记。<br>那时候，我在不断追寻自己，以守护者为名，以鼠标为画笔，试着画出自己的梦想。</p>
-<h6 id="守护者之宿命诅咒"><a href="#守护者之宿命诅咒" class="headerlink" title="守护者之宿命诅咒"></a>守护者之宿命诅咒</h6><p><img src="http://www-zebe-me.oss-cn-beijing.aliyuncs.com/shou-hu-zhe-de-su-ming.jpg" alt="守护者之宿命诅咒"></p>
-<h6 id="七彩凤凰"><a href="#七彩凤凰" class="headerlink" title="七彩凤凰"></a>七彩凤凰</h6><p><img src="http://www-zebe-me.oss-cn-beijing.aliyuncs.com/qi-cai-feng-huang.jpg" alt="七彩凤凰"></p>
-<h6 id="WindowsXP主题设计"><a href="#WindowsXP主题设计" class="headerlink" title="WindowsXP主题设计"></a>WindowsXP主题设计</h6><p><img src="http://www-zebe-me.oss-cn-beijing.aliyuncs.com/gray-style-windows-theme.jpg" alt="WindowsXP主题设计"></p>
-<h6 id="我爱罗-AI矢量图"><a href="#我爱罗-AI矢量图" class="headerlink" title="我爱罗 - AI矢量图"></a>我爱罗 - AI矢量图</h6><p><img src="http://www-zebe-me.oss-cn-beijing.aliyuncs.com/cartoon-wo-ai-luo.jpg" alt="我爱罗 - AI矢量图"></p>
-<h6 id="卡卡西-AI矢量图"><a href="#卡卡西-AI矢量图" class="headerlink" title="卡卡西 - AI矢量图"></a>卡卡西 - AI矢量图</h6><p><img src="http://www-zebe-me.oss-cn-beijing.aliyuncs.com/cartoon-ka-ka-xi.jpg" alt="卡卡西 - AI矢量图"></p>
-<h6 id="音画设计-旧景依然"><a href="#音画设计-旧景依然" class="headerlink" title="音画设计 - 旧景依然"></a>音画设计 - 旧景依然</h6><p><img src="http://www-zebe-me.oss-cn-beijing.aliyuncs.com/jiu-jing-yi-ran.jpg" alt="卡卡西 - AI矢量图"></p>
-<h2 id="现在"><a href="#现在" class="headerlink" title="现在"></a>现在</h2><p>八年的时光，沉淀了我的大半个靑春。那时候，我经常像这样花几个小时，只是安静地写写几段文字。<br><strong>生活就像一场繁华里的流浪，多少欲望，像汹涌的浪，吞噬多少善良。曾经的梦想，如今实现了。</strong>大概和南派三叔一样，从感性思维的设计师，跳槽做了一名理性思维的程序员。只不过，我不大可能再像他一样从程序员再跨界成为一名作家，我写不出《盗墓笔记》，也导演不了《沙海》。</p>
-<p>不同的人，对程序员的理解不同，仁者见仁，智者见智。<strong>会写循环的码农千篇一律，懂得思考的Coder万里挑一</strong>。如今我只想问问自己，我该为我的选择付出什么？<br>八小时求生存，八小时求发展，八小时好好睡觉。这对于我来说只是一个美好的愿望。</p>
-<h2 id="未来"><a href="#未来" class="headerlink" title="未来"></a>未来</h2><p>选择了程序员，选择的是一份<strong>热爱</strong> —— 挑灯夜战，不知疲倦，终身学习。<br>选择了程序员，选择的是一份<strong>担当</strong> —— 努力让自己的代码产出价值，让用户满意，让老板赚到钱，让自己可靠。<br>选择了程序员，选择的是一种<strong>修行</strong> —— 不抱怨，不埋怨，少言语，多产出，多虚心，眼里能容下别人的代码。<br>选择了程序员，选择的是一种<strong>孤独</strong> —— 从HTTP协议到DB持久化，越是独立解决问题，越是独当一面。</p>
-<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line">Programmer zebe = Programmer.getInstance();</span><br><span class="line"><span class="keyword">for</span>(;;) &#123;</span><br><span class="line">	<span class="keyword">try</span> &#123;</span><br><span class="line">		zebe.writeCode();</span><br><span class="line">	&#125; <span class="keyword">catch</span> (Exception e) &#123;</span><br><span class="line">		zebe.fixBug();</span><br><span class="line">	&#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-<p>仅以此文纪念自己成为职业程序员一路走来的一千多个日日夜夜。</p>
-<p>第 <strong>1638</strong> 天，思考自己，思考未来。<strong>静下心来，方能做得更好。</strong></p>
-<embed src="http://www-zebe-me.oss-cn-beijing.aliyuncs.com/yi-nu-ni-feng.mp3" width="1" height="1" type="audio/mpeg" autostart="true" loop="infinite">
-          
-        
-      
-    </div>
-    
-    
-    
-
-    
-
-    
-
-    
-
-    <footer class="post-footer">
-      
-
-      
-
-      
-
-      
-      
-        <div class="post-eof"></div>
-      
-    </footer>
-  </div>
-  
-  
-  
-  </article>
-
-
-    
-      
-
-  
-
-  
-  
-  
-
-  <article class="post post-type-normal" itemscope="" itemtype="http://schema.org/Article">
-  
-  
-  
-  <div class="post-block">
     <link itemprop="mainEntityOfPage" href="http://www.nichuan.top/spring-cloud-eureka-server/">
 
     <span hidden itemprop="author" itemscope="" itemtype="http://schema.org/Person">
@@ -1821,11 +1499,300 @@
 
 
     
+      
+
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal" itemscope="" itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="http://www.nichuan.top/java-get-http-request-absolute-context-path/">
+
+    <span hidden itemprop="author" itemscope="" itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="倪川">
+      <meta itemprop="description" content="">
+      <meta itemprop="image" content="/images/avatar.gif">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope="" itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="nichuan's blog">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+                
+                <a class="post-title-link" href="/java-get-http-request-absolute-context-path/" itemprop="url">Java - 获取HTTP请求的上下文绝对路径</a></h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">发表于</span>
+              
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2018-08-03T22:19:11+08:00">
+                2018-08-03
+              </time>
+            
+
+            
+
+            
+          </span>
+
+          
+            <span class="post-category">
+            
+              <span class="post-meta-divider">|</span>
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">分类于</span>
+              
+              
+                <span itemprop="about" itemscope="" itemtype="http://schema.org/Thing">
+                  <a href="/categories/Java/" itemprop="url" rel="index">
+                    <span itemprop="name">Java</span>
+                  </a>
+                </span>
+
+                
+                
+              
+            </span>
+          
+
+          
+            
+          
+
+          
+          
+
+          
+
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        
+          
+            <p><img src="http://www-zebe-me.oss-cn-beijing.aliyuncs.com/cover/cover-java.jpg" alt=""><br>本文介绍使用Java获取一个请求的完整的 协议名+主机+端口号，如：<a href="http://127.0.0.1:14530。获取该地址后，可以设为全局变量（contextPath），在系统页面中作为路径前缀使用。" target="_blank" rel="noopener">http://127.0.0.1:14530。获取该地址后，可以设为全局变量（contextPath），在系统页面中作为路径前缀使用。</a></p>
+<p>请参考以下代码片段：</p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">// 获取HTTP请求的上下文绝对路径（完整的协议名+主机+端口号）</span></span><br><span class="line">StringBuffer url = request.getRequestURL(); <span class="comment">// http://127.0.0.1:14530/siteNews/add</span></span><br><span class="line">String contextUrl = url.delete(url.length() - request.getRequestURI().length(), url.length()).toString();</span><br><span class="line"><span class="keyword">if</span> (contextUrl.endsWith(<span class="string">"/"</span>)) &#123;</span><br><span class="line">    contextUrl = contextUrl.substring(<span class="number">0</span>, contextUrl.length() - <span class="number">1</span>);</span><br><span class="line">&#125;</span><br><span class="line">System.out.println(contextUrl); <span class="comment">// http://127.0.0.1:14530</span></span><br></pre></td></tr></table></figure>
+
+          
+        
+      
+    </div>
+    
+    
+    
+
+    
+
+    
+
+    
+
+    <footer class="post-footer">
+      
+
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </footer>
+  </div>
+  
+  
+  
+  </article>
+
+
+    
+      
+
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal" itemscope="" itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="http://www.nichuan.top/java-get-real-ip/">
+
+    <span hidden itemprop="author" itemscope="" itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="倪川">
+      <meta itemprop="description" content="">
+      <meta itemprop="image" content="/images/avatar.gif">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope="" itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="nichuan's blog">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+                
+                <a class="post-title-link" href="/java-get-real-ip/" itemprop="url">Java - 获取HTTP请求的真实IP</a></h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">发表于</span>
+              
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2018-08-03T22:08:39+08:00">
+                2018-08-03
+              </time>
+            
+
+            
+
+            
+          </span>
+
+          
+            <span class="post-category">
+            
+              <span class="post-meta-divider">|</span>
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">分类于</span>
+              
+              
+                <span itemprop="about" itemscope="" itemtype="http://schema.org/Thing">
+                  <a href="/categories/Java/" itemprop="url" rel="index">
+                    <span itemprop="name">Java</span>
+                  </a>
+                </span>
+
+                
+                
+              
+            </span>
+          
+
+          
+            
+          
+
+          
+          
+
+          
+
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        
+          
+            <p><img src="http://www-zebe-me.oss-cn-beijing.aliyuncs.com/cover/cover-java.jpg" alt=""><br>本文介绍使用Java获取HTTP请求的真实IP，包括了对反向代理、代理客户端、多个IP情况的处理。</p>
+<p>请参考以下代码片段：</p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">/**</span></span><br><span class="line"><span class="comment"> * 获取真实IP</span></span><br><span class="line"><span class="comment"> * <span class="doctag">@param</span> request 请求体</span></span><br><span class="line"><span class="comment"> * <span class="doctag">@return</span> 真实IP</span></span><br><span class="line"><span class="comment"> */</span></span><br><span class="line"><span class="function"><span class="keyword">public</span> <span class="keyword">static</span> String <span class="title">getRealIp</span><span class="params">(HttpServletRequest request)</span> </span>&#123;</span><br><span class="line">	<span class="comment">// 这个一般是Nginx反向代理设置的参数</span></span><br><span class="line">    String ip = request.getHeader(<span class="string">"X-Real-IP"</span>);</span><br><span class="line">    <span class="keyword">if</span> (ip == <span class="keyword">null</span> || ip.length() == <span class="number">0</span> || <span class="string">"unknown"</span>.equalsIgnoreCase(ip)) &#123;</span><br><span class="line">        ip = request.getHeader(<span class="string">"X-Forwarded-For"</span>);</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="keyword">if</span> (ip == <span class="keyword">null</span> || ip.length() == <span class="number">0</span> || <span class="string">"unknown"</span>.equalsIgnoreCase(ip)) &#123;</span><br><span class="line">        ip = request.getHeader(<span class="string">"Proxy-Client-IP"</span>);</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="keyword">if</span> (ip == <span class="keyword">null</span> || ip.length() == <span class="number">0</span> || <span class="string">"unknown"</span>.equalsIgnoreCase(ip)) &#123;</span><br><span class="line">        ip = request.getHeader(<span class="string">"WL-Proxy-Client-IP"</span>);</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="keyword">if</span> (ip == <span class="keyword">null</span> || ip.length() == <span class="number">0</span> || <span class="string">"unknown"</span>.equalsIgnoreCase(ip)) &#123;</span><br><span class="line">        ip = request.getRemoteAddr();</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="comment">// 处理多IP的情况（只取第一个IP）</span></span><br><span class="line">    <span class="keyword">if</span> (ip != <span class="keyword">null</span> &amp;&amp; ip.contains(<span class="string">","</span>)) &#123;</span><br><span class="line">        String[] ipArray = ip.split(<span class="string">","</span>);</span><br><span class="line">        ip = ipArray[<span class="number">0</span>];</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="keyword">return</span> ip;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<p>以上方法，绝大多数情况下可用获取到HTTP请求的真实IP。当然，如果该请求是经过了多层反向代理发送的，则可能获取的是代理服务器的IP，而不是真实IP。</p>
+
+          
+        
+      
+    </div>
+    
+    
+    
+
+    
+
+    
+
+    
+
+    <footer class="post-footer">
+      
+
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </footer>
+  </div>
+  
+  
+  
+  </article>
+
+
+    
   </section>
 
   
   <nav class="pagination">
-    <a class="extend prev" rel="prev" href="/"><i class="fa fa-angle-left"></i></a><a class="page-number" href="/">1</a><span class="page-number current">2</span><a class="page-number" href="/page/3/">3</a><span class="space">&hellip;</span><a class="page-number" href="/page/5/">5</a><a class="extend next" rel="next" href="/page/3/"><i class="fa fa-angle-right"></i></a>
+    <a class="extend prev" rel="prev" href="/"><i class="fa fa-angle-left"></i></a><a class="page-number" href="/">1</a><span class="page-number current">2</span><a class="page-number" href="/page/3/">3</a><a class="page-number" href="/page/4/">4</a><a class="extend next" rel="next" href="/page/3/"><i class="fa fa-angle-right"></i></a>
   </nav>
 
 
@@ -1871,7 +1838,7 @@
               
                 <a href="/archives/">
               
-                  <span class="site-state-item-count">41</span>
+                  <span class="site-state-item-count">38</span>
                   <span class="site-state-item-name">日志</span>
                 </a>
               </div>
@@ -1882,7 +1849,7 @@
               
               <div class="site-state-item site-state-categories">
                 
-                  <span class="site-state-item-count">24</span>
+                  <span class="site-state-item-count">20</span>
                   <span class="site-state-item-name">分类</span>
                 
               </div>
@@ -1893,7 +1860,7 @@
               
               <div class="site-state-item site-state-tags">
                 
-                  <span class="site-state-item-count">97</span>
+                  <span class="site-state-item-count">94</span>
                   <span class="site-state-item-name">标签</span>
                 
               </div>

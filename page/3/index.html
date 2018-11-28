@@ -229,295 +229,6 @@
   
   
   <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="http://www.nichuan.top/java-get-http-request-absolute-context-path/">
-
-    <span hidden itemprop="author" itemscope="" itemtype="http://schema.org/Person">
-      <meta itemprop="name" content="倪川">
-      <meta itemprop="description" content="">
-      <meta itemprop="image" content="/images/avatar.gif">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope="" itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="nichuan's blog">
-    </span>
-
-    
-      <header class="post-header">
-
-        
-        
-          <h1 class="post-title" itemprop="name headline">
-                
-                <a class="post-title-link" href="/java-get-http-request-absolute-context-path/" itemprop="url">Java - 获取HTTP请求的上下文绝对路径</a></h1>
-        
-
-        <div class="post-meta">
-          <span class="post-time">
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-calendar-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">发表于</span>
-              
-              <time title="创建于" itemprop="dateCreated datePublished" datetime="2018-08-03T22:19:11+08:00">
-                2018-08-03
-              </time>
-            
-
-            
-
-            
-          </span>
-
-          
-            <span class="post-category">
-            
-              <span class="post-meta-divider">|</span>
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-folder-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">分类于</span>
-              
-              
-                <span itemprop="about" itemscope="" itemtype="http://schema.org/Thing">
-                  <a href="/categories/Java/" itemprop="url" rel="index">
-                    <span itemprop="name">Java</span>
-                  </a>
-                </span>
-
-                
-                
-              
-            </span>
-          
-
-          
-            
-          
-
-          
-          
-
-          
-
-          
-
-          
-
-        </div>
-      </header>
-    
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-
-      
-      
-
-      
-        
-          
-            <p><img src="http://www-zebe-me.oss-cn-beijing.aliyuncs.com/cover/cover-java.jpg" alt=""><br>本文介绍使用Java获取一个请求的完整的 协议名+主机+端口号，如：<a href="http://127.0.0.1:14530。获取该地址后，可以设为全局变量（contextPath），在系统页面中作为路径前缀使用。" target="_blank" rel="noopener">http://127.0.0.1:14530。获取该地址后，可以设为全局变量（contextPath），在系统页面中作为路径前缀使用。</a></p>
-<p>请参考以下代码片段：</p>
-<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">// 获取HTTP请求的上下文绝对路径（完整的协议名+主机+端口号）</span></span><br><span class="line">StringBuffer url = request.getRequestURL(); <span class="comment">// http://127.0.0.1:14530/siteNews/add</span></span><br><span class="line">String contextUrl = url.delete(url.length() - request.getRequestURI().length(), url.length()).toString();</span><br><span class="line"><span class="keyword">if</span> (contextUrl.endsWith(<span class="string">"/"</span>)) &#123;</span><br><span class="line">    contextUrl = contextUrl.substring(<span class="number">0</span>, contextUrl.length() - <span class="number">1</span>);</span><br><span class="line">&#125;</span><br><span class="line">System.out.println(contextUrl); <span class="comment">// http://127.0.0.1:14530</span></span><br></pre></td></tr></table></figure>
-
-          
-        
-      
-    </div>
-    
-    
-    
-
-    
-
-    
-
-    
-
-    <footer class="post-footer">
-      
-
-      
-
-      
-
-      
-      
-        <div class="post-eof"></div>
-      
-    </footer>
-  </div>
-  
-  
-  
-  </article>
-
-
-    
-      
-
-  
-
-  
-  
-  
-
-  <article class="post post-type-normal" itemscope="" itemtype="http://schema.org/Article">
-  
-  
-  
-  <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="http://www.nichuan.top/java-get-real-ip/">
-
-    <span hidden itemprop="author" itemscope="" itemtype="http://schema.org/Person">
-      <meta itemprop="name" content="倪川">
-      <meta itemprop="description" content="">
-      <meta itemprop="image" content="/images/avatar.gif">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope="" itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="nichuan's blog">
-    </span>
-
-    
-      <header class="post-header">
-
-        
-        
-          <h1 class="post-title" itemprop="name headline">
-                
-                <a class="post-title-link" href="/java-get-real-ip/" itemprop="url">Java - 获取HTTP请求的真实IP</a></h1>
-        
-
-        <div class="post-meta">
-          <span class="post-time">
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-calendar-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">发表于</span>
-              
-              <time title="创建于" itemprop="dateCreated datePublished" datetime="2018-08-03T22:08:39+08:00">
-                2018-08-03
-              </time>
-            
-
-            
-
-            
-          </span>
-
-          
-            <span class="post-category">
-            
-              <span class="post-meta-divider">|</span>
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-folder-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">分类于</span>
-              
-              
-                <span itemprop="about" itemscope="" itemtype="http://schema.org/Thing">
-                  <a href="/categories/Java/" itemprop="url" rel="index">
-                    <span itemprop="name">Java</span>
-                  </a>
-                </span>
-
-                
-                
-              
-            </span>
-          
-
-          
-            
-          
-
-          
-          
-
-          
-
-          
-
-          
-
-        </div>
-      </header>
-    
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-
-      
-      
-
-      
-        
-          
-            <p><img src="http://www-zebe-me.oss-cn-beijing.aliyuncs.com/cover/cover-java.jpg" alt=""><br>本文介绍使用Java获取HTTP请求的真实IP，包括了对反向代理、代理客户端、多个IP情况的处理。</p>
-<p>请参考以下代码片段：</p>
-<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">/**</span></span><br><span class="line"><span class="comment"> * 获取真实IP</span></span><br><span class="line"><span class="comment"> * <span class="doctag">@param</span> request 请求体</span></span><br><span class="line"><span class="comment"> * <span class="doctag">@return</span> 真实IP</span></span><br><span class="line"><span class="comment"> */</span></span><br><span class="line"><span class="function"><span class="keyword">public</span> <span class="keyword">static</span> String <span class="title">getRealIp</span><span class="params">(HttpServletRequest request)</span> </span>&#123;</span><br><span class="line">	<span class="comment">// 这个一般是Nginx反向代理设置的参数</span></span><br><span class="line">    String ip = request.getHeader(<span class="string">"X-Real-IP"</span>);</span><br><span class="line">    <span class="keyword">if</span> (ip == <span class="keyword">null</span> || ip.length() == <span class="number">0</span> || <span class="string">"unknown"</span>.equalsIgnoreCase(ip)) &#123;</span><br><span class="line">        ip = request.getHeader(<span class="string">"X-Forwarded-For"</span>);</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="keyword">if</span> (ip == <span class="keyword">null</span> || ip.length() == <span class="number">0</span> || <span class="string">"unknown"</span>.equalsIgnoreCase(ip)) &#123;</span><br><span class="line">        ip = request.getHeader(<span class="string">"Proxy-Client-IP"</span>);</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="keyword">if</span> (ip == <span class="keyword">null</span> || ip.length() == <span class="number">0</span> || <span class="string">"unknown"</span>.equalsIgnoreCase(ip)) &#123;</span><br><span class="line">        ip = request.getHeader(<span class="string">"WL-Proxy-Client-IP"</span>);</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="keyword">if</span> (ip == <span class="keyword">null</span> || ip.length() == <span class="number">0</span> || <span class="string">"unknown"</span>.equalsIgnoreCase(ip)) &#123;</span><br><span class="line">        ip = request.getRemoteAddr();</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="comment">// 处理多IP的情况（只取第一个IP）</span></span><br><span class="line">    <span class="keyword">if</span> (ip != <span class="keyword">null</span> &amp;&amp; ip.contains(<span class="string">","</span>)) &#123;</span><br><span class="line">        String[] ipArray = ip.split(<span class="string">","</span>);</span><br><span class="line">        ip = ipArray[<span class="number">0</span>];</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="keyword">return</span> ip;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-<p>以上方法，绝大多数情况下可用获取到HTTP请求的真实IP。当然，如果该请求是经过了多层反向代理发送的，则可能获取的是代理服务器的IP，而不是真实IP。</p>
-
-          
-        
-      
-    </div>
-    
-    
-    
-
-    
-
-    
-
-    
-
-    <footer class="post-footer">
-      
-
-      
-
-      
-
-      
-      
-        <div class="post-eof"></div>
-      
-    </footer>
-  </div>
-  
-  
-  
-  </article>
-
-
-    
-      
-
-  
-
-  
-  
-  
-
-  <article class="post post-type-normal" itemscope="" itemtype="http://schema.org/Article">
-  
-  
-  
-  <div class="post-block">
     <link itemprop="mainEntityOfPage" href="http://www.nichuan.top/java-send-mail-by-many-accounts-in-one-thread/">
 
     <span hidden itemprop="author" itemscope="" itemtype="http://schema.org/Person">
@@ -1772,11 +1483,350 @@
 
 
     
+      
+
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal" itemscope="" itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="http://www.nichuan.top/jenkins-forget-admin-user-password/">
+
+    <span hidden itemprop="author" itemscope="" itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="倪川">
+      <meta itemprop="description" content="">
+      <meta itemprop="image" content="/images/avatar.gif">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope="" itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="nichuan's blog">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+                
+                <a class="post-title-link" href="/jenkins-forget-admin-user-password/" itemprop="url">Jenkins-忘记admin或其他用户密码的解决办法</a></h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">发表于</span>
+              
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2018-04-28T13:48:43+08:00">
+                2018-04-28
+              </time>
+            
+
+            
+
+            
+          </span>
+
+          
+            <span class="post-category">
+            
+              <span class="post-meta-divider">|</span>
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">分类于</span>
+              
+              
+                <span itemprop="about" itemscope="" itemtype="http://schema.org/Thing">
+                  <a href="/categories/工具/" itemprop="url" rel="index">
+                    <span itemprop="name">工具</span>
+                  </a>
+                </span>
+
+                
+                
+                  ， 
+                
+              
+                <span itemprop="about" itemscope="" itemtype="http://schema.org/Thing">
+                  <a href="/categories/工具/Jenkins/" itemprop="url" rel="index">
+                    <span itemprop="name">Jenkins</span>
+                  </a>
+                </span>
+
+                
+                
+              
+            </span>
+          
+
+          
+            
+          
+
+          
+          
+
+          
+
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        
+          
+            <p><img src="http://www-zebe-me.oss-cn-beijing.aliyuncs.com/jenkins.jpg" alt="jenkins"><br>Linux环境中，Jenkins忘记密码的情形分好几种：</p>
+<h2 id="admin无法登录"><a href="#admin无法登录" class="headerlink" title="admin无法登录"></a>admin无法登录</h2><p>一种情况是安装了jenkins后，<strong>没有立即用admin登录，用的是自己创建的用户，第二次登录时就发现 admin 登录不了</strong>（即使默认的初始密码你已经拷贝出来了）。这是因为 jenkins 安装目录下的 <strong>users</strong> 文件夹中，根本就没有 <strong>admin</strong> 这个账户。</p>
+<p>另外一种情况是：<strong>你真的忘记了 admin 的密码</strong>。</p>
+<p>不用着急，先确定自己是哪种情况，去 jenkins 默认的安装目录找找看有没有 admin 账户。<br>在 users 目录下，如果没有 admin 文件夹，就表示没有 admin 这个账户。</p>
+<p>一般情况下，如果是通过 rpm 包安装的 jenkins，其默认路径如下：<br><strong>/usr/lib/jenkins/jenkins.war</strong> WAR包<br><strong>/etc/sysconfig/jenkins</strong> 配置文件<br><strong>/var/lib/jenkins/</strong> 默认的JENKINS_HOME目录<br><strong>/var/log/jenkins/jenkins.log</strong> Jenkins日志文件</p>
+<p>其中，users 文件夹在 <strong>/var/lib/jenkins/</strong> 目录下。如果是通过其他方式装的，或者自己指定了 jenkins 安装目录，就到自己的安装目录下去找。</p>
+<h4 id="没有admin账户的解决办法"><a href="#没有admin账户的解决办法" class="headerlink" title="没有admin账户的解决办法"></a>没有admin账户的解决办法</h4><p>如果你的 users 目录下有其他账户，例如 zebe，可以通过 <strong>cp -r zebe admin</strong> 命令，拷贝一个账户并命名为 admin，这样你就有了一个 admin 账户，<strong>密码和 zebe 一样</strong>。前提是你记得 zebe 这个账户的密码。</p>
+<h4 id="有admin账户，但是忘记了密码的解决办法"><a href="#有admin账户，但是忘记了密码的解决办法" class="headerlink" title="有admin账户，但是忘记了密码的解决办法"></a>有admin账户，但是忘记了密码的解决办法</h4><p>其实，仔细查看用户目录里面的 config.xml，就会发现里面保存了用户的密码，只不过是通过 Hash 加密了（请留意 passwordHash 这个节点里面的内容）。把其他账户的配置文件里面的密码，拷贝到 admin 账户的 config.xml 中，就行了，密码和被拷贝的那个账户的密码相同。</p>
+<h4 id="既没有admin账户，其他账户的密码也忘记了解决办法"><a href="#既没有admin账户，其他账户的密码也忘记了解决办法" class="headerlink" title="既没有admin账户，其他账户的密码也忘记了解决办法"></a>既没有admin账户，其他账户的密码也忘记了解决办法</h4><p>在 users 目录下创建一个文件夹，名称就是你的帐户名，<strong>建议取名为 admin，因为admin这个名称是系统特殊角色，可以创建其他用户并进行系统管理</strong>。<br>然后，在 admin 目录下通过 touch config.xml 命令，创建一个配置文件，拷贝以下内容进去：</p>
+<figure class="highlight xml"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">&lt;?xml version='1.1' encoding='UTF-8'?&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">user</span>&gt;</span></span><br><span class="line">  <span class="tag">&lt;<span class="name">fullName</span>&gt;</span>admin<span class="tag">&lt;/<span class="name">fullName</span>&gt;</span></span><br><span class="line">  <span class="tag">&lt;<span class="name">properties</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">jenkins.security.ApiTokenProperty</span>&gt;</span></span><br><span class="line">      <span class="tag">&lt;<span class="name">apiToken</span>&gt;</span>&#123;AQAAABAAAAAwsR8R28vFpICPsa48E9wlo3qY8SzrAwKW/Xf9TxRdJHIruqwJ4VRXmqsYb9Wahmq1MKgJgs9QWeO6l8rB5CFxqg==&#125;<span class="tag">&lt;/<span class="name">apiToken</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;/<span class="name">jenkins.security.ApiTokenProperty</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">hudson.model.MyViewsProperty</span>&gt;</span></span><br><span class="line">      <span class="tag">&lt;<span class="name">views</span>&gt;</span></span><br><span class="line">        <span class="tag">&lt;<span class="name">hudson.model.AllView</span>&gt;</span></span><br><span class="line">          <span class="tag">&lt;<span class="name">owner</span> <span class="attr">class</span>=<span class="string">"hudson.model.MyViewsProperty"</span> <span class="attr">reference</span>=<span class="string">"../../.."</span>/&gt;</span></span><br><span class="line">          <span class="tag">&lt;<span class="name">name</span>&gt;</span>all<span class="tag">&lt;/<span class="name">name</span>&gt;</span></span><br><span class="line">          <span class="tag">&lt;<span class="name">filterExecutors</span>&gt;</span>false<span class="tag">&lt;/<span class="name">filterExecutors</span>&gt;</span></span><br><span class="line">          <span class="tag">&lt;<span class="name">filterQueue</span>&gt;</span>false<span class="tag">&lt;/<span class="name">filterQueue</span>&gt;</span></span><br><span class="line">          <span class="tag">&lt;<span class="name">properties</span> <span class="attr">class</span>=<span class="string">"hudson.model.View$PropertyList"</span>/&gt;</span></span><br><span class="line">        <span class="tag">&lt;/<span class="name">hudson.model.AllView</span>&gt;</span></span><br><span class="line">      <span class="tag">&lt;/<span class="name">views</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;/<span class="name">hudson.model.MyViewsProperty</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">hudson.model.PaneStatusProperties</span>&gt;</span></span><br><span class="line">      <span class="tag">&lt;<span class="name">collapsed</span>/&gt;</span></span><br><span class="line">    <span class="tag">&lt;/<span class="name">hudson.model.PaneStatusProperties</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">hudson.search.UserSearchProperty</span>&gt;</span></span><br><span class="line">      <span class="tag">&lt;<span class="name">insensitiveSearch</span>&gt;</span>true<span class="tag">&lt;/<span class="name">insensitiveSearch</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;/<span class="name">hudson.search.UserSearchProperty</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">hudson.security.HudsonPrivateSecurityRealm_-Details</span>&gt;</span></span><br><span class="line">      <span class="tag">&lt;<span class="name">passwordHash</span>&gt;</span>#jbcrypt:$2a$10$wgKFlO9fDqnqMB6QIaRbjO2mOob1mKDPp7AQuOo.HK1JKpZhAwZg2<span class="tag">&lt;/<span class="name">passwordHash</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;/<span class="name">hudson.security.HudsonPrivateSecurityRealm_-Details</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">jenkins.security.LastGrantedAuthoritiesProperty</span>&gt;</span></span><br><span class="line">      <span class="tag">&lt;<span class="name">roles</span>&gt;</span></span><br><span class="line">        <span class="tag">&lt;<span class="name">string</span>&gt;</span>authenticated<span class="tag">&lt;/<span class="name">string</span>&gt;</span></span><br><span class="line">      <span class="tag">&lt;/<span class="name">roles</span>&gt;</span></span><br><span class="line">      <span class="tag">&lt;<span class="name">timestamp</span>&gt;</span>1524893701946<span class="tag">&lt;/<span class="name">timestamp</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;/<span class="name">jenkins.security.LastGrantedAuthoritiesProperty</span>&gt;</span></span><br><span class="line">  <span class="tag">&lt;/<span class="name">properties</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">user</span>&gt;</span></span><br></pre></td></tr></table></figure>
+<p>说明：通过拷贝XML这种方式来创建用户，我没有测试，但理论上是可行的。</p>
+<h2 id="使新的账户和密码生效"><a href="#使新的账户和密码生效" class="headerlink" title="使新的账户和密码生效"></a>使新的账户和密码生效</h2><p>先停止jenkins，执行命令：<strong>service jenkins stop</strong>。<br>再启动jenkins，执行命令：<strong>service jenkins start</strong>。</p>
+<p>如果没有 jenkins 服务的话（通过 rpm 装的都有这个服务），请以其他的方式重启 jenkins。</p>
+<h2 id="重启后登录"><a href="#重启后登录" class="headerlink" title="重启后登录"></a>重启后登录</h2><p><img src="http://www-zebe-me.oss-cn-beijing.aliyuncs.com/jenkins-admin-login.jpg" alt="jenkins-admin-login"></p>
+
+          
+        
+      
+    </div>
+    
+    
+    
+
+    
+
+    
+
+    
+
+    <footer class="post-footer">
+      
+
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </footer>
+  </div>
+  
+  
+  
+  </article>
+
+
+    
+      
+
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal" itemscope="" itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="http://www.nichuan.top/java-9-module-demo/">
+
+    <span hidden itemprop="author" itemscope="" itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="倪川">
+      <meta itemprop="description" content="">
+      <meta itemprop="image" content="/images/avatar.gif">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope="" itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="nichuan's blog">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+                
+                <a class="post-title-link" href="/java-9-module-demo/" itemprop="url">Java9 - 模块化简明例子</a></h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">发表于</span>
+              
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2018-04-27T16:59:10+08:00">
+                2018-04-27
+              </time>
+            
+
+            
+
+            
+          </span>
+
+          
+            <span class="post-category">
+            
+              <span class="post-meta-divider">|</span>
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">分类于</span>
+              
+              
+                <span itemprop="about" itemscope="" itemtype="http://schema.org/Thing">
+                  <a href="/categories/Java/" itemprop="url" rel="index">
+                    <span itemprop="name">Java</span>
+                  </a>
+                </span>
+
+                
+                
+                  ， 
+                
+              
+                <span itemprop="about" itemscope="" itemtype="http://schema.org/Thing">
+                  <a href="/categories/Java/Java9/" itemprop="url" rel="index">
+                    <span itemprop="name">Java9</span>
+                  </a>
+                </span>
+
+                
+                
+              
+            </span>
+          
+
+          
+            
+          
+
+          
+          
+
+          
+
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        
+          
+            <p><img src="http://www-zebe-me.oss-cn-beijing.aliyuncs.com/cover/cover-java-9.jpg" alt=""></p>
+<h2 id="个人对Java9的模块化的理解"><a href="#个人对Java9的模块化的理解" class="headerlink" title="个人对Java9的模块化的理解"></a>个人对Java9的模块化的理解</h2><p>个人对Java9模块化的简单理解是：模块是 <strong>package</strong> 的容器，是 <strong>package</strong> 的上一层。在模块里，可以输出（管理）当前模块哪些包是对外暴露（<strong>exports</strong>）的。同样的，当前模块需要别的模块，就要引用（<strong>requires</strong>）进来。</p>
+<h2 id="Java9模块化的例子"><a href="#Java9模块化的例子" class="headerlink" title="Java9模块化的例子"></a>Java9模块化的例子</h2><p>使用Idea创建一个项目 <strong>java-9-module-demo</strong>，添加两个模块：</p>
+<ul>
+<li><strong>module-main</strong>：主模块</li>
+<li><strong>module-user</strong>：用户模块</li>
+</ul>
+<p>这个例子将演示模块化的作用和写法，实现了以下功能：</p>
+<ul>
+<li>主模块需要用户模块中的 <code>User</code> 类。</li>
+<li>用户模块暴露（输出）了 <code>User</code> 类所在的包，因此主模块可以使用（可以成功 <strong>requires</strong>）。</li>
+<li>主模块无法访问用户模块中的 <code>HiddenClass</code> 类，因为用户模块没有输出（<strong>exports</strong>）这个类所在的包。</li>
+</ul>
+<p>项目结构如下图所示：</p>
+<p><img src="http://www-zebe-me.oss-cn-beijing.aliyuncs.com/java-9-module-demo-1.jpg" alt="java-9-module-demo"></p>
+<h3 id="主类"><a href="#主类" class="headerlink" title="主类"></a>主类</h3><figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">package</span> main;</span><br><span class="line"></span><br><span class="line"><span class="keyword">import</span> user.User;</span><br><span class="line"></span><br><span class="line"><span class="comment">/**</span></span><br><span class="line"><span class="comment"> * 主类</span></span><br><span class="line"><span class="comment"> *</span></span><br><span class="line"><span class="comment"> * <span class="doctag">@author</span> Zebe</span></span><br><span class="line"><span class="comment"> */</span></span><br><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">Main</span> </span>&#123;</span><br><span class="line"></span><br><span class="line">    <span class="comment">/**</span></span><br><span class="line"><span class="comment">     * 运行入口</span></span><br><span class="line"><span class="comment">     *</span></span><br><span class="line"><span class="comment">     * <span class="doctag">@param</span> args 运行参数</span></span><br><span class="line"><span class="comment">     */</span></span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">void</span> <span class="title">main</span><span class="params">(String[] args)</span> </span>&#123;</span><br><span class="line">        <span class="comment">// 调用 module-user 模块中的 User 类</span></span><br><span class="line">        User user = <span class="keyword">new</span> User();</span><br><span class="line">        user.sayHello();</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<h3 id="用户类"><a href="#用户类" class="headerlink" title="用户类"></a>用户类</h3><figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">package</span> user;</span><br><span class="line"></span><br><span class="line"><span class="comment">/**</span></span><br><span class="line"><span class="comment"> * 用户类</span></span><br><span class="line"><span class="comment"> *</span></span><br><span class="line"><span class="comment"> * <span class="doctag">@author</span> Zebe</span></span><br><span class="line"><span class="comment"> */</span></span><br><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">User</span> </span>&#123;</span><br><span class="line"></span><br><span class="line">    <span class="comment">/**</span></span><br><span class="line"><span class="comment">     * 打招呼</span></span><br><span class="line"><span class="comment">     */</span></span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">void</span> <span class="title">sayHello</span><span class="params">()</span> </span>&#123;</span><br><span class="line">        System.out.println(<span class="string">"hello, 我是 module-user 模块 user 包里面的 User 类！"</span>);</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<h3 id="隐藏类"><a href="#隐藏类" class="headerlink" title="隐藏类"></a>隐藏类</h3><figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">package</span> invisible;</span><br><span class="line"></span><br><span class="line"><span class="comment">/**</span></span><br><span class="line"><span class="comment"> * 隐藏类</span></span><br><span class="line"><span class="comment"> *</span></span><br><span class="line"><span class="comment"> * <span class="doctag">@author</span> Zebe</span></span><br><span class="line"><span class="comment"> */</span></span><br><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">HiddenClass</span> </span>&#123;</span><br><span class="line"></span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">void</span> <span class="title">test</span><span class="params">()</span> </span>&#123;</span><br><span class="line">        System.out.println(<span class="string">"Test"</span>);</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<h3 id="主模块信息定义"><a href="#主模块信息定义" class="headerlink" title="主模块信息定义"></a>主模块信息定义</h3><figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">/**</span></span><br><span class="line"><span class="comment"> * module-main 主模块信息定义</span></span><br><span class="line"><span class="comment"> * <span class="doctag">@author</span> Zebe</span></span><br><span class="line"><span class="comment"> */</span></span><br><span class="line"><span class="keyword">module</span> <span class="keyword">module</span>.main &#123;</span><br><span class="line">    <span class="comment">// 需要 module-user 模块</span></span><br><span class="line">    <span class="keyword">requires</span> <span class="keyword">module</span>.user;</span><br><span class="line"></span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<h3 id="用户模块信息定义"><a href="#用户模块信息定义" class="headerlink" title="用户模块信息定义"></a>用户模块信息定义</h3><figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">/**</span></span><br><span class="line"><span class="comment"> * module-user 用户模块信息定义</span></span><br><span class="line"><span class="comment"> * <span class="doctag">@author</span> Zebe</span></span><br><span class="line"><span class="comment"> */</span></span><br><span class="line"><span class="keyword">module</span> <span class="keyword">module</span>.user &#123;</span><br><span class="line">    <span class="comment">// 输出（对外暴露）整个 user 包</span></span><br><span class="line">    <span class="keyword">exports</span> user;</span><br><span class="line">    <span class="comment">//exports invisible;</span></span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<h2 id="小结"><a href="#小结" class="headerlink" title="小结"></a>小结</h2><p><strong>眼过千遍，不如手过一遍</strong>。对于编程的学习，在于积累和不断的练习。</p>
+
+          
+        
+      
+    </div>
+    
+    
+    
+
+    
+
+    
+
+    
+
+    <footer class="post-footer">
+      
+
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </footer>
+  </div>
+  
+  
+  
+  </article>
+
+
+    
   </section>
 
   
   <nav class="pagination">
-    <a class="extend prev" rel="prev" href="/page/2/"><i class="fa fa-angle-left"></i></a><a class="page-number" href="/">1</a><a class="page-number" href="/page/2/">2</a><span class="page-number current">3</span><a class="page-number" href="/page/4/">4</a><a class="page-number" href="/page/5/">5</a><a class="extend next" rel="next" href="/page/4/"><i class="fa fa-angle-right"></i></a>
+    <a class="extend prev" rel="prev" href="/page/2/"><i class="fa fa-angle-left"></i></a><a class="page-number" href="/">1</a><a class="page-number" href="/page/2/">2</a><span class="page-number current">3</span><a class="page-number" href="/page/4/">4</a><a class="extend next" rel="next" href="/page/4/"><i class="fa fa-angle-right"></i></a>
   </nav>
 
 
@@ -1822,7 +1872,7 @@
               
                 <a href="/archives/">
               
-                  <span class="site-state-item-count">41</span>
+                  <span class="site-state-item-count">38</span>
                   <span class="site-state-item-name">日志</span>
                 </a>
               </div>
@@ -1833,7 +1883,7 @@
               
               <div class="site-state-item site-state-categories">
                 
-                  <span class="site-state-item-count">24</span>
+                  <span class="site-state-item-count">20</span>
                   <span class="site-state-item-name">分类</span>
                 
               </div>
@@ -1844,7 +1894,7 @@
               
               <div class="site-state-item site-state-tags">
                 
-                  <span class="site-state-item-count">97</span>
+                  <span class="site-state-item-count">94</span>
                   <span class="site-state-item-name">标签</span>
                 
               </div>
