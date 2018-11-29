@@ -229,6 +229,196 @@
   
   
   <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="http://www.nichuan.top/学习markdown/">
+
+    <span hidden itemprop="author" itemscope="" itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="倪川">
+      <meta itemprop="description" content="">
+      <meta itemprop="image" content="/images/avatar.gif">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope="" itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="nichuan's blog">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+                
+                <a class="post-title-link" href="/学习markdown/" itemprop="url">学习markdown</a></h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">发表于</span>
+              
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2018-11-29T23:42:53+08:00">
+                2018-11-29
+              </time>
+            
+
+            
+
+            
+          </span>
+
+          
+
+          
+            
+          
+
+          
+          
+
+          
+
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        
+          
+            <h1 id="Sublime-Text3-实时预览Markdown效果"><a href="#Sublime-Text3-实时预览Markdown效果" class="headerlink" title="Sublime Text3 实时预览Markdown效果"></a>Sublime Text3 实时预览Markdown效果</h1><ul>
+<li>安装以下插件</li>
+</ul>
+<table>
+<thead>
+<tr>
+<th style="text-align:center">插件</th>
+<th style="text-align:center">功能</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:center">MarkdownEditing</td>
+<td style="text-align:center">一个提高Sublime中Markdown编辑特性的插件</td>
+</tr>
+<tr>
+<td style="text-align:center">MarkdownPreview</td>
+<td style="text-align:center">Markdown转HTML，提供在浏览器中的预览功能</td>
+</tr>
+<tr>
+<td style="text-align:center">MarkdownLivePreview</td>
+<td style="text-align:center">提供在编辑框中实时预览的功能</td>
+</tr>
+<tr>
+<td style="text-align:center">LiveReload</td>
+<td style="text-align:center">一个提供md/html等文档的实时刷新预览的的插件</td>
+</tr>
+</tbody>
+</table>
+<p>1.MarkdownEditing<br>    顾名思义，Markdown编辑器，是Markdown写作者必备的插件，不仅可以高亮显示Markdown语法还支持很多编程语言的语法高亮显示。<br>    特别注意：MarkdownEditing只针对 md\mdown\mmd\txt 格式文件才启用。</p>
+<ul>
+<li><p>特性</p>
+<p>   MarkdownEditing 从视觉和便捷性上针对 Markdown 文档的编辑进行了一系列的优化。如：</p>
+<ul>
+<li>颜色方案仿 Byword及iA writer</li>
+<li>自动匹配星号（*）、下划线（_）及反引号（`）</li>
+<li>选中文本按下以上符号能自动在所选文本前后添加配对的符号</li>
+<li>方便粗体、斜体和代码框的输入</li>
+</ul>
+</li>
+</ul>
+<p>2.MarkdownLivePreview</p>
+<ul>
+<li><p>使用</p>
+<p>   MarkdownLivePreview默认关闭实时预览，既然安装这个插件了，那肯定是要用的。打开方式为在Preferences -&gt; Package Settings -&gt; MarkdownLivePreview -&gt; Settings 的设置的右侧加一条 “markdown_live_preview_on_open”: true,，重启sublime即可。</p>
+</li>
+</ul>
+<p>3.MarkdownPreview</p>
+<ul>
+<li><p>功能</p>
+<p> 1.支持在浏览器中预览markdown文件</p>
+<p> 2.将md文件导出为html代码</p>
+</li>
+<li><p>使用</p>
+<p> 1.组合键 Ctrl+Shift+P 调出命令面板</p>
+<p> 2.输入mdp找到并选中Markdown Preview： Preview in Browser</p>
+<p> 3.出现两个选项：github和markdown。任选其一即可，github是利用GitHub的在线API来解析.md文件，支持在线资源的预览，如在线图片它的解析速度取决于你的联网速度。该方式据说一天只能打开60次。markdown就是传统的本地打开，不支持在线资源的预览。</p>
+<p> 4.默认浏览器中显示预览结果</p>
+</li>
+</ul>
+<p>4.实时自动刷新预览：MarkdownPreview + LiveReload 先安装并配置Markdown Preview</p>
+<ul>
+<li>如前Markdown Preview安装成功后，设置前文所述的快捷键（如需），打开其配置文件 Preferences -&gt; Package Settings -&gt; Markdown Preview -&gt; Settings，检查左侧enable_autoreload条目是否为true，若是，跳过。若不是，右侧栏加一条下面这个后重启Sublime:</li>
+</ul>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"></span><br><span class="line">&#123;</span><br><span class="line">    &quot;enable_autoreload&quot;: true</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<ul>
+<li><p>安装并配置LiveReload</p>
+<p> Ctrl+Shift+p, 输入 Install Package，输入LiveReload, 回车安装 安装成功后, 再次Ctrl+shift+p, 输入LiveReload: Enable/disable plug-ins, 回车, 选择 Simple Reload with delay (400ms)或者Simple Reload，两者的区别仅仅在于后者没有延迟。</p>
+</li>
+</ul>
+<p>参考地址：<a href="#">CSDN</a></p>
+
+          
+        
+      
+    </div>
+    
+    
+    
+
+    
+
+    
+
+    
+
+    <footer class="post-footer">
+      
+
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </footer>
+  </div>
+  
+  
+  
+  </article>
+
+
+    
+      
+
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal" itemscope="" itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
     <link itemprop="mainEntityOfPage" href="http://www.nichuan.top/java-jvm-xss/">
 
     <span hidden itemprop="author" itemscope="" itemtype="http://schema.org/Person">
@@ -1393,161 +1583,6 @@
   
   
   <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="http://www.nichuan.top/java-ten-methods-of-array/">
-
-    <span hidden itemprop="author" itemscope="" itemtype="http://schema.org/Person">
-      <meta itemprop="name" content="倪川">
-      <meta itemprop="description" content="">
-      <meta itemprop="image" content="/images/avatar.gif">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope="" itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="nichuan's blog">
-    </span>
-
-    
-      <header class="post-header">
-
-        
-        
-          <h1 class="post-title" itemprop="name headline">
-                
-                <a class="post-title-link" href="/java-ten-methods-of-array/" itemprop="url">(译)Java - 数组的10个常用方法</a></h1>
-        
-
-        <div class="post-meta">
-          <span class="post-time">
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-calendar-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">发表于</span>
-              
-              <time title="创建于" itemprop="dateCreated datePublished" datetime="2018-09-20T10:17:49+08:00">
-                2018-09-20
-              </time>
-            
-
-            
-
-            
-          </span>
-
-          
-            <span class="post-category">
-            
-              <span class="post-meta-divider">|</span>
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-folder-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">分类于</span>
-              
-              
-                <span itemprop="about" itemscope="" itemtype="http://schema.org/Thing">
-                  <a href="/categories/Java/" itemprop="url" rel="index">
-                    <span itemprop="name">Java</span>
-                  </a>
-                </span>
-
-                
-                
-              
-            </span>
-          
-
-          
-            
-          
-
-          
-          
-
-          
-
-          
-
-          
-
-        </div>
-      </header>
-    
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-
-      
-      
-
-      
-        
-          
-            <p><img src="http://www-zebe-me.oss-cn-beijing.aliyuncs.com/cover/cover-java-translate.jpg" alt=""><br>以下是Java数组中最常用的10种方法，它们是 <em>stackoverflow</em> 中投票最多的问题。</p>
-<h2 id="0-声明数组"><a href="#0-声明数组" class="headerlink" title="0. 声明数组"></a>0. 声明数组</h2><figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">String[] aArray = <span class="keyword">new</span> String[<span class="number">5</span>];</span><br><span class="line">String[] bArray = &#123;<span class="string">"a"</span>,<span class="string">"b"</span>,<span class="string">"c"</span>, <span class="string">"d"</span>, <span class="string">"e"</span>&#125;;</span><br><span class="line">String[] cArray = <span class="keyword">new</span> String[]&#123;<span class="string">"a"</span>,<span class="string">"b"</span>,<span class="string">"c"</span>,<span class="string">"d"</span>,<span class="string">"e"</span>&#125;;</span><br></pre></td></tr></table></figure>
-<h2 id="1-打印数组"><a href="#1-打印数组" class="headerlink" title="1. 打印数组"></a>1. 打印数组</h2><figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">int</span>[] intArray = &#123; <span class="number">1</span>, <span class="number">2</span>, <span class="number">3</span>, <span class="number">4</span>, <span class="number">5</span> &#125;;</span><br><span class="line">String intArrayString = Arrays.toString(intArray);</span><br><span class="line"> </span><br><span class="line"><span class="comment">// print directly will print reference value</span></span><br><span class="line">System.out.println(intArray);</span><br><span class="line"><span class="comment">// [I@7150bd4d</span></span><br><span class="line"> </span><br><span class="line">System.out.println(intArrayString);</span><br><span class="line"><span class="comment">// [1, 2, 3, 4, 5]</span></span><br></pre></td></tr></table></figure>
-<h2 id="2-从数组创建一个-ArrayList"><a href="#2-从数组创建一个-ArrayList" class="headerlink" title="2. 从数组创建一个 ArrayList"></a>2. 从数组创建一个 ArrayList</h2><figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">String[] stringArray = &#123; <span class="string">"a"</span>, <span class="string">"b"</span>, <span class="string">"c"</span>, <span class="string">"d"</span>, <span class="string">"e"</span> &#125;;</span><br><span class="line">ArrayList&lt;String&gt; arrayList = <span class="keyword">new</span> ArrayList&lt;String&gt;(Arrays.asList(stringArray));</span><br><span class="line">System.out.println(arrayList);</span><br><span class="line"><span class="comment">// [a, b, c, d, e]</span></span><br></pre></td></tr></table></figure>
-<h2 id="3-检查数组是否包含某一个值"><a href="#3-检查数组是否包含某一个值" class="headerlink" title="3. 检查数组是否包含某一个值"></a>3. 检查数组是否包含某一个值</h2><figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">String[] stringArray = &#123; <span class="string">"a"</span>, <span class="string">"b"</span>, <span class="string">"c"</span>, <span class="string">"d"</span>, <span class="string">"e"</span> &#125;;</span><br><span class="line"><span class="keyword">boolean</span> b = Arrays.asList(stringArray).contains(<span class="string">"a"</span>);</span><br><span class="line">System.out.println(b);</span><br><span class="line"><span class="comment">// true</span></span><br></pre></td></tr></table></figure>
-<h2 id="4-合并数组"><a href="#4-合并数组" class="headerlink" title="4. 合并数组"></a>4. 合并数组</h2><figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">int</span>[] intArray = &#123; <span class="number">1</span>, <span class="number">2</span>, <span class="number">3</span>, <span class="number">4</span>, <span class="number">5</span> &#125;;</span><br><span class="line"><span class="keyword">int</span>[] intArray2 = &#123; <span class="number">6</span>, <span class="number">7</span>, <span class="number">8</span>, <span class="number">9</span>, <span class="number">10</span> &#125;;</span><br><span class="line"><span class="comment">// Apache Commons Lang library</span></span><br><span class="line"><span class="keyword">int</span>[] combinedIntArray = ArrayUtils.addAll(intArray, intArray2);</span><br></pre></td></tr></table></figure>
-<h2 id="5-一行代码声明数组"><a href="#5-一行代码声明数组" class="headerlink" title="5. 一行代码声明数组"></a>5. 一行代码声明数组</h2><figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">method(<span class="keyword">new</span> String[]&#123;<span class="string">"a"</span>, <span class="string">"b"</span>, <span class="string">"c"</span>, <span class="string">"d"</span>, <span class="string">"e"</span>&#125;);</span><br></pre></td></tr></table></figure>
-<h2 id="6-把数组中的元素用指定的分隔符连接起来"><a href="#6-把数组中的元素用指定的分隔符连接起来" class="headerlink" title="6. 把数组中的元素用指定的分隔符连接起来"></a>6. 把数组中的元素用指定的分隔符连接起来</h2><figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">// containing the provided list of elements</span></span><br><span class="line"><span class="comment">// Apache common lang</span></span><br><span class="line">String j = StringUtils.join(<span class="keyword">new</span> String[] &#123; <span class="string">"a"</span>, <span class="string">"b"</span>, <span class="string">"c"</span> &#125;, <span class="string">", "</span>);</span><br><span class="line">System.out.println(j);</span><br><span class="line"><span class="comment">// a, b, c</span></span><br></pre></td></tr></table></figure>
-<h2 id="7-把一个-ArrayList-转换成数组"><a href="#7-把一个-ArrayList-转换成数组" class="headerlink" title="7. 把一个 ArrayList 转换成数组"></a>7. 把一个 ArrayList 转换成数组</h2><figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">String[] stringArray = &#123; <span class="string">"a"</span>, <span class="string">"b"</span>, <span class="string">"c"</span>, <span class="string">"d"</span>, <span class="string">"e"</span> &#125;;</span><br><span class="line">ArrayList&lt;String&gt; arrayList = <span class="keyword">new</span> ArrayList&lt;String&gt;(Arrays.asList(stringArray));</span><br><span class="line">String[] stringArr = <span class="keyword">new</span> String[arrayList.size()];</span><br><span class="line">arrayList.toArray(stringArr);</span><br><span class="line"><span class="keyword">for</span> (String s : stringArr)</span><br><span class="line">	System.out.println(s);</span><br></pre></td></tr></table></figure>
-<h2 id="8-把一个数组转换成-Set"><a href="#8-把一个数组转换成-Set" class="headerlink" title="8. 把一个数组转换成 Set"></a>8. 把一个数组转换成 Set</h2><figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">Set&lt;String&gt; set = <span class="keyword">new</span> HashSet&lt;String&gt;(Arrays.asList(stringArray));</span><br><span class="line">System.out.println(set);</span><br><span class="line"><span class="comment">//[d, e, b, c, a]</span></span><br></pre></td></tr></table></figure>
-<h2 id="9-反转数组"><a href="#9-反转数组" class="headerlink" title="9. 反转数组"></a>9. 反转数组</h2><figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">int</span>[] intArray = &#123; <span class="number">1</span>, <span class="number">2</span>, <span class="number">3</span>, <span class="number">4</span>, <span class="number">5</span> &#125;;</span><br><span class="line">ArrayUtils.reverse(intArray);</span><br><span class="line">System.out.println(Arrays.toString(intArray));</span><br><span class="line"><span class="comment">//[5, 4, 3, 2, 1]</span></span><br></pre></td></tr></table></figure>
-<h2 id="10-移除数组中的元素"><a href="#10-移除数组中的元素" class="headerlink" title="10. 移除数组中的元素"></a>10. 移除数组中的元素</h2><figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">int</span>[] intArray = &#123; <span class="number">1</span>, <span class="number">2</span>, <span class="number">3</span>, <span class="number">4</span>, <span class="number">5</span> &#125;;</span><br><span class="line"><span class="keyword">int</span>[] removed = ArrayUtils.removeElement(intArray, <span class="number">3</span>);<span class="comment">//create a new array</span></span><br><span class="line">System.out.println(Arrays.toString(removed));</span><br></pre></td></tr></table></figure>
-<h2 id="附加的方法-把-int-转换成字节数组"><a href="#附加的方法-把-int-转换成字节数组" class="headerlink" title="附加的方法 - 把 int 转换成字节数组"></a>附加的方法 - 把 int 转换成字节数组</h2><figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">byte</span>[] bytes = ByteBuffer.allocate(<span class="number">4</span>).putInt(<span class="number">8</span>).array();</span><br><span class="line"> </span><br><span class="line"><span class="keyword">for</span> (<span class="keyword">byte</span> t : bytes) &#123;</span><br><span class="line">   System.out.format(<span class="string">"0x%x "</span>, t);</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-<p>版权声明：本文为译文，请尊重原作者，转载请保留原文链接：<a href="https://www.programcreek.com/2013/09/top-10-methods-for-java-arrays/" target="_blank" rel="noopener">https://www.programcreek.com/2013/09/top-10-methods-for-java-arrays/</a></p>
-
-          
-        
-      
-    </div>
-    
-    
-    
-
-    
-
-    
-
-    
-
-    <footer class="post-footer">
-      
-
-      
-
-      
-
-      
-      
-        <div class="post-eof"></div>
-      
-    </footer>
-  </div>
-  
-  
-  
-  </article>
-
-
-    
-      
-
-  
-
-  
-  
-  
-
-  <article class="post post-type-normal" itemscope="" itemtype="http://schema.org/Article">
-  
-  
-  
-  <div class="post-block">
     <link itemprop="mainEntityOfPage" href="http://www.nichuan.top/java-what-exactly-is-null/">
 
     <span hidden itemprop="author" itemscope="" itemtype="http://schema.org/Person">
@@ -1705,7 +1740,7 @@
   
   
   <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="http://www.nichuan.top/win-10-activate/">
+    <link itemprop="mainEntityOfPage" href="http://www.nichuan.top/java-ten-methods-of-array/">
 
     <span hidden itemprop="author" itemscope="" itemtype="http://schema.org/Person">
       <meta itemprop="name" content="倪川">
@@ -1724,7 +1759,7 @@
         
           <h1 class="post-title" itemprop="name headline">
                 
-                <a class="post-title-link" href="/win-10-activate/" itemprop="url">Windows10“许可证即将过期”解决办法</a></h1>
+                <a class="post-title-link" href="/java-ten-methods-of-array/" itemprop="url">(译)Java - 数组的10个常用方法</a></h1>
         
 
         <div class="post-meta">
@@ -1736,8 +1771,8 @@
               
                 <span class="post-meta-item-text">发表于</span>
               
-              <time title="创建于" itemprop="dateCreated datePublished" datetime="2018-09-18T16:53:34+08:00">
-                2018-09-18
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2018-09-20T10:17:49+08:00">
+                2018-09-20
               </time>
             
 
@@ -1759,19 +1794,8 @@
               
               
                 <span itemprop="about" itemscope="" itemtype="http://schema.org/Thing">
-                  <a href="/categories/系统/" itemprop="url" rel="index">
-                    <span itemprop="name">系统</span>
-                  </a>
-                </span>
-
-                
-                
-                  ， 
-                
-              
-                <span itemprop="about" itemscope="" itemtype="http://schema.org/Thing">
-                  <a href="/categories/系统/Windows/" itemprop="url" rel="index">
-                    <span itemprop="name">Windows</span>
+                  <a href="/categories/Java/" itemprop="url" rel="index">
+                    <span itemprop="name">Java</span>
                   </a>
                 </span>
 
@@ -1809,14 +1833,20 @@
       
         
           
-            <p><img src="http://www-zebe-me.oss-cn-beijing.aliyuncs.com/win-10.jpg" alt=""><br>试了很多激活工具、激活码都不行，本文介绍的这个激活方法截止到今日（2018年9月18日）是可行的，亲测通过。</p>
-<p><strong>第1步</strong>：以管理员模式打开命令提示符号（或者PowerShell）。<br><strong>第2步</strong>：在命令窗口中依次输入以下内容（加粗部分）：</p>
-<ul>
-<li><strong>slmgr.vbs /upk</strong>：稍等几秒钟，窗口会弹出“成功地卸载了产品密钥”。</li>
-<li><strong>slmgr /ipk W269N-WFGWX-YVC9B-4J6C9-T83GX</strong>：稍等几秒钟，窗口会弹出“成功的安装了产品密钥”。</li>
-<li><strong>slmgr /skms zh.us.to</strong>：稍等几秒钟，窗口会弹出“密钥管理服务计算机名成功地设置为 zh.us.to”。</li>
-<li><strong>slmgr /ato</strong>：稍等十秒钟左右，窗口会弹出“成功的激活了产品”。</li>
-</ul>
+            <p><img src="http://www-zebe-me.oss-cn-beijing.aliyuncs.com/cover/cover-java-translate.jpg" alt=""><br>以下是Java数组中最常用的10种方法，它们是 <em>stackoverflow</em> 中投票最多的问题。</p>
+<h2 id="0-声明数组"><a href="#0-声明数组" class="headerlink" title="0. 声明数组"></a>0. 声明数组</h2><figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">String[] aArray = <span class="keyword">new</span> String[<span class="number">5</span>];</span><br><span class="line">String[] bArray = &#123;<span class="string">"a"</span>,<span class="string">"b"</span>,<span class="string">"c"</span>, <span class="string">"d"</span>, <span class="string">"e"</span>&#125;;</span><br><span class="line">String[] cArray = <span class="keyword">new</span> String[]&#123;<span class="string">"a"</span>,<span class="string">"b"</span>,<span class="string">"c"</span>,<span class="string">"d"</span>,<span class="string">"e"</span>&#125;;</span><br></pre></td></tr></table></figure>
+<h2 id="1-打印数组"><a href="#1-打印数组" class="headerlink" title="1. 打印数组"></a>1. 打印数组</h2><figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">int</span>[] intArray = &#123; <span class="number">1</span>, <span class="number">2</span>, <span class="number">3</span>, <span class="number">4</span>, <span class="number">5</span> &#125;;</span><br><span class="line">String intArrayString = Arrays.toString(intArray);</span><br><span class="line"> </span><br><span class="line"><span class="comment">// print directly will print reference value</span></span><br><span class="line">System.out.println(intArray);</span><br><span class="line"><span class="comment">// [I@7150bd4d</span></span><br><span class="line"> </span><br><span class="line">System.out.println(intArrayString);</span><br><span class="line"><span class="comment">// [1, 2, 3, 4, 5]</span></span><br></pre></td></tr></table></figure>
+<h2 id="2-从数组创建一个-ArrayList"><a href="#2-从数组创建一个-ArrayList" class="headerlink" title="2. 从数组创建一个 ArrayList"></a>2. 从数组创建一个 ArrayList</h2><figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">String[] stringArray = &#123; <span class="string">"a"</span>, <span class="string">"b"</span>, <span class="string">"c"</span>, <span class="string">"d"</span>, <span class="string">"e"</span> &#125;;</span><br><span class="line">ArrayList&lt;String&gt; arrayList = <span class="keyword">new</span> ArrayList&lt;String&gt;(Arrays.asList(stringArray));</span><br><span class="line">System.out.println(arrayList);</span><br><span class="line"><span class="comment">// [a, b, c, d, e]</span></span><br></pre></td></tr></table></figure>
+<h2 id="3-检查数组是否包含某一个值"><a href="#3-检查数组是否包含某一个值" class="headerlink" title="3. 检查数组是否包含某一个值"></a>3. 检查数组是否包含某一个值</h2><figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">String[] stringArray = &#123; <span class="string">"a"</span>, <span class="string">"b"</span>, <span class="string">"c"</span>, <span class="string">"d"</span>, <span class="string">"e"</span> &#125;;</span><br><span class="line"><span class="keyword">boolean</span> b = Arrays.asList(stringArray).contains(<span class="string">"a"</span>);</span><br><span class="line">System.out.println(b);</span><br><span class="line"><span class="comment">// true</span></span><br></pre></td></tr></table></figure>
+<h2 id="4-合并数组"><a href="#4-合并数组" class="headerlink" title="4. 合并数组"></a>4. 合并数组</h2><figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">int</span>[] intArray = &#123; <span class="number">1</span>, <span class="number">2</span>, <span class="number">3</span>, <span class="number">4</span>, <span class="number">5</span> &#125;;</span><br><span class="line"><span class="keyword">int</span>[] intArray2 = &#123; <span class="number">6</span>, <span class="number">7</span>, <span class="number">8</span>, <span class="number">9</span>, <span class="number">10</span> &#125;;</span><br><span class="line"><span class="comment">// Apache Commons Lang library</span></span><br><span class="line"><span class="keyword">int</span>[] combinedIntArray = ArrayUtils.addAll(intArray, intArray2);</span><br></pre></td></tr></table></figure>
+<h2 id="5-一行代码声明数组"><a href="#5-一行代码声明数组" class="headerlink" title="5. 一行代码声明数组"></a>5. 一行代码声明数组</h2><figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">method(<span class="keyword">new</span> String[]&#123;<span class="string">"a"</span>, <span class="string">"b"</span>, <span class="string">"c"</span>, <span class="string">"d"</span>, <span class="string">"e"</span>&#125;);</span><br></pre></td></tr></table></figure>
+<h2 id="6-把数组中的元素用指定的分隔符连接起来"><a href="#6-把数组中的元素用指定的分隔符连接起来" class="headerlink" title="6. 把数组中的元素用指定的分隔符连接起来"></a>6. 把数组中的元素用指定的分隔符连接起来</h2><figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">// containing the provided list of elements</span></span><br><span class="line"><span class="comment">// Apache common lang</span></span><br><span class="line">String j = StringUtils.join(<span class="keyword">new</span> String[] &#123; <span class="string">"a"</span>, <span class="string">"b"</span>, <span class="string">"c"</span> &#125;, <span class="string">", "</span>);</span><br><span class="line">System.out.println(j);</span><br><span class="line"><span class="comment">// a, b, c</span></span><br></pre></td></tr></table></figure>
+<h2 id="7-把一个-ArrayList-转换成数组"><a href="#7-把一个-ArrayList-转换成数组" class="headerlink" title="7. 把一个 ArrayList 转换成数组"></a>7. 把一个 ArrayList 转换成数组</h2><figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">String[] stringArray = &#123; <span class="string">"a"</span>, <span class="string">"b"</span>, <span class="string">"c"</span>, <span class="string">"d"</span>, <span class="string">"e"</span> &#125;;</span><br><span class="line">ArrayList&lt;String&gt; arrayList = <span class="keyword">new</span> ArrayList&lt;String&gt;(Arrays.asList(stringArray));</span><br><span class="line">String[] stringArr = <span class="keyword">new</span> String[arrayList.size()];</span><br><span class="line">arrayList.toArray(stringArr);</span><br><span class="line"><span class="keyword">for</span> (String s : stringArr)</span><br><span class="line">	System.out.println(s);</span><br></pre></td></tr></table></figure>
+<h2 id="8-把一个数组转换成-Set"><a href="#8-把一个数组转换成-Set" class="headerlink" title="8. 把一个数组转换成 Set"></a>8. 把一个数组转换成 Set</h2><figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">Set&lt;String&gt; set = <span class="keyword">new</span> HashSet&lt;String&gt;(Arrays.asList(stringArray));</span><br><span class="line">System.out.println(set);</span><br><span class="line"><span class="comment">//[d, e, b, c, a]</span></span><br></pre></td></tr></table></figure>
+<h2 id="9-反转数组"><a href="#9-反转数组" class="headerlink" title="9. 反转数组"></a>9. 反转数组</h2><figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">int</span>[] intArray = &#123; <span class="number">1</span>, <span class="number">2</span>, <span class="number">3</span>, <span class="number">4</span>, <span class="number">5</span> &#125;;</span><br><span class="line">ArrayUtils.reverse(intArray);</span><br><span class="line">System.out.println(Arrays.toString(intArray));</span><br><span class="line"><span class="comment">//[5, 4, 3, 2, 1]</span></span><br></pre></td></tr></table></figure>
+<h2 id="10-移除数组中的元素"><a href="#10-移除数组中的元素" class="headerlink" title="10. 移除数组中的元素"></a>10. 移除数组中的元素</h2><figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">int</span>[] intArray = &#123; <span class="number">1</span>, <span class="number">2</span>, <span class="number">3</span>, <span class="number">4</span>, <span class="number">5</span> &#125;;</span><br><span class="line"><span class="keyword">int</span>[] removed = ArrayUtils.removeElement(intArray, <span class="number">3</span>);<span class="comment">//create a new array</span></span><br><span class="line">System.out.println(Arrays.toString(removed));</span><br></pre></td></tr></table></figure>
+<h2 id="附加的方法-把-int-转换成字节数组"><a href="#附加的方法-把-int-转换成字节数组" class="headerlink" title="附加的方法 - 把 int 转换成字节数组"></a>附加的方法 - 把 int 转换成字节数组</h2><figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">byte</span>[] bytes = ByteBuffer.allocate(<span class="number">4</span>).putInt(<span class="number">8</span>).array();</span><br><span class="line"> </span><br><span class="line"><span class="keyword">for</span> (<span class="keyword">byte</span> t : bytes) &#123;</span><br><span class="line">   System.out.format(<span class="string">"0x%x "</span>, t);</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<p>版权声明：本文为译文，请尊重原作者，转载请保留原文链接：<a href="https://www.programcreek.com/2013/09/top-10-methods-for-java-arrays/" target="_blank" rel="noopener">https://www.programcreek.com/2013/09/top-10-methods-for-java-arrays/</a></p>
 
           
         
@@ -1902,7 +1932,7 @@
               
                 <a href="/archives/">
               
-                  <span class="site-state-item-count">38</span>
+                  <span class="site-state-item-count">39</span>
                   <span class="site-state-item-name">日志</span>
                 </a>
               </div>
