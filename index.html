@@ -864,7 +864,7 @@
 </ol>
 <p>在 /etc 目录下创建 shadowsocks.json 配置文件<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">vi /etc/shadowsocks.json</span><br></pre></td></tr></table></figure></p>
 <p>然后把上面的json替换进去，就修改端口和对应密码就ok，重启shadowsocks 生效：</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">/etc/init.d/shadowsocks restart</span><br></pre></td></tr></table></figure>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">/etc/init.d/shadowsocks restart</span><br><span class="line"></span><br><span class="line">#上面不行，下面这个</span><br><span class="line">ssserver -d restart -c /etc/shadowsocks.json</span><br></pre></td></tr></table></figure>
 <p>关闭防火墙：</p>
 <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">service iptables stop</span><br><span class="line">chkconfig iptables off</span><br></pre></td></tr></table></figure>
 <p>多用户配置完成！</p>
