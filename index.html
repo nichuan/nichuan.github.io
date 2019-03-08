@@ -249,6 +249,402 @@
   
   
   <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="http://www.nichuan.top/oracle12C安装后几个简单命令记录/">
+
+    <span hidden itemprop="author" itemscope="" itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="倪川">
+      <meta itemprop="description" content="">
+      <meta itemprop="image" content="/images/avatar.gif">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope="" itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="nichuan's blog">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+                
+                <a class="post-title-link" href="/oracle12C安装后几个简单命令记录/" itemprop="url">oracle12C安装后几个简单命令记录</a></h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">发表于</span>
+              
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2019-03-08T21:25:14+08:00">
+                2019-03-08
+              </time>
+            
+
+            
+
+            
+          </span>
+
+          
+
+          
+            
+          
+
+          
+          
+
+          
+
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        
+          
+            <h1 id="oracle12C安装后几个简单命令记录，供以后查看"><a href="#oracle12C安装后几个简单命令记录，供以后查看" class="headerlink" title="oracle12C安装后几个简单命令记录，供以后查看"></a>oracle12C安装后几个简单命令记录，供以后查看</h1><h3 id="简介：Oracle-12C引入了CDB与PDB的新特性，在ORACLE-12C数据库引入的多租用户环境（Multitenant-Environment）中，允许一个数据库容器（CDB）承载多个可插拔数据库（PDB）。CDB全称为Container-Database，中文翻译为数据库容器，PDB全称为Pluggable-Database，即可插拔数据库。在ORACLE-12C之前，实例与数据库是一对一或多对一关系（RAC）：即一个实例只能与一个数据库相关联，数据库可以被多个实例所加载。而实例与数据库不可能是一对多的关系。当进入ORACLE-12C后，实例与数据库可以是一对多的关系。"><a href="#简介：Oracle-12C引入了CDB与PDB的新特性，在ORACLE-12C数据库引入的多租用户环境（Multitenant-Environment）中，允许一个数据库容器（CDB）承载多个可插拔数据库（PDB）。CDB全称为Container-Database，中文翻译为数据库容器，PDB全称为Pluggable-Database，即可插拔数据库。在ORACLE-12C之前，实例与数据库是一对一或多对一关系（RAC）：即一个实例只能与一个数据库相关联，数据库可以被多个实例所加载。而实例与数据库不可能是一对多的关系。当进入ORACLE-12C后，实例与数据库可以是一对多的关系。" class="headerlink" title="简介：Oracle 12C引入了CDB与PDB的新特性，在ORACLE 12C数据库引入的多租用户环境（Multitenant Environment）中，允许一个数据库容器（CDB）承载多个可插拔数据库（PDB）。CDB全称为Container Database，中文翻译为数据库容器，PDB全称为Pluggable Database，即可插拔数据库。在ORACLE 12C之前，实例与数据库是一对一或多对一关系（RAC）：即一个实例只能与一个数据库相关联，数据库可以被多个实例所加载。而实例与数据库不可能是一对多的关系。当进入ORACLE 12C后，实例与数据库可以是一对多的关系。"></a>简介：Oracle 12C引入了CDB与PDB的新特性，在ORACLE 12C数据库引入的多租用户环境（Multitenant Environment）中，允许一个数据库容器（CDB）承载多个可插拔数据库（PDB）。CDB全称为Container Database，中文翻译为数据库容器，PDB全称为Pluggable Database，即可插拔数据库。在ORACLE 12C之前，实例与数据库是一对一或多对一关系（RAC）：即一个实例只能与一个数据库相关联，数据库可以被多个实例所加载。而实例与数据库不可能是一对多的关系。当进入ORACLE 12C后，实例与数据库可以是一对多的关系。</h3><hr>
+<ol>
+<li><p>查看是否为 CDB</p>
+<figure class="highlight sql"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">SQL&gt; select cdb from v$database;</span><br><span class="line">CDB</span><br><span class="line"><span class="comment">---------</span></span><br><span class="line">YES</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>创建 PDB 必须切换到 cdb$root 下</p>
+<figure class="highlight sql"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">SQL&gt; alter session set container=cdb$root;</span><br><span class="line">Session altered.</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>查看当前容器</p>
+<figure class="highlight sql"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">SQL&gt; show con_name;</span><br><span class="line">CON_NAME</span><br><span class="line"><span class="comment">------------------------------</span></span><br><span class="line">CDB$ROOT</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>查看当前PDB数量和状态</p>
+<figure class="highlight sql"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">SQL&gt; show pdbs</span><br><span class="line">    CON_ID CON_NAME     OPEN MODE  RESTRICTED</span><br><span class="line"><span class="comment">------------------------------          ----------  ----------  ----------</span></span><br><span class="line">     2 PDB$SEED           READ ONLY  NO</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>以现有模板PDB$SEED创建新的PDB</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">SQL&gt; CREATE PLUGGABLE DATABASE test_pdb ADMIN USER mas IDENTIFIED BY &quot;mas&quot; ROLES=(CONNECT) file_name_convert=(&apos;/u01/app/oracle/oradata/mas/pdbseed&apos;,&apos;/u01/app/oracle/oradata/mas/test_pdb&apos;) storage (maxsize 2G max_shared_temp_size 100M);</span><br><span class="line"></span><br><span class="line">##注：storage 参数限定了该 PDB 所有表空间的上限大小，不加 storage 参数或者将参数的 maxsize 设为 unlimited，则不会限制 pdb 内所有表空间的上限大小。</span><br></pre></td></tr></table></figure>
+</li>
+</ol>
+<hr>
+<h2 id="用户管理"><a href="#用户管理" class="headerlink" title="用户管理"></a>用户管理</h2><p>在 CDB 中只能创建全局用户（用户名以 c## 开头），会在 CDB 和所有的 PDB 中均创建该用户（但是在 PDB 中创建的该用户需要另外授权才能够在 CDB 中访问）。在 PDB 中只能创建本地用户。</p>
+<ol>
+<li><p>创建全局用户</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">SQL&gt; create user c##test identified by &quot;test&quot;;</span><br><span class="line">User created.</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>创建本地用户</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">SQL&gt; ALTER SESSION set container = TEST_PDB;      </span><br><span class="line">Session altered.</span><br><span class="line">SQL&gt; alter pluggable database TEST_PDB open;</span><br><span class="line">Pluggable database altered.</span><br><span class="line">SQL&gt; create user test identified by &quot;test_pdb&quot;;</span><br><span class="line">User created.</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>用户授权</p>
+<figure class="highlight sql"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">#授予test用户创建session的权限，即登陆权限，允许用户登录数据库</span></span><br><span class="line"><span class="keyword">grant</span> <span class="keyword">create</span> <span class="keyword">session</span> <span class="keyword">to</span> <span class="keyword">test</span>;</span><br><span class="line"><span class="comment">#授予test用户使用表空间的权限</span></span><br><span class="line"><span class="keyword">grant</span> <span class="keyword">unlimited</span> <span class="keyword">tablespace</span> <span class="keyword">to</span> <span class="keyword">test</span>;</span><br></pre></td></tr></table></figure>
+</li>
+</ol>
+<hr>
+<h2 id="改变PDB的状态"><a href="#改变PDB的状态" class="headerlink" title="改变PDB的状态"></a>改变PDB的状态</h2><ol>
+<li><p>打开TEST_PDB的状态</p>
+<figure class="highlight sql"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">SQL&gt; alter pluggable database TEST_PDB open;</span><br><span class="line">Pluggable database altered.</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>关闭TEST_PDB的状态</p>
+<figure class="highlight sql"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">SQL&gt; alter pluggable database TEST_PDB close immediate;</span><br><span class="line">Pluggable database altered.</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>打开所有PDB的状态命令</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"> alter pluggable database all open;</span><br><span class="line">Pluggable database altered.</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>关闭所有PDB的状态命令</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">SQL&gt; alter pluggable database all close immediate;</span><br><span class="line">Pluggable database altered.</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>拔出PDB数据库(将session切换到CDB$ROOT,关闭TEST_PDB，然后再执行)</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">SQL&gt; alter pluggable database test_pdb unplug into&apos;/home/oracle/orapdb01.xml&apos;;</span><br><span class="line">Pluggable database altered.</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>从CDB$ROOT上的PDB列表中移除TEST_PDB</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">SQL&gt; drop pluggable database TEST_PDB;   </span><br><span class="line">Pluggable database dropped.</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>插入PDB数据库(从上个步骤中导出的xml文件 中记录的数据文件存储位置没有变化（即将拔出的 PDB 的数据文件复制于新数据库中完全一致的路径下，或将原 PDB 做保留数据文件删除重新插入），则执行以下操作)</p>
+<figure class="highlight sql"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">SQL&gt; create pluggable database test_pdb_replug using '/home/oracle/orapdb01.xml' nocopy tempfile reuse;</span><br><span class="line">Pluggable database created.</span><br><span class="line"></span><br><span class="line">//插入PDB后需要执行以下命令保存状态信息</span><br><span class="line">SQL&gt; alter pluggable database all save state;</span><br><span class="line">Pluggable database altered.</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>删除PDB数据库</p>
+<figure class="highlight sql"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">SQL&gt; drop pluggable database TEST_PDB_REPLUG including datafiles;</span><br><span class="line">Pluggable database dropped.</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>上面的删除命令会将数据文件一并删除，若要保留数据文件，则要改变参数</p>
+</li>
+</ol>
+<figure class="highlight sql"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">SQL&gt; drop pluggable database TEST_PDB_REPLUG keep datafiles;</span><br><span class="line">Pluggable database dropped.</span><br></pre></td></tr></table></figure>
+<hr>
+<ol>
+<li><p>关闭数据库实例</p>
+<figure class="highlight sql"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">SQL&gt; shutdown immediate</span><br><span class="line">Database closed.</span><br><span class="line">Database dismounted.</span><br><span class="line">ORACLE instance shut down.</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>关闭数据库监听</p>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">[oracle@hand ~]$ lsnrctl stop</span><br></pre></td></tr></table></figure>
+</li>
+</ol>
+
+          
+        
+      
+    </div>
+    
+    
+    
+
+    
+
+    
+
+    
+
+    <footer class="post-footer">
+      
+
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </footer>
+  </div>
+  
+  
+  
+  </article>
+
+
+    
+      
+
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal" itemscope="" itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="http://www.nichuan.top/git学习笔记/">
+
+    <span hidden itemprop="author" itemscope="" itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="倪川">
+      <meta itemprop="description" content="">
+      <meta itemprop="image" content="/images/avatar.gif">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope="" itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="nichuan's blog">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+                
+                <a class="post-title-link" href="/git学习笔记/" itemprop="url">git学习笔记</a></h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">发表于</span>
+              
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2019-03-08T21:21:57+08:00">
+                2019-03-08
+              </time>
+            
+
+            
+
+            
+          </span>
+
+          
+
+          
+            
+          
+
+          
+          
+
+          
+
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        
+          
+            <blockquote>
+<p>以前在项目中大部分命令都还是可以熟练使用的，但是可能有一些细节上的东西还不一定清楚，借此写日报学习的机会，再进行一次梳理，相信会有更多的收获</p>
+</blockquote>
+<hr>
+<h1 id="Git-项目的三个工作区域的概念：Git-仓库、工作目录以及暂存区域。"><a href="#Git-项目的三个工作区域的概念：Git-仓库、工作目录以及暂存区域。" class="headerlink" title="Git 项目的三个工作区域的概念：Git 仓库、工作目录以及暂存区域。"></a>Git 项目的三个工作区域的概念：Git 仓库、工作目录以及暂存区域。</h1><ol>
+<li>git仓库： Git 用来保存项目的元数据和对象数据库的地方，最重要！</li>
+<li>暂存区：暂存区域是一个文件，保存了下次将提交的文件列表信息，其实就是git add后会将文件的快照放入暂存区域。 </li>
+<li>工作目录：主要就是日常开发我们会操作的地方，一般开发某新功能前，都会基于最新的版本checkout一个新的分支，然后在这个分支上做自己的修改，这就是工作目录。</li>
+</ol>
+<h1 id="常用配置"><a href="#常用配置" class="headerlink" title="常用配置"></a>常用配置</h1><ol>
+<li>一般开始用都会先配置username和邮箱，还有对于一些常用命令可以设置别名，这样操作起来更简单，如下命令：<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line">#username、email设置</span><br><span class="line">$ git config --global user.name &quot;nichuan&quot;</span><br><span class="line">$ git config --global user.email nichuan@hand-china.com </span><br><span class="line"></span><br><span class="line"></span><br><span class="line">#设置别名（根据个人喜好，可以更简洁哦）</span><br><span class="line">$ git config --global alias.co checkout </span><br><span class="line">$ git config --global alias.br branch </span><br><span class="line">$ git config --global alias.ci commit </span><br><span class="line">$ git config --global alias.st status</span><br></pre></td></tr></table></figure>
+</li>
+</ol>
+<p>新了解到一个查询有哪些配置信息的命令：<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">git config --list</span><br></pre></td></tr></table></figure></p>
+<h1 id="获取git仓库"><a href="#获取git仓库" class="headerlink" title="获取git仓库"></a>获取git仓库</h1><ol>
+<li>一般项目上，我们要检出一个已经存在的项目，我们可以用git clone命令，这样会在本地克隆一个和远程仓库一样的库出来，成为我们的工作目录，一般的，远程克隆下来是master分支，我们一般不会直接在master分支做改动，所以会基于master分支再checkout新的分支，新分支的命名规则各有不同，然后我们会在新的分支做改动，完成后再合并。</li>
+</ol>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">#克隆仓库</span><br><span class="line">git clone url</span><br><span class="line">git checkout -b dev-nichuan-feature-test01</span><br></pre></td></tr></table></figure>
+<ol start="2">
+<li>如果是要完全新建一个仓库，初始化代码，那么可以git init初始化，然后再push到远程仓库。</li>
+</ol>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">git init</span><br></pre></td></tr></table></figure>
+<h1 id="常用命令"><a href="#常用命令" class="headerlink" title="常用命令"></a>常用命令</h1><ol>
+<li><p>查看当前状态，比如有没有修改，有没有提交之类的，非常常用，几乎每次执行其它命令都要先看看</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">git status</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>拉取远程代码更新</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">git pull</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>推送到远程分支</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">git push</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>查看有什么改动</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">git diff</span><br><span class="line">#修改了后，如果已经add，并未提交，然后再修改，再diff 是可以输出改动的内容的</span><br><span class="line"></span><br><span class="line">#若要查看已暂存的将要添加到下次提交里的内容</span><br><span class="line">git diff --cached</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>提交代码到本地仓库，这里是本地，还没有push之前都是在本地，使用git commit -a 可以跳过git add,会把已经跟踪的文件，自动add</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">git commit -m &apos;message&apos;</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>检出分支，或者基于某分支检出</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">git checkout branch </span><br><span class="line">git checkout -b branch</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>合并分支，比如在基于master分支切出的新分支dev有新的改动，要再合并给master，先切回master后，再进行merger操作</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">git merge dev</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>查询有哪些分支，一般直接查询所有</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">#创建分支，基于当前所在分支</span><br><span class="line">git branch branchName</span><br><span class="line">#查询所有分支，包括远程的</span><br><span class="line">git branch -a</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>拉取远端的所有数据</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">git fetch</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>查看历史记录</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">git log</span><br><span class="line">#简介查看，一条记录一行</span><br><span class="line">git log --pretty=oneline</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>查看历史提交记录</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">git reflog</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>回到上一个版本</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">#^符号有几个代表回到上几个版本</span><br><span class="line">git reset --hard HEAD^</span><br><span class="line">#~符号后面数字是几就是回退几个版本，以免写过多的^符号</span><br><span class="line">git reset --hard HEAD~1</span><br></pre></td></tr></table></figure>
+</li>
+<li><p><strong>==回到指定版本,版本号可以不写全，reset三个参数（重要！）==</strong></p>
+</li>
+</ol>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line">//这个是默认方式，它回退到某个版本，只保留源码，回退commit和index信息</span><br><span class="line">git reset --mixed</span><br><span class="line"></span><br><span class="line">//git reset--soft：回退到某个版本，只回退了commit的信息，不会恢复到index file一级。如果还要提交，直接commit即可</span><br><span class="line">git reset --soft</span><br><span class="line"></span><br><span class="line">//git reset--hard：彻底回退到某个版本，本地的源码也会变为上一个版本的内容，此命令 慎用！小心代码丢失！</span><br><span class="line">git reset --hard xxx</span><br></pre></td></tr></table></figure>
+<h1 id="打标签（可以快速对于某个版本进行回滚之类的操作，很实用！）"><a href="#打标签（可以快速对于某个版本进行回滚之类的操作，很实用！）" class="headerlink" title="打标签（可以快速对于某个版本进行回滚之类的操作，很实用！）"></a>打标签（可以快速对于某个版本进行回滚之类的操作，很实用！）</h1><ol>
+<li>Git 使用两种主要类型的标签：轻量标签（lightweight）与附注标签（annotated）</li>
+</ol>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">#轻量标签；轻量标签本质上是将提交校验和存储到一个文件中 - 没有保存任 何其他信息</span><br><span class="line">git tag &apos;test tag&apos;</span><br><span class="line">#附注标签，信息更详细；附注标签是存储在 Git 数据库中的一个完整对象。 它们是可以被校验的；其中包含打标签者的名字、电子 邮件地址、日期时间；</span><br><span class="line"> git tag -a v1.0 -m &apos;test tag&apos;</span><br></pre></td></tr></table></figure>
+<ol start="2">
+<li>后期打标签，如果想把以前的历史记录打标签，也是可以的，只需找到历史的提交记录，就可以了，如下：</li>
+</ol>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">#首先查询历史，后面参数作用会使输出内容简介为一行，更直观</span><br><span class="line">git log --pretty=oneline </span><br><span class="line"></span><br><span class="line">#历史的记录校验和的值完整的或前一部分都可以</span><br><span class="line">$ git tag -a v1.1 9fceb02</span><br></pre></td></tr></table></figure>
+<ol start="3">
+<li>标签的如果不单独push的话，只会在本地存在，所以要想其他人也能共享的话，需要push</li>
+</ol>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">git push origin [tagname]</span><br></pre></td></tr></table></figure>
+<ul>
+<li>IDEA中git</li>
+</ul>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">idea中已经提供了很强大的git操作，所有的操作都可以可视化完成，也可以很方便的在terminal中使用命令行，terminal就在同一个窗口打开，一直使用idea，熟练度还行。</span><br></pre></td></tr></table></figure>
+<ul>
+<li>eclipse中git</li>
+</ul>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">暂未使用过，期待之后的使用</span><br></pre></td></tr></table></figure>
+<h1 id="生成公私钥"><a href="#生成公私钥" class="headerlink" title="生成公私钥"></a>生成公私钥</h1><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">ssh-keygen -t rsa -b 4096 -C &quot;chuan.ni@hand-china.com&quot;</span><br></pre></td></tr></table></figure>
+<p>三个参数分别代表：</p>
+<p>-t：type rsa dsa</p>
+<p>-b:指定密钥长度。对于RSA密钥，最小要求768位，默认是2048位。命令中的4096指的是RSA密钥长度为4096位。<br>DSA密钥必须恰好是1024位(FIPS 186-2 标准的要求)。</p>
+<p>-C: 邮箱</p>
+
+          
+        
+      
+    </div>
+    
+    
+    
+
+    
+
+    
+
+    
+
+    <footer class="post-footer">
+      
+
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </footer>
+  </div>
+  
+  
+  
+  </article>
+
+
+    
+      
+
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal" itemscope="" itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
     <link itemprop="mainEntityOfPage" href="http://www.nichuan.top/idea激活办法-永久/">
 
     <span hidden itemprop="author" itemscope="" itemtype="http://schema.org/Person">
@@ -879,7 +1275,7 @@
               
                 <a href="/archives/">
               
-                  <span class="site-state-item-count">4</span>
+                  <span class="site-state-item-count">6</span>
                   <span class="site-state-item-name">日志</span>
                 </a>
               </div>
