@@ -249,6 +249,147 @@
   
   
   <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="http://www.nichuan.top/oracle中dblink和synonym/">
+
+    <span hidden itemprop="author" itemscope="" itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="倪川">
+      <meta itemprop="description" content="">
+      <meta itemprop="image" content="/images/avatar.gif">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope="" itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="nichuan's blog">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+                
+                <a class="post-title-link" href="/oracle中dblink和synonym/" itemprop="url">oracle中dblink和synonym</a></h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">发表于</span>
+              
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2019-03-20T00:29:35+08:00">
+                2019-03-20
+              </time>
+            
+
+            
+
+            
+          </span>
+
+          
+
+          
+            
+          
+
+          
+          
+
+          
+
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        
+          
+            <h1 id="1-dblink"><a href="#1-dblink" class="headerlink" title="1. dblink"></a>1. dblink</h1><p>dblink(Database Link)数据库链接顾名思义就是数据库的链接，就像电话线一样，是一个通道，当我们要跨本地数据库，访问另外一个数据库表中的数据时，本地数据库中就必须要创建远程数据库的dblink,通过dblink本地数据库可以像访问本地数据库一样访问远程数据库表中的数据。</p>
+<h2 id="1-1-赋予权限"><a href="#1-1-赋予权限" class="headerlink" title="1.1 赋予权限"></a>1.1 赋予权限</h2><p>创建dblink前，要看是否登录用户具有创建的权限</p>
+<figure class="highlight sql"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">--查看是否有权限</span></span><br><span class="line"><span class="keyword">select</span> * <span class="keyword">from</span> user_sys_privs <span class="keyword">where</span> privilege <span class="keyword">like</span> <span class="keyword">upper</span>(<span class="string">'%DATABASE LINK%'</span>) <span class="keyword">AND</span> USERNAME=<span class="string">'你的登录用户名'</span>;</span><br></pre></td></tr></table></figure>
+<p>如果查出没有权限，那么还需要用sys用户登录去为这个用户赋予权限</p>
+<figure class="highlight sql"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">--username是你需要赋予权限的用户</span></span><br><span class="line"><span class="keyword">grant</span> <span class="keyword">create</span> <span class="keyword">public</span> <span class="keyword">database</span> <span class="keyword">link</span> <span class="keyword">to</span> username;</span><br></pre></td></tr></table></figure>
+<h2 id="1-2-创建database-link"><a href="#1-2-创建database-link" class="headerlink" title="1.2 创建database link"></a>1.2 创建database link</h2><p>可以用工具创建，如pl/sql developer,这是可视化的，比较容易；再有就是用语句创建</p>
+<figure class="highlight sql"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">CREATE</span> [<span class="keyword">SHARED</span>] [<span class="keyword">PUBLIC</span>] <span class="keyword">database</span> <span class="keyword">link</span> link_name</span><br><span class="line">　　[<span class="keyword">CONNECT</span> <span class="keyword">TO</span> [<span class="keyword">user</span>] [<span class="keyword">current_user</span>] <span class="keyword">IDENTIFIED</span> <span class="keyword">BY</span> [<span class="keyword">password</span>]　</span><br><span class="line">　　[<span class="keyword">AUTHENTICATED</span> <span class="keyword">BY</span> <span class="keyword">user</span> <span class="keyword">IDENTIFIED</span> <span class="keyword">BY</span> <span class="keyword">password</span>]　</span><br><span class="line">　　[<span class="keyword">USING</span> <span class="string">'connect_string'</span>]</span><br></pre></td></tr></table></figure>
+<p>说明：<a href="https://baike.baidu.com/item/dblink/15079163?fr=aladdin" target="_blank" rel="noopener">百度百科</a></p>
+<ol>
+<li>权限：创建数据库链接的帐号必须有CREATE DATABASE LINK或CREATE PUBLIC DATABASE LINK的系统权限，用来登录到远程数据库的帐号必须有CREATE SESSION权限。这两种权限都包含在CONNECT角色中（CREATE PUBLIC DATABASE LINK权限在DBA中）。一个公用数据库链接对于数据库中的所有用户都是可用的，而一个私有链接仅对创建它的用户可用。由一个用户给另外一个用户授权私 有数据库链接是不可能的，一个数据库链接要么是公用的，要么是私有的。</li>
+<li>link : 当source端的参数(parameter)GLOBAL_NAMES=TRUE时，link名必须与远程数据库的全局数据库名global_name）相同；否则，可以任意命名。</li>
+<li>current_user使用该选项是为了创建global类型的dblink。在分布式体系中存在多个数据库的话。如果想要在每一个数据库中都可以使用同样的名字来访问数据库a，那在每个数据库中都要创建一个到数据库a的db_link，太麻烦了。所以有这个选项的话你只要创建一次。所有的数据库都可以使用这个db_link来访问了。要使用这个特性，必须有oracle nameserver或者ORACLE目录服务器。并且数据库a的参数global_names=true.具体我也没有创建过，没有这个环境。</li>
+<li>connectstring：连接字符串，tnsnames.ora中定义远程数据库的连接串，也可以在创建dblink的时候直接指定。</li>
+<li>username、password：远程数据库的用户名，口令。如果不指定，则使用当前的用户名和口令登录到远程数据库，当创建connected user类型的dblink时，需要如果采用数据字典验证，则需要两边数据库的用户名密码一致。</li>
+</ol>
+<p>示例：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br></pre></td><td class="code"><pre><span class="line">--最后的srm其实就是tns配置的连接信息，可以直接写完，也可以这样写，这样写的话，要保证tns里的配置是ok的，否则不行。</span><br><span class="line">--假如现在远程数据库有个srm用户，那么如下创建dblink的例子</span><br><span class="line">create public database link TESTLINK connect to srm identified by &quot;srm&quot; USING &apos;srm&apos;</span><br><span class="line"></span><br><span class="line">--如果不写srm的话，那可以直接写完整的，大致如下</span><br><span class="line"></span><br><span class="line">create database link link_name</span><br><span class="line">　　connect to username identified by password </span><br><span class="line">　　using &apos;(DESCRIPTION = </span><br><span class="line">　　(ADDRESS_LIST = </span><br><span class="line">　　(ADDRESS = (PROTOCOL = TCP)(HOST = X.X.X.X )(PORT = 1521)) </span><br><span class="line">　　) </span><br><span class="line">　　(CONNECT_DATA = </span><br><span class="line">　　(SERVICE_NAME = SSID) </span><br><span class="line">　　) </span><br><span class="line">　　)&apos;;</span><br></pre></td></tr></table></figure>
+<h2 id="使用"><a href="#使用" class="headerlink" title="使用"></a>使用</h2><p>创建好后，那么我们就可以在创建的这个库中去访问通过dblink配置的库中的数据了</p>
+<h1 id="2-synonym-（同义词）"><a href="#2-synonym-（同义词）" class="headerlink" title="2. synonym （同义词）"></a>2. synonym （同义词）</h1><p>这个的作用其实就是相当于建一个别名，然后通过用这个别名，达到一个简化效果，比如说<br><figure class="highlight sql"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">-- 创建同义词</span></span><br><span class="line"><span class="comment">--假如上面的例子srm用户有个company表，那么可以如下创建同义词</span></span><br><span class="line"><span class="keyword">create</span> <span class="keyword">synonym</span> TESTSYNONYM <span class="keyword">FOR</span> company@TESTLINK;</span><br></pre></td></tr></table></figure></p>
+<p>创建了上面的同义词后，看下查询的区别</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">--创建以前</span><br><span class="line">SELECT * FROM company@TESTLINK;</span><br><span class="line">--使用上面创建的同义词后</span><br><span class="line">SELECT * FROM TESTSYNONYM;</span><br></pre></td></tr></table></figure>
+<p>会发现就写的很简化了，主要就是一个简化的作用</p>
+
+          
+        
+      
+    </div>
+    
+    
+    
+
+    
+
+    
+
+    
+
+    <footer class="post-footer">
+      
+
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </footer>
+  </div>
+  
+  
+  
+  </article>
+
+
+    
+      
+
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal" itemscope="" itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
     <link itemprop="mainEntityOfPage" href="http://www.nichuan.top/pl-sql初学记录/">
 
     <span hidden itemprop="author" itemscope="" itemtype="http://schema.org/Person">
@@ -1209,7 +1350,7 @@
               
                 <a href="/archives/">
               
-                  <span class="site-state-item-count">6</span>
+                  <span class="site-state-item-count">7</span>
                   <span class="site-state-item-name">日志</span>
                 </a>
               </div>
