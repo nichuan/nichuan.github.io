@@ -249,6 +249,155 @@
   
   
   <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="http://www.nichuan.top/记录Docker运行一个redis和mysql的过程/">
+
+    <span hidden itemprop="author" itemscope="" itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="倪川">
+      <meta itemprop="description" content="">
+      <meta itemprop="image" content="/images/avatar.gif">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope="" itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="nichuan's blog">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+                
+                <a class="post-title-link" href="/记录Docker运行一个redis和mysql的过程/" itemprop="url">记录Docker运行一个redis和mysql的过程</a></h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">发表于</span>
+              
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2019-05-23T20:21:16+08:00">
+                2019-05-23
+              </time>
+            
+
+            
+
+            
+          </span>
+
+          
+
+          
+            
+          
+
+          
+          
+
+          
+
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        
+          
+            <h1 id="Docker启动redis容器"><a href="#Docker启动redis容器" class="headerlink" title="Docker启动redis容器"></a>Docker启动redis容器</h1><ol>
+<li><p>拉取最新redis镜像</p>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">docker pull redis</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>启动容器（此处没有密码，也可以设置）</p>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">root@nichuan:/home/nichuan# docker run --name redis-test -p 6379:6379 -d redis</span><br><span class="line">b4dd89700398d826a0488e45dedd6e3e6b9ee134f43f482f3622fbdf0b97ac26</span><br><span class="line">root@nichuan:/home/nichuan# docker ps</span><br><span class="line">CONTAINER ID        IMAGE               COMMAND                  CREATED             STATUS              PORTS                    NAMES</span><br><span class="line">b4dd89700398        redis               "docker-entrypoint..."   4 seconds ago       Up 3 seconds        0.0.0.0:6379-&gt;6379/tcp   redis-test</span><br></pre></td></tr></table></figure>
+</li>
+</ol>
+<ul>
+<li>–name redis-test：指定一个别名</li>
+<li>-p 6379:6379：将宿主机的6379端口映射到docker容器</li>
+<li>-d：后台运行</li>
+</ul>
+<ol start="3">
+<li>使用redis-cli命令行</li>
+</ol>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">root@nichuan:/home/nichuan# docker exec -it b4dd redis-cli</span><br><span class="line">127.0.0.1:6379&gt;</span><br></pre></td></tr></table></figure>
+<h1 id="Docker启动Mysql容器"><a href="#Docker启动Mysql容器" class="headerlink" title="Docker启动Mysql容器"></a>Docker启动Mysql容器</h1><ol>
+<li><p>拉取镜像（这里最新的mysql，8.+）</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br></pre></td><td class="code"><pre><span class="line">root@nichuan:/home/nichuan# docker pull mysql</span><br><span class="line">Using default tag: latest</span><br><span class="line">latest: Pulling from library/mysql</span><br><span class="line">27833a3ba0a5: Already exists</span><br><span class="line">864c283b3c4b: Pull complete</span><br><span class="line">cea281b2278b: Pull complete</span><br><span class="line">8f856c14f5af: Pull complete</span><br><span class="line">9c4f38c23b6f: Pull complete</span><br><span class="line">1b810e1751b3: Pull complete</span><br><span class="line">5479aaef3d30: Pull complete</span><br><span class="line">9667974ee097: Pull complete</span><br><span class="line">4ebb5e7ad6ac: Pull complete</span><br><span class="line">021bd5074e22: Pull complete</span><br><span class="line">cce70737c123: Pull complete</span><br><span class="line">544ff12e028f: Pull complete</span><br><span class="line">Digest: sha256:f5f78fe2054b4686da3fddb460eab0b53d04e067c977d6a02fcb5ec25375ed15</span><br><span class="line">Status: Downloaded newer image for mysql:latest</span><br><span class="line">root@nichuan:/home/nichuan# docker images</span><br><span class="line">REPOSITORY          TAG                 IMAGE ID            CREATED             SIZE</span><br><span class="line">mysql               latest              d72169616e20        4 days ago          443MB</span><br><span class="line">redis               latest              a55fbf438dfd        4 weeks ago         95MB</span><br><span class="line">nginx               latest              2bcb04bdb83f        4 weeks ago         109MB</span><br><span class="line">java                latest              d23bdf5b1b1b        2 years ago         643MB</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>拉取完成后启动</p>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">root@nichuan:/home/nichuan# docker run --name mysql-test -p 3306:3306 -e MYSQL_ROOT_PASSWORD=123456 -d mysql</span><br><span class="line">83e826e1fd277e6ef078380ee98a526f95ab2cb545c957363c090af0c67f1e05</span><br><span class="line">root@nichuan:/home/nichuan# docker ps</span><br><span class="line">CONTAINER ID        IMAGE               COMMAND                  CREATED             STATUS              PORTS                               NAMES</span><br><span class="line">83e826e1fd27        mysql               "docker-entrypoint..."   6 seconds ago       Up 4 seconds        0.0.0.0:3306-&gt;3306/tcp, 33060/tcp   mysql-test</span><br><span class="line">b4dd89700398        redis               "docker-entrypoint..."   30 minutes ago      Up 30 minutes       0.0.0.0:6379-&gt;6379/tcp              redis-test</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>在navicat链接mysql8以后的版本时，会出现2059的错误，这个错误出现的原因是在mysql8之前的版本中加密规则为mysql_native_password，而在mysql8以后的加密规则为caching_sha2_password。</p>
+</li>
+</ol>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br></pre></td><td class="code"><pre><span class="line">root@nichuan:/home/nichuan# docker exec -it 83e826e1fd27 /bin/bash</span><br><span class="line">root@83e826e1fd27:/# mysql -u root -p</span><br><span class="line">Enter password:</span><br><span class="line">Welcome to the MySQL monitor.  Commands end with ; or \g.</span><br><span class="line">Your MySQL connection id is 12</span><br><span class="line">Server version: 8.0.16 MySQL Community Server - GPL</span><br><span class="line"></span><br><span class="line">Copyright (c) 2000, 2019, Oracle and/or its affiliates. All rights reserved.</span><br><span class="line"></span><br><span class="line">Oracle is a registered trademark of Oracle Corporation and/or its</span><br><span class="line">affiliates. Other names may be trademarks of their respective</span><br><span class="line">owners.</span><br><span class="line"></span><br><span class="line">Type &apos;help;&apos; or &apos;\h&apos; for help. Type &apos;\c&apos; to clear the current input statement.</span><br><span class="line"></span><br><span class="line">mysql&gt; use mysql;</span><br><span class="line">Reading table information for completion of table and column names</span><br><span class="line">You can turn off this feature to get a quicker startup with -A</span><br><span class="line"></span><br><span class="line">Database changed</span><br><span class="line">mysql&gt; select user,plugin from user where user=&apos;root&apos;;</span><br><span class="line">+------+-----------------------+</span><br><span class="line">| user | plugin                |</span><br><span class="line">+------+-----------------------+</span><br><span class="line">| root | caching_sha2_password |</span><br><span class="line">| root | caching_sha2_password |</span><br><span class="line">+------+-----------------------+</span><br><span class="line">2 rows in set (0.00 sec)</span><br><span class="line"></span><br><span class="line">mysql&gt; ALTER USER &apos;root&apos;@&apos;%&apos; IDENTIFIED BY &apos;123456&apos; PASSWORD EXPIRE NEVER;</span><br><span class="line">Query OK, 0 rows affected (0.03 sec)</span><br><span class="line">mysql&gt; ALTER USER &apos;root&apos;@&apos;%&apos; IDENTIFIED WITH mysql_native_password BY &apos;123456&apos;;</span><br><span class="line">Query OK, 0 rows affected (0.03 sec)</span><br><span class="line"></span><br><span class="line">mysql&gt; FLUSH PRIVILEGES;</span><br><span class="line">Query OK, 0 rows affected (0.01 sec)</span><br><span class="line"></span><br><span class="line">mysql&gt; select user,plugin from user where user=&apos;root&apos;;</span><br><span class="line">+------+-----------------------+</span><br><span class="line">| user | plugin                |</span><br><span class="line">+------+-----------------------+</span><br><span class="line">| root | mysql_native_password |</span><br><span class="line">| root | caching_sha2_password |</span><br><span class="line">+------+-----------------------+</span><br><span class="line">2 rows in set (0.00 sec)</span><br><span class="line"></span><br><span class="line">mysql&gt; exit;</span><br></pre></td></tr></table></figure>
+<p>然后就可以通过工具连接数据库了</p>
+<hr>
+
+          
+        
+      
+    </div>
+    
+    
+    
+
+    
+
+    
+
+    
+
+    <footer class="post-footer">
+      
+
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </footer>
+  </div>
+  
+  
+  
+  </article>
+
+
+    
+      
+
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal" itemscope="" itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
     <link itemprop="mainEntityOfPage" href="http://www.nichuan.top/oracle中dblink和synonym/">
 
     <span hidden itemprop="author" itemscope="" itemtype="http://schema.org/Person">
@@ -1350,7 +1499,7 @@
               
                 <a href="/archives/">
               
-                  <span class="site-state-item-count">7</span>
+                  <span class="site-state-item-count">8</span>
                   <span class="site-state-item-name">日志</span>
                 </a>
               </div>
